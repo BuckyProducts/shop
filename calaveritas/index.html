@@ -18,25 +18,25 @@ main{max-width:860px;margin:0 auto;padding:20px}h1{font-size:2rem;line-height:1.
 <div style="background:#fff;border:1px solid #ecd9c3;border-radius:14px;padding:16px">
 <label><b>Nombre</b><br><input id="cn" maxlength="30" placeholder="Ej. Lupita" style="font-size:1.1rem;padding:8px;width:100%;max-width:340px;border:1px solid #d9bfa3;border-radius:8px"></label>
 <p style="margin:10px 0 4px"><b>¿Para quién es?</b></p>
-<select id="ct" style="font-size:1rem;padding:8px;border-radius:8px;border:1px solid #d9bfa3"><option value="amigo">Un amigo o amiga</option><option value="maestro">Mi maestra o maestro</option><option value="mama">Mamá o papá</option><option value="abuelo">Abuelita o abuelito</option><option value="companero">Compañero de trabajo</option><option value="yo">Para mí</option></select>
+<select id="ct" style="font-size:1rem;padding:8px;border-radius:8px;border:1px solid #d9bfa3"><option value="amigo">Un amigo o amiga</option><option value="maestro">Mi maestra o maestro</option><option value="mama">Mamá o papá</option><option value="abuelo">Abuelita o abuelito</option><option value="companero">Compañera o compañero de trabajo</option><option value="yo">Para mí</option></select>
 <p><button id="cg" class="btn" style="border:0;cursor:pointer;font-size:1rem">Crear calaverita</button> <button id="cg2" class="btn" style="border:0;cursor:pointer;font-size:1rem;background:#7a4a26">Otra versión</button></p>
 <pre id="co" style="white-space:pre-wrap;font-family:Georgia,serif;font-size:1.15rem;background:#FFF6EA;border-radius:10px;padding:16px;min-height:150px">Escribe un nombre y presiona «Crear calaverita».</pre>
 <p><button id="cc" class="btn" style="border:0;cursor:pointer;background:#2A9D8F">Copiar</button> <button id="cp" class="btn" style="border:0;cursor:pointer;background:#8E7DBE">Imprimir</button> <a id="cw" class="btn wa" href="#" rel="noopener">Enviar por WhatsApp</a></p>
 </div>
 <script>
 const T={
-amigo:["Estaba {n} muy contento,\ncomiendo pan con café,\nllegó la Flaca al momento\ny le dijo: «¡Ya me sé\nque eres buen amigo, {n};\nhoy te vienes, ya lo ves!»\nPero {n} sonrió bonito\ny la invitó a bailar otra vez.",
+amigo:["Estaba {n} muy sonriente,\ncomiendo pan con café,\nllegó la Flaca de repente\ny le dijo: «¡Ya me sé\nque eres gran amistad, {n};\nhoy te vienes, ya lo ves!»\nPero {n} sonrió bonito\ny la invitó a bailar otra vez.",
 "La Calaca andaba buscando\na alguien que fuera genial,\ny a {n} encontró jugando\nen el patio principal.\n«Vente conmigo», le dijo,\npero {n}, muy formal,\nle contestó: «Hoy no me alejo:\n¡me falta la fiesta final!»"],
 maestro:["La Catrina llegó a la escuela\ncon su lista para llevar,\nbuscó a {n}, toda una estrella,\nque no paraba de enseñar.\nVio la tarea, vio el pizarrón,\ny dijo: «Mejor me espero:\nsi me la llevo hoy al panteón,\n¿quién enseña al salón entero?»",
-"Con su libro y su gis en mano\nestaba {n} en el salón,\nla Muerte entró muy temprano\ny pidió tomar la lección.\nAl final quedó tan contenta\nque olvidó su comisión:\n«Con {n} hasta la Flaca aprende;\n¡le pongo diez en la boleta, campeón!»"],
-mama:["La Muerte tocó la puerta\nbuscando a {n} con afán,\npero la encontró despierta\nhaciendo tamales y pan.\n«Siéntate», le dijo {n},\n«primero vamos a cenar».\nY la Flaca, muy contenta,\nya no se quiso marchar.",
-"Llegó la Calaca a la casa\na las seis de la mañana,\n{n} ya estaba en la plaza,\ncomprando fruta y manzana.\nLa siguió por todo el mercado,\ny al final dijo cansada:\n«¡Con {n} nadie ha podido,\nmejor me voy a la cama!»"],
+"Con su libro y su gis en mano\nestaba {n} en el salón,\nla Muerte entró muy temprano\ny pidió tomar la lección.\nAl final quedó tan contenta\nque olvidó su comisión:\n«Con {n} hasta la Flaca aprende,\n¡diez de calificación!»"],
+mama:["La Muerte tocó la puerta\nbuscando a {n} con afán,\ny olía desde la puerta\na tamales y a pan.\n«Siéntate», le dijo {n},\n«primero vamos a cenar».\nY la Flaca, muy contenta,\nya no se quiso marchar.",
+"Llegó la Calaca a la casa\na las seis de la mañana,\n{n} ya estaba en la plaza,\ncomprando pan y manzana.\nLa siguió por todo el mercado,\ny al final dijo cansada:\n«¡Con {n} nadie ha podido,\nmejor me voy a la cama!»"],
 abuelo:["Con su cafecito en la mesa\ncontaba {n} su historia,\nla Catrina, por sorpresa,\nse sentó a escuchar la gloria.\nTantos cuentos le contaron\nque perdió la trayectoria:\n«Volveré el próximo año,\n¡que me falta la memoria!»",
 "La Flaca fue de visita\na casa de {n} un día,\nle sirvieron su sopita\ny un buen chocolate que ardía.\n«Me lo iba a llevar», dijo,\n«pero aquí hay mucha alegría;\nmejor le dejo su sitio\ny regreso en otro día.»"],
 companero:["En la oficina trabajando\nestaba {n} sin parar,\nla Muerte llegó buscando\na quién se podía llevar.\nVio los correos, vio las juntas,\nvio la lista por terminar,\ny dijo: «Con tantas preguntas,\n¡yo mejor me voy a descansar!»",
-"La Calaca pidió cita\ncon {n} para el lunes,\npero ya estaba ocupadita\ncon reportes y resúmenes.\nEsperó toda la semana\ncon sus huesitos comunes,\ny al final dijo: «Mañana…\n¡que {n} ni el domingo se reúne!»"],
-yo:["Me buscaba la Catrina\npara llevarme al panteón,\nme encontró en la cocina\ncomiendo pan con montón.\n«Soy {n}», le dije contento,\n«y te invito un pedazón».\nY la Flaca, en ese momento,\nse quedó por el antojón.",
-"La Muerte vino por {n}\ncon su rebozo y su flor,\npero yo, muy tranquilito,\nle canté con mucho amor.\nLe gustó tanto la canción\nque dijo con buen humor:\n«Este año no hay ocasión,\n¡sigue cantando mejor!»"]};
+"La Calaca pidió cita\ncon {n} para el lunes,\npero la agenda está llenita\nde reportes y resúmenes.\nEsperó toda la semana\ncon sus huesitos comunes,\ny al final dijo: «Mañana…\n¡que {n} ni el domingo se reúne!»"],
+yo:["Me buscaba la Catrina\npara llevarme al panteón,\nme encontró en la cocina\ncomiendo pan de a montón.\n«Soy {n}», le dije sonriendo,\n«y te invito un pedazón».\nY la Flaca, comiendo y comiendo,\nse quedó por el antojón.",
+"La Muerte vino por {n}\ncon su rebozo y su flor,\npero yo, con calma y ritmo,\nle canté con mucho amor.\nLe gustó tanto la canción\nque dijo con buen humor:\n«Este año no hay ocasión,\n¡sigue cantando mejor!»"]};
 const $=id=>document.getElementById(id);let k=0;
 function gen(nx){const n=($("cn").value.trim()||"Bucky").replace(/[<>]/g,"");const a=T[$("ct").value];if(nx)k++;const t=a[k%a.length].replaceAll("{n}",n);$("co").textContent=t;
 $("cw").href="https://wa.me/?text="+encodeURIComponent(t+"\n\nHaz la tuya: https://buckyproducts.github.io/shop/calaveritas/");}

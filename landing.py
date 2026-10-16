@@ -73,7 +73,7 @@ html_m=page("dia-de-muertos","Ofrenda de Día de Muertos: guía paso a paso + im
  "Todo lo que necesitas para poner tu ofrenda en casa o en el salón: qué lleva, qué va en cada nivel, papel picado para imprimir y actividades para niños. Al final encuentras nuestro <b>kit imprimible bilingüe</b> listo para descargar hoy.",
  mbody,M,mfaq,men,"Guía y kit imprimible para la ofrenda de Día de Muertos:","Día de Muertos")
 X=[("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio de regalos y decoración. El paquete completo al mejor precio.","15.99","bkgnnd","0NkMo"),
-   ("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia, de 5 a 50 personas.","9.99","cnexgy","yR2hw"),
+   ("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia: lotería, bingo, trivia y más.","9.99","cnexgy","yR2hw"),
    ("bingo","Lotería / Bingo navideño con imágenes","Cartones con dibujos, ideal para niños y adultos.","5.99","lbizh","AQVW1"),
    ("secret-santa","Kit de intercambio de regalos","Tarjetas, listas de deseos, sorteo y etiquetas para tu intercambio.","6.99","mfqlci","PGsBK"),
    ("planner","Agenda 2027 digital e imprimible","Empieza el año organizado: agenda imprimible y digital con hipervínculos.","7.99","becqk","becqk")]
@@ -85,7 +85,7 @@ xbody='''<h2>Cómo organizar una posada paso a paso</h2>
 <li><b>Juegos:</b> prepara 3 o 4 juegos impresos para que nadie se aburra (más abajo hay ideas).</li>
 <li><b>Intercambio de regalos:</b> define un monto, haz el sorteo con anticipación y usa etiquetas con nombre.</li></ol>
 <h2>Juegos para posada y fiesta navideña</h2>
-<ul><li><b>Lotería o bingo navideño:</b> funciona con niños y adultos, y con premios sencillos.</li><li><b>¿Quién es quién? navideño:</b> perfecto para la oficina.</li><li><b>Adivina la canción o el villancico.</b></li><li><b>Sopa de letras y trivia navideña</b> para los más pequeños.</li><li><b>Intercambio “robado”</b> (el regalo se puede robar hasta 2 veces).</li></ul>
+<ul><li><b>Lotería o bingo navideño:</b> funciona con niños y adultos, y con premios sencillos.</li><li><b>¿Quién soy? navideño:</b> perfecto para la oficina.</li><li><b>Adivina la canción o el villancico.</b></li><li><b>Palabras revueltas y trivia navideña</b> para toda la familia.</li><li><b>Intercambio “robado”</b> (el regalo se puede robar hasta 2 veces).</li></ul>
 <h2>Intercambio de regalos: reglas fáciles</h2>
 <ul><li>Fija un monto (por ejemplo $200, $300 o $500 pesos).</li><li>Haz el sorteo con papelitos o tarjetas y pide a cada quien su lista de deseos.</li><li>Pon una etiqueta con el nombre en cada regalo para evitar confusiones.</li></ul>
 <h2>Checklist de la fiesta navideña</h2>
@@ -93,7 +93,7 @@ xbody='''<h2>Cómo organizar una posada paso a paso</h2>
 <p><b>¿Ya piensas en 2027?</b> Empieza el año organizado con nuestra <a href="https://payhip.com/b/becqk">Agenda 2027 imprimible y digital</a>.</p>'''
 xfaq=[("¿Cuándo son las posadas?","Las posadas tradicionales se celebran del 16 al 24 de diciembre, nueve noches antes de Navidad."),
 ("¿Qué juegos puedo hacer en una posada?","Lotería o bingo navideño, adivinanzas, trivia, ¿quién es quién? y el intercambio de regalos son los favoritos. Nuestros kits traen juegos listos para imprimir."),
-("¿Los juegos sirven para la oficina?","Sí. Están pensados para grupos de 5 a 50 personas, para familia, escuela u oficina."),
+("¿Los juegos sirven para la oficina?","Sí. Funcionan con grupos chicos o grandes, en familia, escuela u oficina."),
 ("¿Vienen en español?","Sí, los imprimibles vienen en español y la mayoría también en inglés, tamaño carta y A4."),
 ("¿Cómo recibo los archivos?","Recibes un enlace de descarga inmediata en pantalla y por correo. Son PDF, no se envía nada físico.")]
 xen='''<h2>Christmas party games & Las Posadas printables (English)</h2><p>Planning a Christmas party, a Las Posadas celebration or a Spanish class holiday activity? Our <b>printable Christmas party games</b>, <b>picture bingo (lotería navideña)</b> and <b>Secret Santa kit</b> come in English and Spanish, US Letter and A4, as an instant download. They're good for families, classrooms and office parties.</p>
