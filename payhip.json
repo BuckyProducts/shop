@@ -252,6 +252,18 @@
   "h": 800
  },
  {
+  "k": "bucky-storybooks",
+  "p": "U0mF4",
+  "pr": "4.99",
+  "es": "Cuentos de Bucky: 3 cuentos + colorear (ES/EN)",
+  "en": "Bucky Storybooks: 3 Stories + Coloring | Cuentos de Bucky (EN/ES Printable)",
+  "des": "3 cuentos imprimibles de Bucky y sus amigos + 24 páginas para colorear. Bilingüe, de 3 a 7 años.",
+  "den": "3 printable Bucky stories plus 24 coloring pages. Bilingual EN/ES, ages 3–7.",
+  "c": "bucky",
+  "w": 800,
+  "h": 800
+ },
+ {
   "k": "bucky-stickers",
   "p": "soCGy",
   "pr": "3.99",
@@ -267,10 +279,10 @@
   "k": "bucky-clipart",
   "p": "y8V0S",
   "pr": "4.99",
-  "es": "Clipart de Bucky",
-  "en": "Bucky Clipart Set",
-  "des": "22 archivos PNG transparentes de Bucky, el personaje de Bucky Little Shop, a 300 ppp.",
-  "den": "22 transparent PNG clipart files of Bucky, the Bucky Little Shop character, at 300 DPI.",
+  "es": "Clipart de Bucky (46 PNG)",
+  "en": "Bucky Clipart Set (46 PNG)",
+  "des": "46 archivos PNG transparentes de Bucky en 6 poses oficiales, a 300 ppp.",
+  "den": "46 transparent PNG clipart files of Bucky in 6 official poses, at 300 DPI.",
   "c": "bucky",
   "w": 800,
   "h": 800
@@ -281,8 +293,8 @@
   "pr": "2.99",
   "es": "Bucky para colorear",
   "en": "Bucky Coloring Pages for Kids",
-  "des": "10 páginas para colorear con Bucky, calcadas del arte original, con líneas gruesas ideales para niños: hola, hora de dibujar, jardín, cumpleaños,…",
-  "den": "10 printable coloring pages starring Bucky, traced from the original Bucky artwork, with thick, kid-friendly lines: hello, drawing time, garden,…",
+  "des": "10 páginas para colorear con Bucky, con líneas gruesas ideales para niños.",
+  "den": "10 printable coloring pages starring Bucky, with thick, kid-friendly lines.",
   "c": "bucky",
   "w": 800,
   "h": 800
