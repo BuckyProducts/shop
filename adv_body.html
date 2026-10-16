@@ -1,0 +1,14 @@
+<style>.adv{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin:16px 0}.door{aspect-ratio:1;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;font-weight:800;font-size:2rem;color:#fff;background:#2A9D8F;border:3px dashed #fff;box-shadow:0 3px 10px rgba(0,0,0,.12)}.door small{font-size:.75rem;font-weight:600}.door.lock{background:#c9b8a6;cursor:not-allowed}.door:nth-child(3n+2):not(.lock){background:#E76F51}.door:nth-child(3n):not(.lock){background:#7a4a26}</style>
+<p id="advmsg" style="font-weight:700"></p>
+<div class="adv" id="adv"></div>
+<script>
+(function(){var now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Mexico_City"}));var y=now.getFullYear(),m=now.getMonth(),d=now.getDate();
+var open=(y>2026||(y==2026&&m==11))?(y>2026?24:Math.min(d,24)):0;var h="";
+for(var i=1;i<=24;i++){var n=("0"+i).slice(-2);if(i<=open)h+='<a class="door" href="Bucky-Adviento-Dia-'+n+'_ES-EN.pdf" download>'+i+'<small>¡Abrir! / Open</small></a>';else h+='<span class="door lock" title="Se abre el '+i+' de diciembre">'+i+'<small>🔒 '+i+' dic</small></span>';}
+document.getElementById("adv").innerHTML=h;
+document.getElementById("advmsg").textContent=open?"¡Hoy se abrió la puerta "+open+"! Descarga gratis tu imprimible. / Door "+open+" is open today!":"El calendario abre el 1 de diciembre. ¡Guarda esta página y vuelve cada día! / Opens December 1. Bookmark this page!";})();
+</script>
+<noscript><p>Activa JavaScript para ver el calendario.</p></noscript>
+<h2>¿Cómo funciona el calendario de Adviento de Bucky?</h2>
+<ol><li><b>Del 1 al 24 de diciembre</b> se abre una puerta nueva cada día (hora de la Ciudad de México).</li><li>Cada puerta es un <b>imprimible gratis en PDF</b> (español e inglés) de nuestros kits de Navidad: juegos, etiquetas de regalo, trivia, bingo y más.</li><li>Sin registro: solo descarga e imprime.</li><li>¿No quieres esperar? El <b>paquete completo de fiesta navideña</b> trae todo de una vez (abajo).</li></ol>
+<p>Ideas: imprime la puerta del día para la mesa de la cena, el salón de clases o la posada de la oficina. Para la posada, también tenemos la <a href="../letania-posadas/">letra para pedir posada</a> y la <a href="../posadas-navidad/">guía de juegos</a>.</p>

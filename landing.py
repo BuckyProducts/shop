@@ -152,6 +152,7 @@ html_t=page("thanksgiving-printables","Thanksgiving Printables: Last-Minute Kids
  "Gratitude cards, games and table decor you can <b>download and print today</b>, in English and Spanish, for home or the classroom.",
  open("tg_body.html").read(),TG,tfaq,"<h2>Acción de Gracias (español)</h2><p>Kit imprimible de Acción de Gracias con tarjetas de gratitud, juegos y decoración, en español e inglés. Descarga instantánea.</p>","Thanksgiving printables for kids & classrooms:","Thanksgiving")
 html_t=html_t.replace('<html lang="es">','<html lang="en">',1)
+for a,b in [("<a href=\"../\">Inicio</a>","<a href=\"../\">Home</a>"),("Compartir por WhatsApp / Share","Share on WhatsApp"),("Compartir por WhatsApp","Share on WhatsApp"),("Imprimibles listos para descargar","Ready-to-download printables"),("Preguntas frecuentes","FAQ"),("Pagar con Payhip / Mercado Pago","Pay with Payhip / Mercado Pago"),("Pago con Payhip / Mercado Pago","Checkout via Payhip / Mercado Pago"),("Comprar / Buy","Buy now"),("Descarga instantánea · Archivos digitales, no se envía nada físico · <a href=\"../\">Ver toda la tienda</a>","Instant download · Digital files, nothing is shipped · <a href=\"../\">See the whole shop</a>")]:html_t=html_t.replace(a,b)
 open("thanksgiving-printables/index.html","w").write(html_t)
 LT=[("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia.","9.99","cnexgy","yR2hw"),
     ("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio y decoración al mejor precio.","15.99","bkgnnd","0NkMo"),
@@ -165,6 +166,30 @@ html_l=page("letania-posadas","Letra para pedir posada completa (para imprimir) 
  open("lt_body.html").read(),LT,lfaq,"<h2>Las Posadas song lyrics (English)</h2><p>These are the traditional Spanish lyrics for <i>pedir posada</i>, the call-and-response song of Mexico's Las Posadas (Dec 16–24). Pilgrims sing outside and innkeepers answer from inside, and everyone sings together when the door opens. Print them for your Spanish class or family celebration, and see our bilingual Christmas party games below.</p>","Letra para pedir posada, lista para imprimir:","Letra para pedir posada")
 html_l=html_l.replace('<div class="cta">','<div class="cta" style="display:none">',1)
 open("letania-posadas/index.html","w").write(html_l)
+
+SS=[("secret-santa","Kit de intercambio de regalos","Tarjetas para el sorteo, listas de deseos y etiquetas para regalos. ES + EN.","6.99","mfqlci","PGsBK"),
+    ("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio y decoración al mejor precio.","15.99","bkgnnd","0NkMo"),
+    ("games","Juegos para posada y fiesta navideña","Juegos imprimibles para oficina, escuela o familia.","9.99","cnexgy","yR2hw"),
+    ("planner","Agenda 2027 digital e imprimible","Un regalo útil: agenda 2027 imprimible y digital.","7.99","becqk","becqk")]
+sfaq=[("¿Cuánto se gasta en un intercambio de regalos?","Lo más común en México es entre $200 y $500 pesos. Lo importante es que todos respeten el mismo monto."),("¿Cómo se hace el sorteo?","Escribe los nombres en tarjetas, que cada quien saque una sin enseñarla y vuelva a sacar si le toca su propio nombre. Nuestro kit trae tarjetas listas."),("¿Qué regalo dar si no conozco bien a la persona?","Algo útil y neutral: taza o termo, vela, planta, dulces o una libreta bonita."),("¿Estas ideas tienen ligas de afiliados?","No. Son ideas genéricas para que compres donde prefieras.")]
+html_s=page("ideas-intercambio-regalos","Ideas para intercambio de regalos de $200, $300 y $500 pesos (2026) | Bucky",
+ "Ideas para intercambio de regalos por precio: $200, $300 y $500 pesos, para la oficina, maestros y niños, más reglas fáciles y el sorteo. Kit imprimible de intercambio.",
+ "Ideas para intercambio de regalos por precio: $200, $300 y $500",
+ "¿Te tocó intercambio y no sabes qué regalar? Aquí tienes <b>ideas por monto</b>, regalos para la oficina, los maestros y los niños, y las reglas para que el intercambio salga perfecto.",
+ open("ss_body.html").read(),SS,sfaq,"<h2>Secret Santa gift ideas by price (English)</h2><p>Gift ideas for a Secret Santa exchange at about $10, $15 and $25 USD: mugs with cocoa, fun socks, candles, tumblers, coffee kits, spa kits, small speakers, LED lights and puzzles. They're generic ideas with no affiliate links. Our printable Secret Santa kit includes draw cards, wish lists and gift tags in English and Spanish.</p>","Ideas para intercambio de regalos por precio:","Ideas para intercambio de regalos")
+open("ideas-intercambio-regalos/index.html","w").write(html_s)
+AD=[("bundle","Paquete fiesta navideña (completo)","Todo el paquete de Navidad de una vez: juegos, intercambio y decoración.","15.99","bkgnnd","0NkMo"),
+    ("bingo","Lotería / Bingo navideño","Cartones con dibujos para niños y adultos.","5.99","lbizh","AQVW1"),
+    ("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia.","9.99","cnexgy","yR2hw"),
+    ("secret-santa","Kit de intercambio de regalos","Tarjetas, listas de deseos y etiquetas.","6.99","mfqlci","PGsBK")]
+afaq=[("¿El calendario de Adviento es gratis?","Sí. Cada día del 1 al 24 de diciembre se abre un imprimible gratis en PDF, sin registro."),("¿A qué hora se abre cada puerta?","A la medianoche, hora de la Ciudad de México."),("¿En qué idioma vienen?","Cada PDF trae la página en español y en inglés."),("¿Me perdí un día, lo puedo descargar?","Sí, las puertas anteriores siguen abiertas hasta el 24 de diciembre y después.")]
+html_a=page("adviento","Calendario de Adviento GRATIS 2026: un imprimible navideño cada día | Bucky",
+ "Calendario de Adviento gratis del 1 al 24 de diciembre: cada día se abre un imprimible navideño en PDF (español e inglés): juegos, etiquetas, trivia y bingo. Sin registro.",
+ "Calendario de Adviento de Bucky: un imprimible gratis cada día",
+ "Del <b>1 al 24 de diciembre</b> se abre una puerta cada día con un <b>imprimible navideño gratis</b> en español e inglés. Guarda esta página y vuelve cada día.",
+ open("adv_body.html").read(),AD,afaq,"<h2>Free Advent printable calendar (English)</h2><p>From December 1 to 24, a new door opens each day (Mexico City time) with a <b>free Christmas printable PDF</b> in English and Spanish: gift tags, trivia, bingo, party games and more. There's no signup. Want everything now? Get the full Christmas Party Bundle below.</p>","Calendario de Adviento gratis, un imprimible cada día:","Calendario de Adviento")
+html_a=html_a.replace('<div class="cta">','<div class="cta" style="display:none">',1)
+open("adviento/index.html","w").write(html_a)
 open("dia-de-muertos/index.html","w").write(html_m);open("posadas-navidad/index.html","w").write(html_x)
-sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>'+U+'</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="es" href="'+U+'"/><xhtml:link rel="alternate" hreflang="en" href="'+U+'?lang=en"/></url>'+"".join(f'<url><loc>{U}{s}/</loc><lastmod>2026-10-16</lastmod></url>' for s in ("dia-de-muertos","posadas-navidad","calendario-2027","calaveritas","thanksgiving-printables","letania-posadas"))+'</urlset>\n'
+sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>'+U+'</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="es" href="'+U+'"/><xhtml:link rel="alternate" hreflang="en" href="'+U+'?lang=en"/></url>'+"".join(f'<url><loc>{U}{s}/</loc><lastmod>2026-10-16</lastmod></url>' for s in ("dia-de-muertos","posadas-navidad","calendario-2027","calaveritas","thanksgiving-printables","letania-posadas","ideas-intercambio-regalos","adviento"))+'</urlset>\n'
 open("sitemap.xml","w").write(sm);print("ok")
