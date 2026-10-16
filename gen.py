@@ -107,7 +107,7 @@ footer{{background:#2d1d12;color:#f3e3d1;padding:30px 0;margin-top:30px;font-siz
 <div class="step"><b>3</b><h3>{t('Descarga e imprime','Download & print')}</h3><p>{t('Tu enlace llega al instante y a tu correo.','Your link arrives instantly and by email.')}</p></div></div></div></section>
 <section id="faq"><div class="w"><h2>{t('Preguntas frecuentes','FAQ')}</h2><p class="sub"></p>{faq}</div></section>
 </main>
-<footer><div class="w ft"><div><strong>Bucky Little Shop</strong> · © 2026 Bucky Products<br>{t('Productos digitales. No se envía nada físico.','Digital products. Nothing is shipped.')}</div>
+<footer><div class="w ft"><div><a href="dia-de-muertos/">Ofrenda de Día de Muertos</a> · <a href="posadas-navidad/">Juegos para posada y Navidad</a><br><strong>Bucky Little Shop</strong> · © 2026 Bucky Products<br>{t('Productos digitales. No se envía nada físico.','Digital products. Nothing is shipped.')}</div>
 <div><a href="https://buckyproducts.github.io/ia-facil/">IA Fácil</a> · <a href="https://buckylittleshop.gumroad.com/">Gumroad</a></div></div></footer>
 <script>
 var M={{es:{{t:"Bucky Little Shop · Imprimibles para fiestas y guías de IA",d:"Kits imprimibles de Halloween, Día de Muertos, Acción de Gracias y Navidad, más guías de IA en español. Descarga instantánea."}},en:{{t:"Bucky Little Shop · Party Printables & AI Guides",d:"Printable Halloween, Día de Muertos, Thanksgiving and Christmas party kits, plus AI guides in Spanish. Instant download."}}}};
@@ -117,3 +117,5 @@ document.querySelectorAll('.lg button').forEach(function(b){{b.onclick=function(
 open('index.html','w').write(H)
 open('robots.txt','w').write(f'User-agent: *\nAllow: /\nSitemap: {U}sitemap.xml\n')
 open('sitemap.xml','w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>{U}</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="es" href="{U}"/><xhtml:link rel="alternate" hreflang="en" href="{U}?lang=en"/></url></urlset>\n')
+
+exec(open('landing.py').read())  # seasonal SEO pages + sitemap
