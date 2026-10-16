@@ -21,6 +21,25 @@ for i,(k,g,p,pr,ne,nn,de,dn,tg) in enumerate(PR):
 <div class="cb"><h3>{t(ne,nn)}</h3><p>{t(de,dn)}</p><div class="row"><span class="price">${pr} <small>USD</small></span><a class="buy" href="{G+g}" rel="noopener">{t('Comprar','Buy now')}</a></div>
 <a class="alt" href="{P+p}" rel="noopener">{t('Pagar con Payhip / Mercado Pago','Pay with Payhip / Mercado Pago')}</a></div></article>\n'''
     ld.append({"@type":"Product","name":nn,"alternateName":ne,"description":dn,"image":U+f"img/{k}.webp","brand":{"@type":"Brand","name":"Bucky Little Shop"},"offers":{"@type":"Offer","price":pr,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":G+g}})
+TAG.update({'free':('Gratis','Free'),'edu':('Educación','Education'),'party':('Fiestas','Parties'),'kids':('Niños','Kids'),'tools':('Plantillas','Templates'),'guide':('Guía','Guide'),'bucky':('Bucky','Bucky'),'family':('Familia · letra grande','Family · large print'),'ana':('Fe','Faith')})
+XP=json.load(open('payhip.json'))
+SEC=[('season','Más de temporada','More seasonal'),('free','Gratis','Free'),('party','Fiestas y eventos','Parties & events'),('kids','Niños y aula','Kids & classroom'),('edu','Niños y aula','Kids & classroom'),('tools','Plantillas y agendas','Templates & planners'),('guide','Guías prácticas','How-to guides'),('bucky','Personaje Bucky','Bucky character'),('family','Familia y letra grande','Family & large print')]
+def pc(o):
+    pr='0' if float(o['pr'])==0 else o['pr']
+    price=t('Gratis','Free') if pr=='0' else f"${pr} <small>USD</small>"
+    ld.append({"@type":"Product","name":o['en'],"alternateName":o['es'],"description":o['den'],"image":U+f"img/{o['k']}.webp","brand":{"@type":"Brand","name":"Ana Hope Shop" if o['c']=='ana' else "Bucky Little Shop"},"offers":{"@type":"Offer","price":pr,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":P+o['p']}})
+    e=html.escape
+    return (f'<article class="card"><div class="ph"><img src="img/{o["k"]}.webp" width="{o["w"]}" height="{o["h"]}" loading="lazy" decoding="async" alt="{e(o["en"])}"><span class="tag">{t(*TAG[o["c"]])}</span></div>\n'
+     f'<div class="cb"><h3>{t(e(o["es"]),e(o["en"]))}</h3><p>{t(e(o["des"]),e(o["den"]))}</p><div class="row"><span class="price">{price}</span><a class="buy" href="{P+o["p"]}" rel="noopener">{t("Obtener" if pr=="0" else "Comprar","Get it" if pr=="0" else "Buy now")}</a></div>\n'
+     f'<span class="alt">{t("Pago con Payhip / Mercado Pago","Checkout via Payhip / Mercado Pago")}</span></div></article>\n')
+xcards='';last=None
+for c,es,en in SEC:
+    items=[o for o in XP if o['c']==c]
+    if not items: continue
+    if (es,en)!=last: xcards+=f'<h3 class="gh">{t(es,en)}</h3>'
+    last=(es,en)
+    xcards+='<div class="grid">'+''.join(pc(o) for o in items)+'</div>'
+acards='<div class="grid">'+''.join(pc(o) for o in XP if o['c']=='ana')+'</div>'
 LD=json.dumps({"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Bucky Little Shop","url":U,"logo":U+"img/logo.webp"}]+ld},ensure_ascii=False)
 FAQ=[('¿Cómo recibo mi archivo?','How do I get my file?','Justo después de pagar recibes un enlace de descarga en pantalla y por correo.','Right after checkout you get a download link on screen and by email.'),
 ('¿Se envía algo físico?','Is anything shipped?','No. Son archivos digitales (PDF). Tú los imprimes en casa o en una papelería.','No. These are digital files (PDF). Print them at home or at a print shop.'),
@@ -58,6 +77,7 @@ h2{{font-size:clamp(24px,3.5vw,34px);margin:0 0 6px}}.sub{{color:var(--mut);marg
 .cb{{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}}.cb h3{{margin:0 0 6px;font-size:18px;line-height:1.25}}.cb p{{margin:0 0 12px;color:var(--mut);font-size:14.5px;flex:1}}
 .row{{display:flex;align-items:center;justify-content:space-between;gap:10px}}.price{{font-size:22px;font-weight:800}}.price small{{font-size:12px;color:var(--mut)}}
 .buy{{background:var(--or);color:#fff;text-decoration:none;font-weight:800;padding:11px 18px;border-radius:12px;min-height:44px;display:inline-flex;align-items:center}}.buy:hover{{background:#d2701d}}
+.gh{{margin:30px 0 14px;font-size:22px}}.ana{{background:#FBF6EA;border-top:6px solid #EAE0F6}}.ana h2{{color:#7E62B0}}.ana .ah{{display:flex;align-items:center;gap:18px;margin-bottom:20px;flex-wrap:wrap}}.ana .ah img{{width:120px;height:auto}}.ana .card{{box-shadow:0 4px 18px rgba(126,98,176,.14)}}.ana .ph{{background:#DCEBF7}}.ana .tag{{color:#7E62B0}}.ana .buy{{background:#7E62B0}}.ana .buy:hover{{background:#6a4f9c}}.ana .price{{color:#4A3F5C}}.ana .alt{{color:#6E9A6A}}
 .alt{{margin-top:10px;font-size:13px;color:var(--mut);text-align:right}}
 .steps{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:s}}.step{{background:#fff;border-radius:16px;padding:20px;border:2px dashed #f0d2ad}}.step b{{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--br);color:#fff;margin-bottom:8px}}.step h3{{margin:0 0 4px}}.step p{{margin:0;color:var(--mut)}}
 .dl{{background:var(--br);color:#fff;border-radius:22px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}}.dl h3{{margin:0 0 4px;color:#ffd9a8}}.dl p{{margin:0;opacity:.92}}
@@ -67,7 +87,7 @@ footer{{background:#2d1d12;color:#f3e3d1;padding:30px 0;margin-top:30px;font-siz
 </style>
 <script type="application/ld+json">{LD}</script></head><body>
 <header><div class="w hd"><a class="brand" href="./"><img src="img/icon-192.png" width="42" height="42" alt="">Bucky Little Shop</a>
-<nav><a class="nl" href="#productos">{t('Productos','Products')}</a><a class="nl" href="#faq">FAQ</a><div class="lg" role="group" aria-label="Idioma / Language"><button data-l="es" type="button">ES</button><button data-l="en" type="button">EN</button></div></nav></div></header>
+<nav><a class="nl" href="#productos">{t('Productos','Products')}</a><a class="nl" href="#ana">Ana Hope</a><a class="nl" href="#faq">FAQ</a><div class="lg" role="group" aria-label="Idioma / Language"><button data-l="es" type="button">ES</button><button data-l="en" type="button">EN</button></div></nav></div></header>
 <main>
 <div class="w hero"><div><h1>{t('Imprimibles para fiestas y guías de IA, listos en minutos','Party printables and AI guides, ready in minutes')}</h1>
 <p>{t('Kits de Halloween, Día de Muertos, Acción de Gracias y Navidad, más guías prácticas de IA en español. Paga, descarga e imprime hoy mismo.','Halloween, Día de Muertos, Thanksgiving and Christmas kits, plus practical AI guides in Spanish. Pay, download and print today.')}</p>
@@ -75,7 +95,8 @@ footer{{background:#2d1d12;color:#f3e3d1;padding:30px 0;margin-top:30px;font-siz
 <div class="badges"><span>⚡ {t('Descarga instantánea','Instant download')}</span><span>🌎 {t('Español + inglés','Spanish + English')}</span><span>🔒 {t('Pago seguro','Secure checkout')}</span></div></div>
 <img src="img/logo.webp" width="400" height="400" alt="Bucky Little Shop"></div>
 <section id="productos"><div class="w"><h2>{t('Productos','Products')}</h2><p class="sub">{t('Primero lo de temporada 🎃💀🦃🎄','Seasonal picks first 🎃💀🦃🎄')}</p><div class="grid">
-{cards}</div></div></section>
+{cards}</div>{xcards}</div></section>
+<section id="ana" class="ana"><div class="w"><div class="ah"><img src="img/ana-logo.webp" width="160" height="160" loading="lazy" alt="Ana Hope Shop"><div><h2>Ana Hope Shop</h2><p class="sub">{t('Oraciones, rosarios y versículos para imprimir, en letra grande.','Prayers, rosaries and Bible verses to print, in large type.')}</p></div></div>{acards}</div></section>
 <section><div class="w"><div class="dl">
 <div><h3>⚡ {t('Descarga instantánea','Instant download')}</h3><p>{t('Recibe tu PDF en segundos, sin esperar envíos.','Get your PDF in seconds, no shipping wait.')}</p></div>
 <div><h3>🖨️ {t('Imprime en casa','Print at home')}</h3><p>{t('Tamaño carta y A4. Imprime cuantas veces quieras para tu evento.','Letter and A4. Print as many as you need for your event.')}</p></div>
