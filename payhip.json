@@ -1,5 +1,29 @@
 [
  {
+  "k": "tarjetas-navidad",
+  "p": "kV1Uf",
+  "pr": "3.99",
+  "es": "Tarjetas navideñas de Bucky",
+  "en": "Bucky Christmas Cards",
+  "des": "12 tarjetas para doblar con mensaje adentro + 16 etiquetas para regalo. ES + EN.",
+  "den": "12 folding cards with message inside + 16 gift tags. EN + ES.",
+  "c": "season",
+  "w": 800,
+  "h": 800
+ },
+ {
+  "k": "reyes-kit",
+  "p": "VEPLY",
+  "pr": "4.99",
+  "es": "Kit Día de Reyes de Bucky",
+  "en": "Bucky Three Kings Day Kit",
+  "des": "Carta a los Reyes, corona, colorear, memorama y más (14 páginas). ES + EN.",
+  "den": "Letter to the Kings, crown, coloring, memory game and more (14 pages).",
+  "c": "season",
+  "w": 800,
+  "h": 800
+ },
+ {
   "k": "combo-posada",
   "p": "2qHnv",
   "pr": "14.49",
@@ -320,6 +344,18 @@
   "des": "10 páginas para colorear con Bucky, con líneas gruesas ideales para niños.",
   "den": "10 printable coloring pages starring Bucky, with thick, kid-friendly lines.",
   "c": "bucky",
+  "w": 800,
+  "h": 800
+ },
+ {
+  "k": "pasatiempos-navidad",
+  "p": "srtKQ",
+  "pr": "4.99",
+  "es": "Pasatiempos navideños en letra grande",
+  "en": "Large Print Christmas Puzzles",
+  "des": "20 sopas de letras + 15 crucigramas con respuestas. ES + EN.",
+  "den": "20 word searches + 15 crosswords with answers. EN + ES.",
+  "c": "family",
   "w": 800,
   "h": 800
  },
