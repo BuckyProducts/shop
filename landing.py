@@ -72,7 +72,7 @@ html_m=page("dia-de-muertos","Ofrenda de Día de Muertos: guía paso a paso + im
  "Ofrenda de Día de Muertos: guía paso a paso + imprimibles",
  "Todo lo que necesitas para poner tu ofrenda en casa o en el salón: qué lleva, qué va en cada nivel, papel picado para imprimir y actividades para niños. Al final encuentras nuestro <b>kit imprimible bilingüe</b> listo para descargar hoy.",
  '<div style="background:#FFF1E2;border:2px dashed #F0932F;border-radius:14px;padding:14px 18px;margin:18px 0"><h2 style="margin-top:0">Lotería de Día de Muertos GRATIS (muestra)</h2><p>2 tablas y las 24 cartas para recortar, con vocabulario en español (la calavera, el cempasúchil, el papel picado…). Ideal para el salón o para jugar en familia. Sin registro.</p><p><a class="btn" href="Loteria-Dia-de-Muertos-GRATIS_Bucky_Carta-Letter.pdf" download>Descargar PDF Carta (Letter)</a> <a class="btn" href="Loteria-Dia-de-Muertos-GRATIS_Bucky_A4.pdf" download>Descargar PDF A4</a></p><p style="font-size:.9rem">¿Quieres las 6 tablas, bingo, sopas de letras y más? Están en los <a href="https://payhip.com/b/Io2Lj">Juegos de clase en español</a>.</p></div>'+mbody,M,mfaq,men,"Guía y kit imprimible para la ofrenda de Día de Muertos:","Día de Muertos")
-X=[("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio de regalos y decoración. El paquete completo al mejor precio.","15.99","bkgnnd","0NkMo"),
+X=[("combo-posada","Combo Posada + Agenda 2027","Kit de posada e intercambio + Agenda 2027 + letanía de regalo. 40 % menos que por separado.","14.49","2qHnv","2qHnv"),("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio de regalos y decoración. El paquete completo al mejor precio.","15.99","bkgnnd","0NkMo"),
    ("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia: lotería, bingo, trivia y más.","9.99","cnexgy","yR2hw"),
    ("bingo","Lotería / Bingo navideño con imágenes","Cartones con dibujos, ideal para niños y adultos.","5.99","lbizh","AQVW1"),
    ("secret-santa","Kit de intercambio de regalos","Tarjetas, listas de deseos, sorteo y etiquetas para tu intercambio.","6.99","mfqlci","PGsBK"),
@@ -141,7 +141,7 @@ html_k=page("calaveritas","Generador de calaveritas literarias GRATIS (con nombr
 html_k=html_k.replace('<div class="cta">','<div class="cta" style="display:none">',1)
 open("calaveritas/index.html","w").write(html_k)
 
-TG=[("thanksgiving","Thanksgiving Printables Kit (EN + ES)","Gratitude cards, games, place cards and table decor. Bilingual, Letter + A4.","7.79","ckmaso","LQBfv"),
+TG=[("combo-gratitud","Gratitude + Christmas Combo (EN + ES)","Thanksgiving kit + 13 Christmas party games. Save 44%.","9.99","9LMt6","9LMt6"),("thanksgiving","Thanksgiving Printables Kit (EN + ES)","Gratitude cards, games, place cards and table decor. Bilingual, Letter + A4.","7.79","ckmaso","LQBfv"),
     ("mega","All Holidays Mega Pack","Thanksgiving, Christmas, Día de Muertos and more in one bundle. Best value.","29","9P4Oc","9P4Oc"),
     ("teachers","Spanish Classroom Games Bundle","Bingo, loterías, word searches and conversation cards for Spanish class.","6.99","Io2Lj","Io2Lj"),
     ("kids-mega","Kids Activity Mega Pack","Mazes, coloring, dot-to-dot and puzzles to keep kids busy.","7.99","Ss82o","Ss82o")]
@@ -154,7 +154,7 @@ html_t=page("thanksgiving-printables","Thanksgiving Printables: Last-Minute Kids
 html_t=html_t.replace('<html lang="es">','<html lang="en">',1)
 for a,b in [("<a href=\"../\">Inicio</a>","<a href=\"../\">Home</a>"),("Compartir por WhatsApp / Share","Share on WhatsApp"),("Compartir por WhatsApp","Share on WhatsApp"),("Imprimibles listos para descargar","Ready-to-download printables"),("Preguntas frecuentes","FAQ"),("Pagar con Payhip / Mercado Pago","Pay with Payhip / Mercado Pago"),("Pago con Payhip / Mercado Pago","Checkout via Payhip / Mercado Pago"),("Comprar / Buy","Buy now"),("Descarga instantánea · Archivos digitales, no se envía nada físico · <a href=\"../\">Ver toda la tienda</a>","Instant download · Digital files, nothing is shipped · <a href=\"../\">See the whole shop</a>")]:html_t=html_t.replace(a,b)
 open("thanksgiving-printables/index.html","w").write(html_t)
-LT=[("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia.","9.99","cnexgy","yR2hw"),
+LT=[("combo-posada","Combo Posada + Agenda 2027","Kit de posada e intercambio + Agenda 2027 + letanía de regalo. 40 % menos que por separado.","14.49","2qHnv","2qHnv"),("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia.","9.99","cnexgy","yR2hw"),
     ("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio y decoración al mejor precio.","15.99","bkgnnd","0NkMo"),
     ("bingo","Lotería / Bingo navideño","Cartones con dibujos para niños y adultos.","5.99","lbizh","AQVW1"),
     ("secret-santa","Kit de intercambio de regalos","Tarjetas, listas de deseos y etiquetas.","6.99","mfqlci","PGsBK")]
@@ -178,7 +178,7 @@ html_s=page("ideas-intercambio-regalos","Ideas para intercambio de regalos de $2
  "¿Te tocó intercambio y no sabes qué regalar? Aquí tienes <b>ideas por monto</b>, regalos para la oficina, los maestros y los niños, y las reglas para que el intercambio salga perfecto.",
  open("ss_body.html").read(),SS,sfaq,"<h2>Secret Santa gift ideas by price (English)</h2><p>Gift ideas for a Secret Santa exchange at about $10, $15 and $25 USD: mugs with cocoa, fun socks, candles, tumblers, coffee kits, spa kits, small speakers, LED lights and puzzles. They're generic ideas with no affiliate links. Our printable Secret Santa kit includes draw cards, wish lists and gift tags in English and Spanish.</p>","Ideas para intercambio de regalos por precio:","Ideas para intercambio de regalos")
 open("ideas-intercambio-regalos/index.html","w").write(html_s)
-AD=[("bundle","Paquete fiesta navideña (completo)","Todo el paquete de Navidad de una vez: juegos, intercambio y decoración.","15.99","bkgnnd","0NkMo"),
+AD=[("devocional-adviento","Devocional de Adviento de Ana Hope (ES + EN)","24 devociones de una página: versículo (RV1909 / KJV), reflexión, oración y acción. Carta y A4.","4.99","rsbKI","rsbKI"),("bundle","Paquete fiesta navideña (completo)","Todo el paquete de Navidad de una vez: juegos, intercambio y decoración.","15.99","bkgnnd","0NkMo"),
     ("bingo","Lotería / Bingo navideño","Cartones con dibujos para niños y adultos.","5.99","lbizh","AQVW1"),
     ("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia.","9.99","cnexgy","yR2hw"),
     ("secret-santa","Kit de intercambio de regalos","Tarjetas, listas de deseos y etiquetas.","6.99","mfqlci","PGsBK")]

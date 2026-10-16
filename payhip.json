@@ -1,5 +1,29 @@
 [
  {
+  "k": "combo-posada",
+  "p": "2qHnv",
+  "pr": "14.49",
+  "es": "Combo Posada + Agenda 2027",
+  "en": "Posada + 2027 Planner Combo",
+  "des": "Kit de posada e intercambio + Agenda 2027 + letanía de regalo. 40 % menos.",
+  "den": "Posada & gift exchange kit + 2027 planner + bonus lyrics sheet. 40% off.",
+  "c": "season",
+  "w": 800,
+  "h": 800
+ },
+ {
+  "k": "combo-gratitud",
+  "p": "9LMt6",
+  "pr": "9.99",
+  "es": "Combo Gratitud + Navidad",
+  "en": "Gratitude + Christmas Combo",
+  "des": "Kit de Acción de Gracias + 13 juegos navideños. 44 % menos.",
+  "den": "Thanksgiving kit + 13 Christmas games. 44% off.",
+  "c": "season",
+  "w": 800,
+  "h": 800
+ },
+ {
   "k": "treat-toppers",
   "p": "8p3sg",
   "pr": "2.49",
@@ -344,6 +368,18 @@
   "des": "Todo lo importante, en un solo lugar.",
   "den": "Everything important, in one place.",
   "c": "family",
+  "w": 800,
+  "h": 800
+ },
+ {
+  "k": "devocional-adviento",
+  "p": "rsbKI",
+  "pr": "4.99",
+  "es": "Devocional de Adviento: 24 días",
+  "en": "Advent Devotional: 24 Days",
+  "des": "Un versículo (RV1909), reflexión, oración y acción para cada día del 1 al 24 de diciembre.",
+  "den": "A KJV verse, reflection, prayer and action for each day, Dec 1–24.",
+  "c": "ana",
   "w": 800,
   "h": 800
  },
