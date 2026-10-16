@@ -88,7 +88,7 @@ h2{{font-size:clamp(24px,3.5vw,34px);margin:0 0 6px}}.sub{{color:var(--mut);marg
 details{{background:#fff;border-radius:14px;padding:14px 18px;margin-bottom:10px}}summary{{cursor:pointer;font-weight:700}}details p{{margin:10px 0 0;color:var(--mut)}}
 footer{{background:#2d1d12;color:#f3e3d1;padding:30px 0;margin-top:30px;font-size:14px}}footer a{{color:#ffd9a8}}.ft{{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}}
 :focus-visible{{outline:3px solid var(--or);outline-offset:2px}}
-</style>
+.alt a,a.alt,footer a,.crumb a{{display:inline-block;padding:6px 0;min-height:24px}}</style>
 <script type="application/ld+json">{LD}</script></head><body>
 <header><div class="w hd"><a class="brand" href="./"><img src="img/icon-192.png" width="42" height="42" alt="">Bucky Little Shop</a>
 <nav><a class="nl" href="#productos">{t('Productos','Products')}</a><a class="nl" href="#ana">Ana Hope</a><a class="nl" href="#faq">FAQ</a><div class="lg" role="group" aria-label="Idioma / Language"><button data-l="es" type="button">ES</button><button data-l="en" type="button">EN</button></div></nav></div></header>

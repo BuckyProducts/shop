@@ -25,7 +25,7 @@ def page(slug,title,desc,h1,lead,body_es,cards,faq,en_html,wa_text,crumb):
   return f'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="article"><meta property="og:url" content="{url}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:image" content="{U}img/{cards[0][0]}.webp"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../favicon.ico"><meta name="theme-color" content="#7a4a26"><style>{CSS}</style>
+<link rel="icon" href="../favicon.ico"><meta name="theme-color" content="#7a4a26"><style>{CSS}.alt,a.alt,footer a,.crumb a,p>a:first-child{{display:inline-block;padding:6px 0;min-height:24px}}</style>
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script></head><body>
 <header><a href="../"><img src="../img/logo.webp" alt="Bucky Little Shop" width="40" height="40"></a><a href="../">Bucky Little Shop</a></header>
 <main><p><a href="../">Inicio</a> › {E(crumb)}</p><h1>{E(h1)}</h1><p class="lead">{lead}</p>
