@@ -100,6 +100,43 @@ html_x=page("posadas-navidad","Juegos para posada y fiesta navideña + intercamb
  "Juegos para posada y fiesta navideña: guía + imprimibles",
  "Organiza tu posada o la fiesta de Navidad de la oficina sin estrés: pasos, juegos, reglas del intercambio de regalos y un checklist. Abajo encuentras nuestros <b>juegos e imprimibles navideños</b> listos para descargar.",
  xbody,X,xfaq,xen,"Juegos e imprimibles para tu posada o fiesta navideña:","Posadas y Navidad")
+
+C=[("planner","Agenda 2027 digital e imprimible","Agenda completa 2027: vista anual, mensual, semanal, metas y hábitos. Inicio lunes o domingo, digital con hipervínculos e imprimible.","7.99","becqk","becqk"),
+   ("sheets","Plantillas de presupuesto, menú y boda","Organiza tu dinero y tu menú en 2027 con hojas de cálculo listas.","9.99","063kf","063kf"),
+   ("organizador-hogar","Organizador del Hogar Rellenable","Carpeta para organizar la casa: limpieza, menús, pagos y contactos.","6.99","FWMd4","FWMd4")]
+cbody='''<h2>Descarga gratis el calendario 2027</h2>
+<p><img src="preview.webp" width="510" height="660" alt="Calendario 2027 imprimible gratis en una hoja" style="max-width:100%;height:auto;border:1px solid #ecd9c3;border-radius:10px"></p>
+<p><a class="btn" href="Calendario-2027-Imprimible-Gratis_Bucky_Carta-Letter.pdf" download>Descargar PDF tamaño Carta (Letter)</a> <a class="btn" href="Calendario-2027-Imprimible-Gratis_Bucky_A4.pdf" download>Descargar PDF tamaño A4</a></p>
+<p>Gratis, sin registro. Es una sola hoja con los 12 meses, la semana empieza en domingo y vienen marcados los días festivos y las fechas especiales de México. Imprímelo en casa o en la papelería; para uso personal o en el salón.</p>
+<h2>Días festivos de México en 2027</h2>
+<ul><li><b>1 de enero:</b> Año Nuevo</li><li><b>6 de enero:</b> Día de Reyes</li><li><b>1 de febrero:</b> Día de la Constitución (descanso oficial, primer lunes de febrero)</li><li><b>15 de marzo:</b> Natalicio de Benito Juárez (descanso oficial, tercer lunes de marzo)</li><li><b>30 de abril:</b> Día del Niño</li><li><b>1 de mayo:</b> Día del Trabajo</li><li><b>10 de mayo:</b> Día de las Madres</li><li><b>16 de septiembre:</b> Día de la Independencia</li><li><b>2 de noviembre:</b> Día de Muertos</li><li><b>15 de noviembre:</b> Revolución Mexicana (descanso oficial, tercer lunes de noviembre)</li><li><b>12 de diciembre:</b> Día de la Virgen de Guadalupe</li><li><b>25 de diciembre:</b> Navidad</li></ul>
+<h2>¿Necesitas más que un calendario?</h2>
+<p>La <a href="https://payhip.com/b/becqk">Agenda 2027 de Bucky</a> trae vista anual y mensual, páginas semanales, metas, hábitos, finanzas y notas. Viene en versión digital con hipervínculos (GoodNotes, Notability, Xodo) y en versión imprimible, con inicio en lunes o en domingo, por $7.99 USD.</p>'''
+cfaq=[("¿El calendario 2027 es gratis?","Sí, es 100 % gratis y sin registro. Descarga el PDF en tamaño Carta o A4 e imprime todas las copias que necesites para uso personal o en el salón."),
+("¿En qué día empieza la semana?","El calendario gratis empieza en domingo. La Agenda 2027 completa viene con inicio en lunes y en domingo."),
+("¿Trae los días festivos de México?","Sí, vienen marcados los días festivos oficiales y las fechas especiales más importantes de México en 2027."),
+("¿Cuál es la diferencia con la Agenda 2027?","El calendario es una sola hoja con el año completo. La agenda es un planificador completo con páginas mensuales, semanales, metas y hábitos, en versión digital e imprimible.")]
+cen='''<h2>Free printable 2027 calendar (English)</h2><p>Download our <b>free one-page 2027 calendar</b> in US Letter or A4 with no signup. It shows all 12 months with bilingual Spanish/English month names, the week starts on Sunday, and Mexican holidays are marked. Need more? The <a href="https://payhip.com/b/becqk">Bucky 2027 Planner</a> ($7.99) includes monthly and weekly pages, goals and habit trackers, in a hyperlinked digital version and a printable one.</p>'''
+html_c=page("calendario-2027","Calendario 2027 para imprimir GRATIS (PDF, una hoja) | Bucky",
+ "Descarga gratis el calendario 2027 para imprimir en una sola hoja, tamaño Carta y A4, con los días festivos de México. Sin registro. También: Agenda 2027 digital e imprimible.",
+ "Calendario 2027 para imprimir gratis (PDF)",
+ "Un calendario 2027 bonito, en una sola hoja, con los días festivos de México. <b>Descárgalo gratis</b> en tamaño Carta o A4, sin registro.",
+ cbody,C,cfaq,cen,"Calendario 2027 gratis para imprimir:","Calendario 2027")
+html_c=html_c.replace('<div class="cta">','<div class="cta" style="display:none">',1)
+open("calendario-2027/index.html","w").write(html_c)
+
+kfaq=[("¿Qué es una calaverita literaria?","Es un verso rimado y divertido que se escribe en Día de Muertos, donde la Muerte viene por una persona viva. Es una tradición mexicana."),
+("¿Puedo usar estas calaveritas para la tarea?","Sí, úsalas como inspiración. Te recomendamos cambiar algunos versos y agregar detalles de la persona para que sea tuya."),
+("¿Cuántos versos debe tener una calaverita?","No hay una regla fija; lo común son 2 a 4 estrofas de 4 versos con rima."),
+("¿El generador es gratis?","Sí, es gratis y funciona en el celular. Puedes copiar, imprimir o mandar tu calaverita por WhatsApp.")]
+ken='''<h2>Calaveritas literarias generator (English)</h2><p>A <i>calaverita literaria</i> is a short, funny rhyming poem written for Día de Muertos (Day of the Dead), in which La Catrina comes for a living person who escapes in some witty way. Type a name, pick who it's for, and get a Spanish calaverita you can copy, print or share. It's great for Spanish classes. For the classroom ofrenda, see our bilingual Day of the Dead kit below.</p>'''
+html_k=page("calaveritas","Generador de calaveritas literarias GRATIS (con nombre) | Bucky",
+ "Crea una calaverita literaria con el nombre que quieras: para tu maestra, mamá, amigos o compañeros. Gratis, cópiala, imprímela o mándala por WhatsApp. Cómo escribir tu calaverita paso a paso.",
+ "Generador de calaveritas literarias con nombre",
+ "Escribe un nombre, elige para quién es y obtén una <b>calaverita literaria</b> divertida y respetuosa para Día de Muertos. Puedes copiarla, imprimirla o mandarla por WhatsApp.",
+ open("calav_body.html").read(),M,kfaq,ken,"Haz una calaverita literaria con el nombre que quieras:","Calaveritas literarias")
+html_k=html_k.replace('<div class="cta">','<div class="cta" style="display:none">',1)
+open("calaveritas/index.html","w").write(html_k)
 open("dia-de-muertos/index.html","w").write(html_m);open("posadas-navidad/index.html","w").write(html_x)
-sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>'+U+'</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="es" href="'+U+'"/><xhtml:link rel="alternate" hreflang="en" href="'+U+'?lang=en"/></url>'+"".join(f'<url><loc>{U}{s}/</loc><lastmod>2026-10-16</lastmod></url>' for s in ("dia-de-muertos","posadas-navidad"))+'</urlset>\n'
+sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>'+U+'</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="es" href="'+U+'"/><xhtml:link rel="alternate" hreflang="en" href="'+U+'?lang=en"/></url>'+"".join(f'<url><loc>{U}{s}/</loc><lastmod>2026-10-16</lastmod></url>' for s in ("dia-de-muertos","posadas-navidad","calendario-2027","calaveritas"))+'</urlset>\n'
 open("sitemap.xml","w").write(sm);print("ok")
