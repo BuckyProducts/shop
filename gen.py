@@ -13,13 +13,17 @@ PR=[('halloween','hftpjb','pnztC','7.79','Kit de fiesta de Halloween','Halloween
 ('bots','ywdtt','ygTLV','15','Manual para dirigir bots de IA','AI Bot Manager Playbook','Guía práctica + 28 plantillas para trabajar con agentes de IA.','Practical guide + 28 templates for working with AI agents.','ai')]
 TAG={'season':('Temporada','Seasonal'),'xmas':('Navidad','Christmas'),'ai':('IA','AI')}
 def t(es,en): return f'<span data-es>{es}</span><span data-en>{en}</span>'
+import urllib.parse as _up
+def wa(es,en,url,brand="Bucky Little Shop"):
+    txt=f"¡Mira esto! {es} 👉 {url}\n(EN) Check this out: {en} 👉 {url}\nDe/From {brand}"
+    return f'<a class="wa" href="https://wa.me/?text={_up.quote(txt)}" target="_blank" rel="noopener" aria-label="WhatsApp">{t("Compartir por WhatsApp","Share on WhatsApp")}</a>'
 cards=''
 ld=[]
 for i,(k,g,p,pr,ne,nn,de,dn,tg) in enumerate(PR):
     lazy='eager' if i<2 else 'lazy'
     cards+=f'''<article class="card"><div class="ph"><img src="img/{k}.webp" width="800" height="800" loading="{lazy}" decoding="async" alt="{html.escape(nn)}"><span class="tag">{t(*TAG[tg])}</span></div>
 <div class="cb"><h3>{t(ne,nn)}</h3><p>{t(de,dn)}</p><div class="row"><span class="price">${pr} <small>USD</small></span><a class="buy" href="{G+g}" rel="noopener">{t('Comprar','Buy now')}</a></div>
-<a class="alt" href="{P+p}" rel="noopener">{t('Pagar con Payhip / Mercado Pago','Pay with Payhip / Mercado Pago')}</a></div></article>\n'''
+<a class="alt" href="{P+p}" rel="noopener">{t('Pagar con Payhip / Mercado Pago','Pay with Payhip / Mercado Pago')}</a>{wa(ne,nn,G+g)}</div></article>\n'''
     ld.append({"@type":"Product","name":nn,"alternateName":ne,"description":dn,"image":U+f"img/{k}.webp","brand":{"@type":"Brand","name":"Bucky Little Shop"},"offers":{"@type":"Offer","price":pr,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":G+g}})
 TAG.update({'free':('Gratis','Free'),'edu':('Educación','Education'),'party':('Fiestas','Parties'),'kids':('Niños','Kids'),'tools':('Plantillas','Templates'),'guide':('Guía','Guide'),'bucky':('Bucky','Bucky'),'family':('Familia · letra grande','Family · large print'),'ana':('Fe','Faith')})
 XP=json.load(open('payhip.json'))
@@ -31,7 +35,7 @@ def pc(o):
     e=html.escape
     return (f'<article class="card"><div class="ph"><img src="img/{o["k"]}.webp" width="{o["w"]}" height="{o["h"]}" loading="lazy" decoding="async" alt="{e(o["en"])}"><span class="tag">{t(*TAG[o["c"]])}</span></div>\n'
      f'<div class="cb"><h3>{t(e(o["es"]),e(o["en"]))}</h3><p>{t(e(o["des"]),e(o["den"]))}</p><div class="row"><span class="price">{price}</span><a class="buy" href="{P+o["p"]}" rel="noopener">{t("Obtener" if pr=="0" else "Comprar","Get it" if pr=="0" else "Buy now")}</a></div>\n'
-     f'<span class="alt">{t("Pago con Payhip / Mercado Pago","Checkout via Payhip / Mercado Pago")}</span></div></article>\n')
+     f'<span class="alt">{t("Pago con Payhip / Mercado Pago","Checkout via Payhip / Mercado Pago")}</span>'+wa(o['es'],o['en'],P+o['p'],'Ana Hope Shop' if o['c']=='ana' else 'Bucky Little Shop')+f'</div></article>\n')
 xcards='';last=None
 for c,es,en in SEC:
     items=[o for o in XP if o['c']==c]
@@ -78,7 +82,7 @@ h2{{font-size:clamp(24px,3.5vw,34px);margin:0 0 6px}}.sub{{color:var(--mut);marg
 .row{{display:flex;align-items:center;justify-content:space-between;gap:10px}}.price{{font-size:22px;font-weight:800}}.price small{{font-size:12px;color:var(--mut)}}
 .buy{{background:var(--or);color:#fff;text-decoration:none;font-weight:800;padding:11px 18px;border-radius:12px;min-height:44px;display:inline-flex;align-items:center}}.buy:hover{{background:#d2701d}}
 .gh{{margin:30px 0 14px;font-size:22px}}.ana{{background:#FBF6EA;border-top:6px solid #EAE0F6}}.ana h2{{color:#7E62B0}}.ana .ah{{display:flex;align-items:center;gap:18px;margin-bottom:20px;flex-wrap:wrap}}.ana .ah img{{width:120px;height:auto}}.ana .card{{box-shadow:0 4px 18px rgba(126,98,176,.14)}}.ana .ph{{background:#DCEBF7}}.ana .tag{{color:#7E62B0}}.ana .buy{{background:#7E62B0}}.ana .buy:hover{{background:#6a4f9c}}.ana .price{{color:#4A3F5C}}.ana .alt{{color:#6E9A6A}}
-.alt{{margin-top:10px;font-size:13px;color:var(--mut);text-align:right}}
+.alt{{margin-top:10px;font-size:13px;color:var(--mut);text-align:right}}.wa{{display:block;margin-top:8px;text-align:center;background:#25D366;color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:8px 12px;border-radius:12px}}.wa:hover{{background:#1da851}}
 .steps{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:s}}.step{{background:#fff;border-radius:16px;padding:20px;border:2px dashed #f0d2ad}}.step b{{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--br);color:#fff;margin-bottom:8px}}.step h3{{margin:0 0 4px}}.step p{{margin:0;color:var(--mut)}}
 .dl{{background:var(--br);color:#fff;border-radius:22px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}}.dl h3{{margin:0 0 4px;color:#ffd9a8}}.dl p{{margin:0;opacity:.92}}
 details{{background:#fff;border-radius:14px;padding:14px 18px;margin-bottom:10px}}summary{{cursor:pointer;font-weight:700}}details p{{margin:10px 0 0;color:var(--mut)}}
@@ -107,7 +111,7 @@ footer{{background:#2d1d12;color:#f3e3d1;padding:30px 0;margin-top:30px;font-siz
 <div class="step"><b>3</b><h3>{t('Descarga e imprime','Download & print')}</h3><p>{t('Tu enlace llega al instante y a tu correo.','Your link arrives instantly and by email.')}</p></div></div></div></section>
 <section id="faq"><div class="w"><h2>{t('Preguntas frecuentes','FAQ')}</h2><p class="sub"></p>{faq}</div></section>
 </main>
-<footer><div class="w ft"><div><a href="dia-de-muertos/">Ofrenda de Día de Muertos</a> · <a href="posadas-navidad/">Juegos para posada y Navidad</a> · <a href="calendario-2027/">Calendario 2027 gratis</a> · <a href="calaveritas/">Generador de calaveritas</a><br><strong>Bucky Little Shop</strong> · © 2026 Bucky Products<br>{t('Productos digitales. No se envía nada físico.','Digital products. Nothing is shipped.')}</div>
+<footer><div class="w ft"><div><a href="dia-de-muertos/">Ofrenda de Día de Muertos</a> · <a href="posadas-navidad/">Juegos para posada y Navidad</a> · <a href="calendario-2027/">Calendario 2027 gratis</a> · <a href="calaveritas/">Generador de calaveritas</a> · <a href="letania-posadas/">Letra para pedir posada</a> · <a href="thanksgiving-printables/">Thanksgiving printables</a><br><strong>Bucky Little Shop</strong> · © 2026 Bucky Products<br>{t('Productos digitales. No se envía nada físico.','Digital products. Nothing is shipped.')}</div>
 <div><a href="https://buckyproducts.github.io/ia-facil/">IA Fácil</a> · <a href="https://buckylittleshop.gumroad.com/">Gumroad</a></div></div></footer>
 <script>
 var M={{es:{{t:"Bucky Little Shop · Imprimibles para fiestas y guías de IA",d:"Kits imprimibles de Halloween, Día de Muertos, Acción de Gracias y Navidad, más guías de IA en español. Descarga instantánea."}},en:{{t:"Bucky Little Shop · Party Printables & AI Guides",d:"Printable Halloween, Día de Muertos, Thanksgiving and Christmas party kits, plus AI guides in Spanish. Instant download."}}}};

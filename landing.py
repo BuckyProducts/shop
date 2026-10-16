@@ -10,8 +10,11 @@ main{max-width:860px;margin:0 auto;padding:20px}h1{font-size:2rem;line-height:1.
 .alt{display:block;font-size:.85rem;margin-top:4px}.price{font-weight:800;margin-right:8px}ol li,ul li{margin:.3em 0}details{background:#fff;border:1px solid #ecd9c3;border-radius:10px;padding:10px 14px;margin:8px 0}summary{font-weight:700;cursor:pointer}
 .en{background:#f3ebe1;border-radius:14px;padding:4px 20px 14px;margin-top:30px}footer{text-align:center;padding:30px;font-size:.9rem;color:#7a5a40}.wa{background:#25D366}'''
 def card(k,title,desc,price,g,p):
+  import urllib.parse as up
+  link=(G+g) if g!=p else (P+p)
+  wa='https://wa.me/?text='+up.quote(f'¡Mira esto! {title} 👉 {link}\n(EN) Check this out 👉 {link}\nDe/From Bucky Little Shop')
   return f'''<div class="card"><img src="../img/{k}.webp" width="800" height="800" loading="lazy" alt="{E(title)}"><div><h3>{E(title)}</h3><p>{E(desc)}</p><span class="price">${price} USD</span>
-'''+(f'<a class="btn" href="{G+g}" rel="noopener">Comprar / Buy</a><a class="alt" href="{P+p}" rel="noopener">Pagar con Payhip / Mercado Pago</a>' if g!=p else f'<a class="btn" href="{P+p}" rel="noopener">Comprar / Buy</a><span class="alt">Pago con Payhip / Mercado Pago</span>')+'</div></div>'
+'''+(f'<a class="btn" href="{G+g}" rel="noopener">Comprar / Buy</a><a class="alt" href="{P+p}" rel="noopener">Pagar con Payhip / Mercado Pago</a>' if g!=p else f'<a class="btn" href="{P+p}" rel="noopener">Comprar / Buy</a><span class="alt">Pago con Payhip / Mercado Pago</span>')+f'<a class="btn wa" href="{wa}" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:8px">Compartir por WhatsApp / Share</a></div></div>'
 def page(slug,title,desc,h1,lead,body_es,cards,faq,en_html,wa_text,crumb):
   url=U+slug+'/'
   ld={"@context":"https://schema.org","@graph":[
@@ -137,6 +140,31 @@ html_k=page("calaveritas","Generador de calaveritas literarias GRATIS (con nombr
  open("calav_body.html").read(),M,kfaq,ken,"Haz una calaverita literaria con el nombre que quieras:","Calaveritas literarias")
 html_k=html_k.replace('<div class="cta">','<div class="cta" style="display:none">',1)
 open("calaveritas/index.html","w").write(html_k)
+
+TG=[("thanksgiving","Thanksgiving Printables Kit (EN + ES)","Gratitude cards, games, place cards and table decor. Bilingual, Letter + A4.","7.79","ckmaso","LQBfv"),
+    ("mega","All Holidays Mega Pack","Thanksgiving, Christmas, Día de Muertos and more in one bundle. Best value.","29","9P4Oc","9P4Oc"),
+    ("teachers","Spanish Classroom Games Bundle","Bingo, loterías, word searches and conversation cards for Spanish class.","6.99","Io2Lj","Io2Lj"),
+    ("kids-mega","Kids Activity Mega Pack","Mazes, coloring, dot-to-dot and puzzles to keep kids busy.","7.99","Ss82o","Ss82o")]
+tfaq=[("When is Thanksgiving 2026?","Thanksgiving 2026 is on Thursday, November 26."),("How do I get the files?","Right after checkout you get a download link on screen and by email. Print at home or at a print shop. Nothing is shipped."),("Is it in Spanish too?","Yes. The kit includes English and Spanish versions, great for bilingual families and Spanish classes."),("Can I use it in my classroom?","Yes, the license covers personal and single-classroom use.")]
+html_t=page("thanksgiving-printables","Thanksgiving Printables: Last-Minute Kids Activities, Gratitude Cards & Table Decor | Bucky",
+ "Instant-download Thanksgiving printables for kids and classrooms: gratitude cards, games, place cards and table decor, in English and Spanish. Print at home today.",
+ "Last-minute Thanksgiving printables for kids & classrooms",
+ "Gratitude cards, games and table decor you can <b>download and print today</b>, in English and Spanish, for home or the classroom.",
+ open("tg_body.html").read(),TG,tfaq,"<h2>Acción de Gracias (español)</h2><p>Kit imprimible de Acción de Gracias con tarjetas de gratitud, juegos y decoración, en español e inglés. Descarga instantánea.</p>","Thanksgiving printables for kids & classrooms:","Thanksgiving")
+html_t=html_t.replace('<html lang="es">','<html lang="en">',1)
+open("thanksgiving-printables/index.html","w").write(html_t)
+LT=[("games","Juegos para posada y fiesta navideña","Juegos imprimibles para posadas, oficina o familia.","9.99","cnexgy","yR2hw"),
+    ("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio y decoración al mejor precio.","15.99","bkgnnd","0NkMo"),
+    ("bingo","Lotería / Bingo navideño","Cartones con dibujos para niños y adultos.","5.99","lbizh","AQVW1"),
+    ("secret-santa","Kit de intercambio de regalos","Tarjetas, listas de deseos y etiquetas.","6.99","mfqlci","PGsBK")]
+lfaq=[("¿Cuándo se pide posada?","En las posadas, del 16 al 24 de diciembre, normalmente al inicio de la fiesta y antes de la piñata."),("¿Quién canta cada parte?","Los peregrinos (afuera, con velitas) piden posada y los posaderos (adentro) responden. Al final todos cantan juntos “Entren, santos peregrinos”."),("¿Puedo imprimir la letra?","Sí, usa el botón “Imprimir la letra”. Se imprime solo la letra, sin menús."),("¿La letra es la misma en todo México?","Hay variantes regionales en algunos versos; aquí está una de las versiones tradicionales más cantadas.")]
+html_l=page("letania-posadas","Letra para pedir posada completa (para imprimir) + cómo se canta | Bucky",
+ "Letra completa para pedir posada: versos de peregrinos y posaderos, “Entren, santos peregrinos” y cómo se canta paso a paso. Lista para imprimir gratis.",
+ "Letra para pedir posada (completa y para imprimir)",
+ "La letra tradicional para pedir posada, con los versos de <b>afuera</b> y de <b>adentro</b>, lista para imprimir y repartir. Abajo encuentras juegos imprimibles para seguir la fiesta.",
+ open("lt_body.html").read(),LT,lfaq,"<h2>Las Posadas song lyrics (English)</h2><p>These are the traditional Spanish lyrics for <i>pedir posada</i>, the call-and-response song of Mexico's Las Posadas (Dec 16–24). Pilgrims sing outside and innkeepers answer from inside, and everyone sings together when the door opens. Print them for your Spanish class or family celebration, and see our bilingual Christmas party games below.</p>","Letra para pedir posada, lista para imprimir:","Letra para pedir posada")
+html_l=html_l.replace('<div class="cta">','<div class="cta" style="display:none">',1)
+open("letania-posadas/index.html","w").write(html_l)
 open("dia-de-muertos/index.html","w").write(html_m);open("posadas-navidad/index.html","w").write(html_x)
-sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>'+U+'</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="es" href="'+U+'"/><xhtml:link rel="alternate" hreflang="en" href="'+U+'?lang=en"/></url>'+"".join(f'<url><loc>{U}{s}/</loc><lastmod>2026-10-16</lastmod></url>' for s in ("dia-de-muertos","posadas-navidad","calendario-2027","calaveritas"))+'</urlset>\n'
+sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>'+U+'</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="es" href="'+U+'"/><xhtml:link rel="alternate" hreflang="en" href="'+U+'?lang=en"/></url>'+"".join(f'<url><loc>{U}{s}/</loc><lastmod>2026-10-16</lastmod></url>' for s in ("dia-de-muertos","posadas-navidad","calendario-2027","calaveritas","thanksgiving-printables","letania-posadas"))+'</urlset>\n'
 open("sitemap.xml","w").write(sm);print("ok")
