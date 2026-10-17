@@ -38,7 +38,7 @@ def page(slug,title,desc,h1,lead,body_es,cards,faq,en_html,wa_text,crumb):
 <footer>© 2026 Bucky Little Shop · Descarga instantánea · Archivos digitales, no se envía nada físico · <a href="../">Ver toda la tienda</a></footer></body></html>'''
 
 M=[("muertos","Kit de Día de Muertos (ES + EN)","Papel picado, ofrenda, calaveritas para colorear, juegos y actividades para casa o el salón.","10.49","ypkit","OA4gi"),
-   ("mega","Mega Paquete de Fiestas","Todas las fiestas en un solo paquete: Muertos, Acción de Gracias, Navidad y más. El mejor precio.","29","9P4Oc","9P4Oc"),
+   ("mega","Mega Paquete de Fiestas","Todas las fiestas en un solo paquete: Muertos, Acción de Gracias, Navidad y más. El mejor precio.","29","oypqoh","9P4Oc"),
    ("kids-mega","Mega Paquete de Actividades para Niños","Laberintos, sopas de letras, para colorear y más, para tener a los niños ocupados.","7.99","Ss82o","Ss82o"),
    ("spanish","Paquete para aprender español / inglés","Vocabulario y actividades bilingües para el salón de clases.","6.99","F1aOK","F1aOK")]
 # payhip-only items: point both buttons to payhip
@@ -142,7 +142,7 @@ html_k=html_k.replace('<div class="cta">','<div class="cta" style="display:none"
 open("calaveritas/index.html","w").write(html_k)
 
 TG=[("combo-gratitud","Gratitude + Christmas Combo (EN + ES)","Thanksgiving kit + 13 Christmas party games. Save 44%.","9.99","9LMt6","9LMt6"),("thanksgiving","Thanksgiving Printables Kit (EN + ES)","Gratitude cards, games, place cards and table decor. Bilingual, Letter + A4.","7.79","ckmaso","LQBfv"),
-    ("mega","All Holidays Mega Pack","Thanksgiving, Christmas, Día de Muertos and more in one bundle. Best value.","29","9P4Oc","9P4Oc"),
+    ("mega","All Holidays Mega Pack","Thanksgiving, Christmas, Día de Muertos and more in one bundle. Best value.","29","oypqoh","9P4Oc"),
     ("teachers","Spanish Classroom Games Bundle","Bingo, loterías, word searches and conversation cards for Spanish class.","6.99","Io2Lj","Io2Lj"),
     ("kids-mega","Kids Activity Mega Pack","Mazes, coloring, dot-to-dot and puzzles to keep kids busy.","7.99","Ss82o","Ss82o")]
 tfaq=[("When is Thanksgiving 2026?","Thanksgiving 2026 is on Thursday, November 26."),("How do I get the files?","Right after checkout you get a download link on screen and by email. Print at home or at a print shop. Nothing is shipped."),("Is it in Spanish too?","Yes. The kit includes English and Spanish versions, great for bilingual families and Spanish classes."),("Can I use it in my classroom?","Yes, the license covers personal and single-classroom use.")]
