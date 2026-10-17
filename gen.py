@@ -31,11 +31,11 @@ SEC=[('season','Más de temporada','More seasonal'),('free','Gratis','Free'),('p
 def pc(o):
     pr='0' if float(o['pr'])==0 else o['pr']
     price=t('Gratis','Free') if pr=='0' else f"${pr} <small>USD</small>"
-    ld.append({"@type":"Product","name":o['en'],"alternateName":o['es'],"description":o['den'],"image":U+f"img/{o['k']}.webp","brand":{"@type":"Brand","name":"Ana Hope Shop" if o['c']=='ana' else "Bucky Little Shop"},"offers":{"@type":"Offer","price":pr,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":P+o['p']}})
+    ld.append({"@type":"Product","name":o['en'],"alternateName":o['es'],"description":o['den'],"image":U+f"img/{o['k']}.webp","brand":{"@type":"Brand","name":"Ana Hope Shop" if o['c']=='ana' else "Bucky Little Shop"},"offers":{"@type":"Offer","price":pr,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":(G+o['g']) if o.get('g') else P+o['p']}})
     e=html.escape
     return (f'<article class="card"><div class="ph"><img src="img/{o["k"]}.webp" width="{o["w"]}" height="{o["h"]}" loading="lazy" decoding="async" alt="{e(o["en"])}"><span class="tag">{t(*TAG[o["c"]])}</span></div>\n'
-     f'<div class="cb"><h3>{t(e(o["es"]),e(o["en"]))}</h3><p>{t(e(o["des"]),e(o["den"]))}</p><div class="row"><span class="price">{price}</span><a class="buy" href="{P+o["p"]}" rel="noopener">{t("Obtener" if pr=="0" else "Comprar","Get it" if pr=="0" else "Buy now")}</a></div>\n'
-     f'<span class="alt">{t("Pago con Payhip / Mercado Pago","Checkout via Payhip / Mercado Pago")}</span>'+wa(o['es'],o['en'],P+o['p'],'Ana Hope Shop' if o['c']=='ana' else 'Bucky Little Shop')+f'</div></article>\n')
+     f'<div class="cb"><h3>{t(e(o["es"]),e(o["en"]))}</h3><p>{t(e(o["des"]),e(o["den"]))}</p><div class="row"><span class="price">{price}</span><a class="buy" href="{(G+o["g"]) if o.get("g") else P+o["p"]}" rel="noopener">{t("Obtener" if pr=="0" else "Comprar","Get it" if pr=="0" else "Buy now")}</a></div>\n'+
+     (f'<a class="alt" href="{P+o["p"]}" rel="noopener">{t("Pagar con Payhip / Mercado Pago","Pay with Payhip / Mercado Pago")}</a>' if o.get('g') else f'<span class="alt">{t("Pago con Payhip / Mercado Pago","Checkout via Payhip / Mercado Pago")}</span>')+wa(o['es'],o['en'],(G+o['g']) if o.get('g') else P+o['p'],'Ana Hope Shop' if o['c']=='ana' else 'Bucky Little Shop')+f'</div></article>\n')
 xcards='';last=None
 for c,es,en in SEC:
     items=[o for o in XP if o['c']==c]
