@@ -40,6 +40,7 @@
  {
   "k": "combo-gratitud",
   "p": "9LMt6",
+  "g": "ajykz",
   "pr": "9.99",
   "es": "Combo Gratitud + Navidad",
   "en": "Gratitude + Christmas Combo",
@@ -115,6 +116,18 @@
   "h": 800
  },
  {
+  "k": "kit-navideno-gratis",
+  "g": "kfinkk",
+  "pr": "0",
+  "es": "Kit navideño gratis",
+  "en": "Free Christmas Mini Kit",
+  "des": "Mímica, ¿qué preferirías?, basta navideño, tarjeta + 8 etiquetas, Bucky para colorear y mini calendario 2027. ES + EN.",
+  "den": "Charades, Would You Rather, Christmas Scattergories, card + 8 gift tags, coloring page and 2027 mini calendar. EN + ES.",
+  "c": "free",
+  "w": 800,
+  "h": 800
+ },
+ {
   "k": "freebie",
   "p": "zXbID",
   "pr": "0",
@@ -129,6 +142,7 @@
  {
   "k": "teachers",
   "p": "Io2Lj",
+  "g": "uyqjef",
   "pr": "6.99",
   "es": "Juegos de Clase en Español",
   "en": "Spanish Classroom Games Bundle",
