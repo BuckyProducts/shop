@@ -40,7 +40,7 @@ def page(slug,title,desc,h1,lead,body_es,cards,faq,en_html,wa_text,crumb):
 
 M=[("muertos","Kit de Día de Muertos (ES + EN)","Papel picado, ofrenda, calaveritas para colorear, juegos y actividades para casa o el salón.","10.49","ypkit","OA4gi"),
    ("mega","Mega Paquete de Fiestas","Todas las fiestas en un solo paquete: Muertos, Acción de Gracias, Navidad y más. El mejor precio.","29","oypqoh","9P4Oc"),
-   ("kids-mega","Mega Paquete de Actividades para Niños","Laberintos, sopas de letras, para colorear y más, para tener a los niños ocupados.","7.99","Ss82o","Ss82o"),
+   ("kids-mega","Mega Paquete de Actividades para Niños","Laberintos, sopas de letras, para colorear y más, para tener a los niños ocupados.","7.99","zfbewk","Ss82o"),
    ("spanish","Paquete para aprender español / inglés","Vocabulario y actividades bilingües para el salón de clases.","6.99","F1aOK","F1aOK")]
 # payhip-only items: point both buttons to payhip
 def fix(c):
@@ -145,7 +145,7 @@ open("calaveritas/index.html","w").write(html_k)
 TG=[("combo-gratitud","Gratitude + Christmas Combo (EN + ES)","Thanksgiving kit + 13 Christmas party games. Save 44%.","9.99","ajykz","9LMt6"),("thanksgiving","Thanksgiving Printables Kit (EN + ES)","Gratitude cards, games, place cards and table decor. Bilingual, Letter + A4.","7.79","ckmaso","LQBfv"),
     ("mega","All Holidays Mega Pack","Thanksgiving, Christmas, Día de Muertos and more in one bundle. Best value.","29","oypqoh","9P4Oc"),
     ("teachers","Spanish Classroom Games Bundle","Bingo, loterías, word searches and conversation cards for Spanish class.","6.99","uyqjef","Io2Lj"),
-    ("kids-mega","Kids Activity Mega Pack","Mazes, coloring, dot-to-dot and puzzles to keep kids busy.","7.99","Ss82o","Ss82o")]
+    ("kids-mega","Kids Activity Mega Pack","Mazes, coloring, dot-to-dot and puzzles to keep kids busy.","7.99","zfbewk","Ss82o")]
 tfaq=[("When is Thanksgiving 2026?","Thanksgiving 2026 is on Thursday, November 26."),("How do I get the files?","Right after checkout you get a download link on screen and by email. Print at home or at a print shop. Nothing is shipped."),("Is it in Spanish too?","Yes. The kit includes English and Spanish versions, great for bilingual families and Spanish classes."),("Can I use it in my classroom?","Yes, the license covers personal and single-classroom use.")]
 html_t=page("thanksgiving-printables","Thanksgiving Printables: Last-Minute Kids Activities, Gratitude Cards & Table Decor | Bucky",
  "Instant-download Thanksgiving printables for kids and classrooms: gratitude cards, games, place cards and table decor, in English and Spanish. Print at home today.",
@@ -215,7 +215,7 @@ html_t=page("tarjetas-navidenas-gratis","Tarjetas navideñas para imprimir GRATI
  open("tng_body.html").read()+KIT,TNG,tfaq,"<h2>Free printable Christmas cards (English)</h2><p>Download 4 free printable Christmas cards with Bucky: Merry Christmas and Happy Posadas in English, and ¡Feliz Navidad! and ¡Felices posadas! in Spanish. Each card prints on one side of a Letter or A4 page and folds into quarters, with the message already inside. Free for personal use, no signup.</p>","Tarjetas navideñas para imprimir gratis:","Tarjetas navideñas gratis")
 html_t=html_t.replace('<div class="cta">','<div class="cta" style="display:none">',1)
 open("tarjetas-navidenas-gratis/index.html","w").write(html_t)
-MN=[("tarjetas-navidad","Tarjetas navideñas de Bucky (12 + 16 etiquetas)","12 tarjetas para doblar con mensaje adentro + 16 etiquetas para regalo. ES + EN.","3.99","yolsoy","kV1Uf"),("kids-mega","Mega paquete de actividades para niños","Cientos de páginas: colorear, laberintos, sopas de letras y más. ES + EN.","7.99","Ss82o","Ss82o"),
+MN=[("tarjetas-navidad","Tarjetas navideñas de Bucky (12 + 16 etiquetas)","12 tarjetas para doblar con mensaje adentro + 16 etiquetas para regalo. ES + EN.","3.99","yolsoy","kV1Uf"),("kids-mega","Mega paquete de actividades para niños","Cientos de páginas: colorear, laberintos, sopas de letras y más. ES + EN.","7.99","zfbewk","Ss82o"),
  ("bucky-coloring","Páginas para colorear de Bucky","Dibujos de Bucky para colorear en casa o en el salón.","2.99","U64TI","U64TI"),
  ("bucky-storybooks","Cuentos de Bucky (3 cuentos + colorear)","3 cuentos imprimibles para peques de 3 a 7 años. ES + EN.","4.99","U0mF4","U0mF4"),
  ("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio y decoración para la posada.","15.99","bkgnnd","0NkMo")]
@@ -228,7 +228,7 @@ html_mn=page("manualidades-navidenas-ninos","Manualidades navideñas para niños
 html_mn=html_mn.replace('<div class="cta">','<div class="cta" style="display:none">',1)
 open("manualidades-navidenas-ninos/index.html","w").write(html_mn)
 RR=[("reyes-kit","Kit Día de Reyes de Bucky","14 páginas: carta, corona, colorear, sopa de letras, laberinto, memorama y diploma. ES + EN.","4.99","VEPLY","VEPLY"),("recetas-familia","Recetas mexicanas de la familia","Recetario imprimible con tamales, pozole, salsas, bebidas y postres. ES + EN.","5.99","Qnl6V","Qnl6V"),
- ("kids-mega","Mega paquete de actividades para niños","Para las vacaciones de invierno: colorear, laberintos y más.","7.99","Ss82o","Ss82o"),
+ ("kids-mega","Mega paquete de actividades para niños","Para las vacaciones de invierno: colorear, laberintos y más.","7.99","zfbewk","Ss82o"),
  ("planner","Agenda 2027 digital e imprimible","Empieza el año organizado.","7.99","oqylfa","becqk"),
  ("bucky-coloring","Páginas para colorear de Bucky","Dibujos de Bucky para colorear.","2.99","U64TI","U64TI")]
 rfaq=[("¿Cuándo se parte la Rosca de Reyes?","El 6 de enero, Día de Reyes, normalmente en la merienda con chocolate caliente."),("¿Qué pasa si me sale el muñequito?","La tradición dice que invitas los tamales el 2 de febrero, Día de la Candelaria."),("¿Qué significa la forma de la rosca?","Su forma redonda representa una corona y la fruta de encima, las joyas de los Reyes Magos."),("¿La carta y la corona son gratis?","Sí, el PDF de muestra es gratis para uso personal, en español y en inglés.")]
