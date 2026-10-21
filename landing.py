@@ -217,7 +217,7 @@ html_t=html_t.replace('<div class="cta">','<div class="cta" style="display:none"
 open("tarjetas-navidenas-gratis/index.html","w").write(html_t)
 MN=[("tarjetas-navidad","Tarjetas navideñas de Bucky (12 + 16 etiquetas)","12 tarjetas para doblar con mensaje adentro + 16 etiquetas para regalo. ES + EN.","3.99","yolsoy","kV1Uf"),("kids-mega","Mega paquete de actividades para niños","Cientos de páginas: colorear, laberintos, sopas de letras y más. ES + EN.","7.99","zfbewk","Ss82o"),
  ("bucky-coloring","Páginas para colorear de Bucky","Dibujos de Bucky para colorear en casa o en el salón.","2.99","U64TI","U64TI"),
- ("bucky-storybooks","Cuentos de Bucky (3 cuentos + colorear)","3 cuentos imprimibles para peques de 3 a 7 años. ES + EN.","4.99","U0mF4","U0mF4"),
+ ("bucky-storybooks","Cuentos de Bucky (3 cuentos + colorear)","3 cuentos imprimibles para peques de 3 a 7 años. ES + EN.","4.99","qlvklq","U0mF4"),
  ("bundle","Paquete fiesta navideña (completo)","Juegos, intercambio y decoración para la posada.","15.99","bkgnnd","0NkMo")]
 mfaq=[("¿Las manualidades son gratis?","Sí. El PDF de 4 páginas es gratis para uso personal o en tu salón, sin registro."),("¿Para qué edad son?","De 3 a 10 años, aproximadamente. Peques de 3 a 5 años necesitan ayuda para recortar."),("¿Qué papel uso?","Papel normal funciona; en cartulina ligera los adornos y la estrella quedan más firmes."),("¿Vienen en inglés?","Las instrucciones vienen en español y en inglés en cada página.")]
 html_mn=page("manualidades-navidenas-ninos","Manualidades navideñas para niños imprimibles GRATIS (PDF) | Bucky",
@@ -227,7 +227,7 @@ html_mn=page("manualidades-navidenas-ninos","Manualidades navideñas para niños
  open("mn_body.html").read()+KIT,MN,mfaq,"<h2>Free printable Christmas crafts for kids (English)</h2><p>Download a free 4-page Christmas craft PDF: 6 ornaments to color, cut and hang, a colorful paper chain, a Bucky coloring page and a tree-top star. Instructions are in English and Spanish, in US Letter and A4. Free for home or classroom use, no signup.</p>","Manualidades navideñas gratis para niños:","Manualidades navideñas")
 html_mn=html_mn.replace('<div class="cta">','<div class="cta" style="display:none">',1)
 open("manualidades-navidenas-ninos/index.html","w").write(html_mn)
-RR=[("reyes-kit","Kit Día de Reyes de Bucky","14 páginas: carta, corona, colorear, sopa de letras, laberinto, memorama y diploma. ES + EN.","4.99","VEPLY","VEPLY"),("recetas-familia","Recetas mexicanas de la familia","Recetario imprimible con tamales, pozole, salsas, bebidas y postres. ES + EN.","5.99","Qnl6V","Qnl6V"),
+RR=[("reyes-kit","Kit Día de Reyes de Bucky","14 páginas: carta, corona, colorear, sopa de letras, laberinto, memorama y diploma. ES + EN.","4.99","VEPLY","VEPLY"),("recetas-familia","Recetas mexicanas de la familia","Recetario imprimible con tamales, pozole, salsas, bebidas y postres. ES + EN.","5.99","vpsxzk","Qnl6V"),
  ("kids-mega","Mega paquete de actividades para niños","Para las vacaciones de invierno: colorear, laberintos y más.","7.99","zfbewk","Ss82o"),
  ("planner","Agenda 2027 digital e imprimible","Empieza el año organizado.","7.99","oqylfa","becqk"),
  ("bucky-coloring","Páginas para colorear de Bucky","Dibujos de Bucky para colorear.","2.99","U64TI","U64TI")]
