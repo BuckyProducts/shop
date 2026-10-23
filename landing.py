@@ -107,7 +107,7 @@ html_x=page("posadas-navidad","Juegos para posada y fiesta navideña + intercamb
 
 C=[("planner","Agenda 2027 digital e imprimible","Agenda completa 2027: vista anual, mensual, semanal, metas y hábitos. Inicio lunes o domingo, digital con hipervínculos e imprimible.","7.99","oqylfa","becqk"),
    ("sheets","Plantillas de presupuesto, menú y boda","Organiza tu dinero y tu menú en 2027 con hojas de cálculo listas.","9.99","063kf","063kf"),
-   ("organizador-hogar","Organizador del Hogar Rellenable","Carpeta para organizar la casa: limpieza, menús, pagos y contactos.","6.99","FWMd4","FWMd4")]
+   ("organizador-hogar","Organizador del Hogar Rellenable","Carpeta para organizar la casa: limpieza, menús, pagos y contactos.","6.99","hefzy","FWMd4")]
 cbody='''<h2>Descarga gratis el calendario 2027</h2>
 <p><img src="preview.webp" width="510" height="660" alt="Calendario 2027 imprimible gratis en una hoja" style="max-width:100%;height:auto;border:1px solid #ecd9c3;border-radius:10px"></p>
 <p><a class="btn" href="Calendario-2027-Imprimible-Gratis_Bucky_Carta-Letter.pdf" download>Descargar PDF tamaño Carta (Letter)</a> <a class="btn" href="Calendario-2027-Imprimible-Gratis_Bucky_A4.pdf" download>Descargar PDF tamaño A4</a></p>
