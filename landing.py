@@ -41,7 +41,7 @@ def page(slug,title,desc,h1,lead,body_es,cards,faq,en_html,wa_text,crumb):
 M=[("muertos","Kit de Día de Muertos (ES + EN)","Papel picado, ofrenda, calaveritas para colorear, juegos y actividades para casa o el salón.","10.49","ypkit","OA4gi"),
    ("mega","Mega Paquete de Fiestas","Todas las fiestas en un solo paquete: Muertos, Acción de Gracias, Navidad y más. El mejor precio.","29","oypqoh","9P4Oc"),
    ("kids-mega","Mega Paquete de Actividades para Niños","Laberintos, sopas de letras, para colorear y más, para tener a los niños ocupados.","7.99","zfbewk","Ss82o"),
-   ("spanish","Paquete para aprender español / inglés","Vocabulario y actividades bilingües para el salón de clases.","6.99","F1aOK","F1aOK")]
+   ("spanish","Paquete para aprender español / inglés","Vocabulario y actividades bilingües para el salón de clases.","6.99","vnoww","F1aOK")]
 # payhip-only items: point both buttons to payhip
 def fix(c):
   k,t,d,pr,g,p=c
@@ -106,7 +106,7 @@ html_x=page("posadas-navidad","Juegos para posada y fiesta navideña + intercamb
  KIT+xbody,X,xfaq,xen,"Juegos e imprimibles para tu posada o fiesta navideña:","Posadas y Navidad")
 
 C=[("planner","Agenda 2027 digital e imprimible","Agenda completa 2027: vista anual, mensual, semanal, metas y hábitos. Inicio lunes o domingo, digital con hipervínculos e imprimible.","7.99","oqylfa","becqk"),
-   ("sheets","Plantillas de presupuesto, menú y boda","Organiza tu dinero y tu menú en 2027 con hojas de cálculo listas.","9.99","063kf","063kf"),
+   ("sheets","Plantillas de presupuesto, menú y boda","Organiza tu dinero y tu menú en 2027 con hojas de cálculo listas.","9.99","zeovm","063kf"),
    ("organizador-hogar","Organizador del Hogar Rellenable","Carpeta para organizar la casa: limpieza, menús, pagos y contactos.","6.99","hefzy","FWMd4")]
 cbody='''<h2>Descarga gratis el calendario 2027</h2>
 <p><img src="preview.webp" width="510" height="660" alt="Calendario 2027 imprimible gratis en una hoja" style="max-width:100%;height:auto;border:1px solid #ecd9c3;border-radius:10px"></p>
