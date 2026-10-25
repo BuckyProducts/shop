@@ -46,3 +46,32 @@ open("christmas-printables/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "christmas-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-printables/</loc><lastmod>2026-10-24</lastmod></url></urlset>"))
 print("ok")
+
+# --- Christmas gift tags (2026-10-25) ---
+body='''<h2>Printable Christmas gift tags: why they beat store-bought</h2>
+<p>A pack of foil tags runs out the night you need it. Printable tags don't: download the PDF once and print another sheet whenever the pile of presents grows. They also match, so the whole stack under the tree looks planned even if you wrapped it at midnight.</p>
+<h2>How to print and attach gift tags</h2>
+<ol><li>Download the PDF (the free mini kit comes with 8 tags, the Christmas Cards set with 16).</li>
+<li>Print on white cardstock, 65 to 110 lb, at "Actual size" so the tags keep their shape. Plain paper works too if you glue the tag onto the package instead of hanging it.</li>
+<li>Cut along the lines with scissors or a paper trimmer. A round hole punch at the top corner turns any tag into a hanging tag.</li>
+<li>Thread twine, ribbon or baker's string through the hole, or use a strip of double-sided tape to stick the tag flat on the paper.</li></ol>
+<h2>Quick ideas</h2>
+<ul><li><b>Teacher and neighbor gifts:</b> pair a tag with cookies, a candle or a mug and you have a gift in five minutes.</li>
+<li><b>Secret Santa and gift exchanges:</b> write the number or code on the back so nobody peeks before the reveal.</li>
+<li><b>Bilingual families:</b> the tags come in English and Spanish, so you can write "Merry Christmas" for one side of the family and "Feliz Navidad" for the other.</li>
+<li><b>Matching cards:</b> the Christmas Cards set includes 12 folding cards with the same look as its tags.</li></ul>'''
+faq=[("Are there free printable Christmas gift tags here?","Yes. The free Christmas Mini Kit includes 8 printable gift tags, plus party games, a card and a coloring page."),
+ ("What paper should I use for gift tags?","White cardstock between 65 and 110 lb holds up best on ribbon. Regular printer paper is fine if you tape or glue the tag flat."),
+ ("Can I print the tags more than once?","Yes. Print as many as you need for your own gifts, home or classroom. Please don't resell the files."),
+ ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
+h=page("christmas-gift-tags","Printable Christmas Gift Tags (Free + Bilingual PDF) | Bucky",
+ "Printable Christmas gift tags you can download today: 8 free tags in the Christmas Mini Kit, plus 16 matching tags and 12 cards in English and Spanish. Print on cardstock, US Letter and A4.",
+ "Printable Christmas gift tags, free and ready to print",
+ "Grab <b>8 free Christmas gift tags</b> in the mini kit, or get <b>16 tags plus 12 matching folding cards</b> in the Christmas Cards set. Instant PDF download, English and Spanish, US Letter and A4.",
+ ["kit-navideno-gratis","tarjetas-navidad"],body,
+ ["bucky-stickers","tarjetas-felicitacion","combo-posada","combo-gratitud","mega"],faq,"Christmas gift tags")
+import os;os.makedirs("christmas-gift-tags",exist_ok=True)
+open("christmas-gift-tags/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "christmas-gift-tags/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-gift-tags/</loc><lastmod>2026-10-25</lastmod></url></urlset>"))
+print("ok gift tags")
