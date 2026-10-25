@@ -143,3 +143,36 @@ open("secret-santa/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/secret-santa/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}secret-santa/</loc><lastmod>2026-10-25</lastmod></url></urlset>"))
 print("ok secret santa")
+
+# --- Free printable 2027 calendar, US edition (2026-10-25, nightly) ---
+for k,g,pr,en,den in [('organizador-hogar','hefzy','6.99','Home Organizer Binder Printable','Bills, passwords, contacts, meals and cleaning pages in one binder.'),
+ ('sheets','zeovm','9.99','Budget, Meal & Wedding Spreadsheet Bundle','Monthly budget, meal planner and wedding planner templates.')]:
+  P.setdefault(k,{'k':k,'g':g,'pr':pr,'en':en,'den':den})
+D='Free-Printable-2027-Calendar-'
+body=f'''<h2>Download the free 2027 calendar</h2>
+<p><img src="preview.webp" width="800" height="1035" loading="lazy" alt="Free printable 2027 calendar on one page with US holidays marked" style="max-width:340px;width:100%;border:1px solid #e8d5bf;border-radius:10px"></p>
+<p><a class="btn" href="{D}US-Letter_Bucky.pdf" download>Download US Letter PDF</a> &nbsp; <a class="btn" href="{D}A4_Bucky.pdf" download>Download A4 PDF</a></p>
+<p>No email, no sign-up. All 12 months fit on one page, weeks start on Sunday, and every US federal holiday is circled.</p>
+<h2>2027 US federal holidays</h2>
+<ul><li>New Year's Day: Friday, January 1</li><li>Martin Luther King Jr. Day: Monday, January 18</li><li>Presidents' Day: Monday, February 15</li><li>Memorial Day: Monday, May 31</li><li>Juneteenth: Saturday, June 19</li><li>Independence Day: Sunday, July 4</li><li>Labor Day: Monday, September 6</li><li>Columbus Day / Indigenous Peoples' Day: Monday, October 11</li><li>Veterans Day: Thursday, November 11</li><li>Thanksgiving: Thursday, November 25</li><li>Christmas Day: Saturday, December 25</li></ul>
+<p>When a holiday falls on a weekend, the day off is usually moved: Juneteenth to Friday, June 18, Independence Day to Monday, July 5, and Christmas to Friday, December 24. Check with your employer or school.</p>
+<h2>Other 2027 dates people plan around</h2>
+<ul><li>Valentine's Day: Sunday, February 14</li><li>St. Patrick's Day: Wednesday, March 17</li><li>Easter: Sunday, March 28</li><li>Mother's Day: Sunday, May 9</li><li>Father's Day: Sunday, June 20</li><li>Halloween: Sunday, October 31</li></ul>
+<h2>How to print it</h2>
+<ol><li>Pick US Letter (USA, Canada, Mexico) or A4 (most other countries).</li><li>Print at "Actual size" or "Fit to page". Plain paper works; cardstock lasts all year on the fridge.</li><li>Want more room to write? The 2027 Planner below has monthly and weekly pages.</li></ol>
+<p>¿Lo quieres con los días festivos de México? Descarga el <a href="../calendario-2027/">calendario 2027 gratis en español</a>.</p>'''
+faq=[("Is this 2027 calendar really free?","Yes. Download the PDF in US Letter or A4 with no email or sign-up. Print as many copies as you need for home or class."),
+ ("Does the 2027 calendar include US holidays?","Yes. All 11 federal holidays are circled, and Valentine's Day, St. Patrick's Day, Easter, Mother's Day, Father's Day, Halloween and New Year's Eve are marked."),
+ ("When is Easter in 2027?","Easter Sunday is March 28, 2027."),
+ ("When is Thanksgiving 2027?","Thanksgiving is Thursday, November 25, 2027.")]
+h=page("printable-calendar-2027","Free Printable 2027 Calendar with US Holidays (One Page PDF) | Bucky",
+ "Free printable 2027 calendar on one page with all US federal holidays, plus Easter, Mother's Day and Halloween dates. Instant PDF, US Letter and A4, no sign-up.",
+ "Free printable 2027 calendar with US holidays",
+ "Download a <b>free one-page 2027 calendar</b> with every <b>US federal holiday</b> circled. US Letter and A4 PDF, no sign-up. Need more space? The <b>2027 Planner</b> has monthly and weekly pages.",
+ ["planner","combo-posada"],body,
+ ["organizador-hogar","sheets","kit-navideno-gratis","mega"],faq,"2027 calendar")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More printables to get organized</h2>")
+open("printable-calendar-2027/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/printable-calendar-2027/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}printable-calendar-2027/</loc><lastmod>2026-10-25</lastmod></url></urlset>"))
+print("ok calendar")
