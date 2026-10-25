@@ -105,3 +105,41 @@ open("christmas-party-games/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "christmas-party-games/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-party-games/</loc><lastmod>2026-10-25</lastmod></url></urlset>"))
 print("ok party games")
+
+# --- Secret Santa (2026-10-25, FB Page 8 PM slot) ---
+for k,g,pp,pr,es,en,des,den,c in [('secret-santa','mfqlci','PGsBK','6.99','Kit de intercambio de regalos','Secret Santa Kit','','Draw cards, wish lists and gift tags for your gift exchange. EN + ES.','xmas'),
+ ('bundle','bkgnnd','0NkMo','15.99','Paquete fiesta navideña','Christmas Party Bundle','','The complete pack: party games, gift exchange kit and decor. Best value.','xmas'),
+ ('games','cnexgy','yR2hw','9.99','Juegos para fiesta navideña','Christmas Party Games','','Printable games for office, family and classroom parties.','xmas')]:
+  P.setdefault(k,{'k':k,'g':g,'pr':pr,'en':en,'den':den})
+body='''<h2>How to run a Secret Santa that actually works</h2>
+<ol><li><b>Set the budget and the date.</b> Agree on one price limit for everyone ($10, $15, $20 or $25 are the most common) and the day you'll swap gifts.</li>
+<li><b>Hand out wish lists.</b> Each person fills in a short list: favorite color, snack, hobby, size and one thing they don't want. It saves everyone from guessing.</li>
+<li><b>Draw names.</b> Write each name on a draw card, fold it and put them all in a bowl or hat. If someone pulls their own name, they put it back and draw again.</li>
+<li><b>Keep it secret.</b> Label each gift with a printable tag that shows only the recipient's name, so the giver stays a mystery until the reveal.</li>
+<li><b>Reveal.</b> At the party, everyone guesses who their Secret Santa was before opening.</li></ol>
+<h2>Secret Santa gift ideas by budget</h2>
+<ul><li><b>Under $10:</b> hot cocoa and a mug, fun socks, a scented candle, a small succulent, a deck of cards or a box of favorite candy.</li>
+<li><b>Under $15:</b> an insulated tumbler, a coffee or tea sampler, a cozy throw-size blanket, a puzzle or a nice notebook and pen.</li>
+<li><b>Under $25:</b> a small Bluetooth speaker, a spa or bath kit, LED string lights, a board game or a plant with a pretty pot.</li></ul>
+<p>These are generic ideas with no affiliate links, so buy wherever you like.</p>
+<h2>Office, family and classroom tips</h2>
+<ul><li><b>Office:</b> keep gifts neutral and set the budget in the invite. A printed wish list helps coworkers who barely know each other.</li>
+<li><b>Family:</b> draw names after Thanksgiving dinner so everyone has a month to shop.</li>
+<li><b>Classroom:</b> keep the budget low ($5 to $10) and let kids decorate their own tags.</li>
+<li><b>Long distance:</b> email the draw results privately and mail gifts with the printed tag inside.</li></ul>
+<p>Every file is bilingual, English and Spanish. ¿Lo buscas en español? Mira nuestras <a href="../ideas-intercambio-regalos/">ideas para intercambio de regalos</a>.</p>'''
+faq=[("What is a good Secret Santa budget?","Most groups choose $10 to $25. What matters most is that everyone agrees on the same limit before the draw."),
+ ("How do you draw names for Secret Santa?","Write every name on a card, fold them into a bowl and have each person draw one in private. If someone draws their own name, they put it back and draw again. The Secret Santa Kit includes printable draw cards."),
+ ("What should I give a coworker I don't know well?","Something useful and neutral: a mug with cocoa, a candle, a tumbler, a plant or a nice notebook."),
+ ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
+h=page("secret-santa","Secret Santa Printables: Draw Cards, Wish Lists, Gift Tags + Ideas | Bucky",
+ "Plan a Secret Santa in minutes: printable draw cards, wish lists and gift tags, plus gift ideas under $10, $15 and $25 for office, family and classroom exchanges. English and Spanish PDF.",
+ "Secret Santa printables and gift ideas for office, family and class",
+ "Run your gift exchange without the stress: the <b>Secret Santa Kit</b> has <b>draw cards, wish lists and gift tags</b> ready to print, and below you'll find <b>gift ideas by budget</b>. Instant PDF download, English and Spanish, US Letter and A4.",
+ ["secret-santa","kit-navideno-gratis"],body,
+ ["tarjetas-navidad","games","bundle","combo-posada","mega"],faq,"Secret Santa")
+os.makedirs("secret-santa",exist_ok=True)
+open("secret-santa/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/secret-santa/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}secret-santa/</loc><lastmod>2026-10-25</lastmod></url></urlset>"))
+print("ok secret santa")
