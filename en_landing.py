@@ -242,3 +242,39 @@ open("large-print-puzzles/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/large-print-puzzles/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}large-print-puzzles/</loc><lastmod>2026-10-26</lastmod></url></urlset>"))
 print("ok large print puzzles")
+
+# --- Christmas activities for kids (2026-10-26, FB Page 8 PM slot) ---
+body='''<h2>Screen-free Christmas activities kids actually enjoy</h2>
+<p>Winter break is long, and by the third day most kids have watched every holiday movie twice. Printable activities fix that without a trip to the craft store: print a few pages in the morning and you have a quiet hour while you wrap presents, cook or work from home.</p>
+<ul><li><b>Coloring pages:</b> the easiest win for ages 3 to 7. Thick lines are easier for little hands, and a finished page makes a nice card for a grandparent.</li>
+<li><b>Christmas games:</b> charades, Would You Rather and Christmas Scattergories get the whole family playing after dinner, with no setup.</li>
+<li><b>Mazes, dot-to-dots and word searches:</b> perfect for early finishers in class, restaurant waits and the car ride to Grandma's.</li>
+<li><b>Story time:</b> read a short printable story together, then let kids color the pictures from it.</li>
+<li><b>Stickers and crafts:</b> print stickers on sticker paper to decorate cards, gift bags and homemade ornaments.</li></ul>
+<h2>Ideas by age</h2>
+<ul><li><b>Ages 3 to 5:</b> big coloring pages, simple mazes and stickers. Keep sessions short, 10 to 15 minutes, and let them pick the page.</li>
+<li><b>Ages 6 to 9:</b> word searches, dot-to-dots and charades. They love playing a game they can "run" for the adults.</li>
+<li><b>Ages 10 and up:</b> Scattergories, Would You Rather and drawing challenges. Older kids can also help the little ones with their pages.</li></ul>
+<h2>A simple winter break plan</h2>
+<ol><li>Print a small stack on Sunday night: two coloring pages, one game and one puzzle per child.</li>
+<li>Keep them in a folder with crayons so kids can grab an activity on their own.</li>
+<li>Save the party games for an evening when the whole family is home.</li>
+<li>Hang finished pages on the fridge or turn them into cards for teachers and neighbors.</li>
+<li>After Christmas, the Three Kings Day kit keeps the fun going until January 6.</li></ol>
+<p>Every file is bilingual, English and Spanish, so it works for dual-language classrooms and families who speak both. ¿Lo buscas en español? Mira nuestras <a href="../manualidades-navidenas-ninos/">manualidades navideñas para niños</a>.</p>'''
+faq=[("Are there free Christmas activities for kids here?","Yes. The free Christmas Mini Kit has Christmas charades, Would You Rather, Christmas Scattergories, a card, 8 gift tags and a coloring page."),
+ ("What ages are these activities for?","Most pages work for ages 3 to 10. Coloring pages and stickers suit preschoolers, and games and word searches suit older kids and the whole family."),
+ ("Can teachers use them in class?","Yes. Personal and classroom use is fine, so print as many copies as your class needs. Please don't resell the files."),
+ ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
+h=page("christmas-activities-for-kids","Printable Christmas Activities for Kids: Coloring, Games and Mazes (PDF) | Bucky",
+ "Printable Christmas activities for kids: a free Christmas mini kit with games and a coloring page, plus 60 screen-free activity pages, coloring pages and stories for winter break. English and Spanish, US Letter and A4.",
+ "Printable Christmas activities for kids",
+ "Keep kids happy and off screens all winter break: start with the <b>free Christmas Mini Kit</b> (games and a coloring page), then add <b>60 screen-free activity pages</b>, coloring pages and stories. Instant PDF download, English and Spanish, US Letter and A4.",
+ ["kit-navideno-gratis","kids-mega"],body,
+ ["bucky-coloring","bucky-storybooks","bucky-stickers","combo-gratitud","reyes-kit","mega"],faq,"Christmas activities for kids")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More printables for kids this season</h2>")
+os.makedirs("christmas-activities-for-kids",exist_ok=True)
+open("christmas-activities-for-kids/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/christmas-activities-for-kids/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-activities-for-kids/</loc><lastmod>2026-10-26</lastmod></url></urlset>"))
+print("ok christmas activities for kids")
