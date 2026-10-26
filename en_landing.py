@@ -211,3 +211,34 @@ open("advent-devotional/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/advent-devotional/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}advent-devotional/</loc><lastmod>2026-10-26</lastmod></url></urlset>"))
 print("ok advent devotional")
+
+# --- Large-print puzzles (2026-10-26, FB group posts 12:30 slot) ---
+body='''<h2>Why large-print puzzles help</h2>
+<p>Regular puzzle books use small type and crowded grids, which turns a relaxing activity into eye strain. Large-print puzzles use big, bold letters and roomy grids, so readers with low vision, older adults and anyone who is tired of squinting can solve comfortably. Because these are printables, you can print one page or the whole book, as many times as you like, and make the pages even bigger by printing at "Fit to page" on US Letter.</p>
+<h2>Which puzzles are inside</h2>
+<ul><li><b>100 Large Print Puzzles for Seniors:</b> word searches, crosswords, sudoku and mazes in large print, with every answer included. You get a complete English book and a complete Spanish book.</li>
+<li><b>Large Print Christmas Puzzles:</b> 20 holiday word searches and 15 crosswords with answers, in English and Spanish. A good stocking stuffer for a grandparent or a quiet activity for Christmas afternoon.</li></ul>
+<h2>Ideas for using them</h2>
+<ul><li><b>Gifts for grandparents:</b> print the set, punch holes and put it in a binder with a pen and a highlighter. It's a thoughtful gift you can make the night before a visit.</li>
+<li><b>Senior centers, assisted living and memory care:</b> activity coordinators can print a fresh stack for every group session. Pick easier word searches for some residents and sudoku for others.</li>
+<li><b>Caregivers:</b> a puzzle page is a calm, screen-free activity for waiting rooms, recovery days and quiet afternoons.</li>
+<li><b>Family time:</b> solve a crossword together across generations. The bilingual books also work for families where grandparents prefer Spanish.</li></ul>
+<h2>How to print large-print puzzles at home</h2>
+<ol><li>Download the PDF right after checkout.</li><li>Print on plain US Letter or A4 paper. Choose "Fit to page" to make the type as big as possible.</li><li>Use a dark felt-tip pen or marker instead of a pencil, since bold lines are easier to see.</li><li>Keep the answer pages aside so nobody peeks.</li></ol>
+<p>¿Buscas en español? Los dos libros traen versión completa en español: sopas de letras, crucigramas, sudokus y laberintos en letra grande.</p>'''
+faq=[("What size is the print?","The puzzles are laid out in large type with roomy grids for easy reading. Printing with \"Fit to page\" on US Letter makes them as big as your paper allows."),
+ ("Are the answers included?","Yes. Both books include an answer key for every puzzle."),
+ ("Are these puzzles good for seniors with memory loss?","Many caregivers and activity coordinators use word searches and simple mazes as calm, low-pressure activities. Start with the easier pages and let the person go at their own pace."),
+ ("Is anything shipped?","No. These are digital PDF files you download and print at home, at a senior center or at a copy shop.")]
+h=page("large-print-puzzles","Large Print Puzzles for Seniors: Printable Word Search, Crossword and Sudoku (PDF) | Bucky",
+ "Printable large-print puzzles for seniors: word searches, crosswords, sudoku and mazes with answers, plus large-print Christmas puzzles. English and Spanish. US Letter and A4 PDF, print as many as you need.",
+ "Printable large-print puzzles for seniors",
+ "Big letters, roomy grids and every answer included: <b>100 large-print puzzles</b> (word search, crossword, sudoku and mazes) plus a <b>large-print Christmas puzzle book</b>. Instant PDF download in English and Spanish, US Letter and A4.",
+ ["rompecabezas-letra-grande","pasatiempos-navidad"],body,
+ ["rosario-novenas","colorear-biblico","chatgpt-paso-a-paso","kit-navideno-gratis","mega"],faq,"Large-print puzzles")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More large-print and relaxing printables</h2>")
+os.makedirs("large-print-puzzles",exist_ok=True)
+open("large-print-puzzles/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/large-print-puzzles/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}large-print-puzzles/</loc><lastmod>2026-10-26</lastmod></url></urlset>"))
+print("ok large print puzzles")
