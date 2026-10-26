@@ -176,3 +176,38 @@ open("printable-calendar-2027/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/printable-calendar-2027/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}printable-calendar-2027/</loc><lastmod>2026-10-25</lastmod></url></urlset>"))
 print("ok calendar")
+
+# --- Advent devotional (2026-10-26, FB Page 10 AM slot) ---
+body='''<h2>What is Advent?</h2>
+<p>Advent is the season of waiting and preparing for Christmas. The word comes from the Latin <i>adventus</i>, "arrival" or "coming." Many churches begin Advent four Sundays before Christmas, so in 2026 it starts on <b>Sunday, November 29</b>. Many families simply count down from December 1 to December 24 instead. Traditionally the four weeks focus on <b>hope, peace, joy and love</b>, and many homes light one more candle on an Advent wreath each Sunday.</p>
+<h2>How to use a daily Advent devotional with your family</h2>
+<ol><li><b>Pick one time and keep it.</b> Breakfast, after dinner or bedtime all work. Ten minutes a day is enough, and doing it at the same time every day is what makes it stick.</li>
+<li><b>Read the verse out loud.</b> Let a different person read each day. Younger kids can repeat a short phrase after a parent.</li>
+<li><b>Read the reflection and ask one question.</b> "What does this verse tell us about God?" or "Who could we help this week?" One question gets a better conversation than five.</li>
+<li><b>Pray together.</b> Use the printed prayer, or let each person add one sentence of thanks.</li>
+<li><b>Do the action.</b> Each day has a small step: call a grandparent, share a snack, write a kind note. This is the part kids remember.</li></ol>
+<h2>Tips for families with kids</h2>
+<ul><li><b>Make it visible.</b> Clip the day's page to the fridge or keep the printed set in a basket by the table with a candle.</li>
+<li><b>Let kids color or draw.</b> While an adult reads, little ones can color a Bible verse page. They listen better with busy hands.</li>
+<li><b>Missed a day? Just keep going.</b> Read two pages the next day, or skip ahead. Advent is about drawing near, not keeping a perfect record.</li>
+<li><b>Hide a verse card.</b> Tuck a Bible verse card into a lunchbox, a coat pocket or under a pillow as a little Advent surprise.</li>
+<li><b>End on Christmas Eve.</b> Day 24 leads into the Christmas story in Luke 2. Read it together before bed.</li></ul>
+<h2>An Advent Bible reading plan you can print</h2>
+<p>The <b>Advent Devotional: 24 Days</b> gives you one King James Version verse for each day from December 1 to 24, with a short reflection, a prayer and a simple action. It follows the story from the prophets' promises to the angels and the shepherds, so the whole family reads toward Christmas together. It's a PDF you download right away and print at home, US Letter and A4.</p>
+<p>¿Buscas en español? El devocional también tiene versión en español (RV1909), y en nuestro <a href="../adviento/">calendario de Adviento gratis</a> encontrarás un imprimible para cada día de diciembre.</p>'''
+faq=[("When does Advent start in 2026?","Many churches begin Advent on the fourth Sunday before Christmas, which is Sunday, November 29, 2026. The devotional runs December 1 to 24, so you can start either way."),
+ ("Is this Advent devotional good for kids?","Yes. Each day is short: one verse, a few sentences of reflection, a prayer and a small action. Families read it together in about ten minutes, and older kids can read it on their own."),
+ ("Which Bible translation does it use?","The English pages use the King James Version (KJV). The Spanish pages use the Reina-Valera 1909."),
+ ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
+h=page("advent-devotional","Printable Advent Devotional for Families: 24 Days of Bible Readings (PDF) | Bucky",
+ "Printable Advent devotional for families and kids: 24 days of KJV Bible readings, a short reflection, prayer and action for each day, Dec 1 to 24. Plus tips for a family Advent routine. US Letter and A4 PDF.",
+ "Printable Advent devotional for families and kids",
+ "Count down to Christmas with God's Word: the <b>Advent Devotional</b> gives you <b>24 daily Bible readings</b> (KJV), each with a short reflection, a prayer and a simple action for the whole family. Instant PDF download, US Letter and A4.",
+ ["devocional-adviento","kit-navideno-gratis"],body,
+ ["tarjetas-biblicas","colorear-biblico","rosario-novenas","mega"],faq,"Advent devotional")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More faith printables for the season</h2>")
+os.makedirs("advent-devotional",exist_ok=True)
+open("advent-devotional/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/advent-devotional/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}advent-devotional/</loc><lastmod>2026-10-26</lastmod></url></urlset>"))
+print("ok advent devotional")
