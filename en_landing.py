@@ -36,8 +36,8 @@ faq=[("Are these Christmas printables free?","The Christmas Mini Kit is free. Th
  ("What paper size are they?","US Letter, and most also come in A4. Print at home or at any copy shop."),
  ("Will anything be shipped to me?","No. These are digital PDF files you download and print yourself."),
  ("Can I use them in my classroom?","Yes. Personal and classroom use is fine; please don't resell the files.")]
-h=page("christmas-printables","Christmas Printables: Free Games, Cards, Tags and Puzzles (PDF) | Bucky",
- "Christmas printables to download today: a free Christmas mini kit with party games, cards and gift tags, plus large-print Christmas puzzles, kids activities and a 2027 planner. US Letter and A4.",
+h=page("christmas-printables","Christmas Printables: Free Games, Cards and Gift Tags (PDF)",
+ "Christmas printables to download today: a free kit of party games, cards and gift tags, plus large-print puzzles and kids activities. US Letter and A4.",
  "Christmas printables for home, class and parties",
  "Start with the <b>free Christmas mini kit</b> (games, a card, 8 gift tags and a coloring page), then add cards, puzzles and party games. Instant PDF download, US Letter and A4.",
  ["kit-navideno-gratis","tarjetas-navidad"],body,
