@@ -64,8 +64,8 @@ faq=[("Are there free printable Christmas gift tags here?","Yes. The free Christ
  ("What paper should I use for gift tags?","White cardstock between 65 and 110 lb holds up best on ribbon. Regular printer paper is fine if you tape or glue the tag flat."),
  ("Can I print the tags more than once?","Yes. Print as many as you need for your own gifts, home or classroom. Please don't resell the files."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
-h=page("christmas-gift-tags","Printable Christmas Gift Tags (Free + Bilingual PDF) | Bucky",
- "Printable Christmas gift tags you can download today: 8 free tags in the Christmas Mini Kit, plus 16 matching tags and 12 cards in English and Spanish. Print on cardstock, US Letter and A4.",
+h=page("christmas-gift-tags","Printable Christmas Gift Tags: Free Bilingual PDF | Bucky",
+ "Free printable Christmas gift tags: 8 free tags in the Christmas Mini Kit, plus 16 matching tags and 12 cards in English and Spanish. Letter and A4.",
  "Printable Christmas gift tags, free and ready to print",
  "Grab <b>8 free Christmas gift tags</b> in the mini kit, or get <b>16 tags plus 12 matching folding cards</b> in the Christmas Cards set. Instant PDF download, English and Spanish, US Letter and A4.",
  ["kit-navideno-gratis","tarjetas-navidad"],body,
