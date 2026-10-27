@@ -278,3 +278,36 @@ open("christmas-activities-for-kids/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/christmas-activities-for-kids/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-activities-for-kids/</loc><lastmod>2026-10-26</lastmod></url></urlset>"))
 print("ok christmas activities for kids")
+
+# --- Christmas word search (2026-10-27, FB Page 10 AM slot) ---
+body='''<h2>Why a printable Christmas word search works so well</h2>
+<p>A word search is the one activity almost everyone can do: kids who just learned to read, teens killing time on winter break, and grandparents who want something calm after dinner. Print a page, hand over a pencil and the table goes quiet for twenty minutes.</p>
+<ul><li><b>Family gatherings:</b> leave a stack of word searches next to the coffee so guests have something to do while the turkey or the ham finishes.</li>
+<li><b>Classrooms:</b> a Christmas word search is an easy early-finisher page in the last week before break, and the answer key makes checking fast.</li>
+<li><b>Seniors and memory care:</b> large print and roomy grids are easier on the eyes, and a familiar holiday theme makes the words easier to find.</li>
+<li><b>Travel and waiting rooms:</b> fold a page into a bag for the airport, the car or the doctor's office.</li></ul>
+<h2>Make it a game</h2>
+<ol><li>Print one copy of the same puzzle for every player.</li>
+<li>Set a timer for five or ten minutes. Whoever finds the most words wins a candy cane.</li>
+<li>For mixed ages, let younger kids team up with an adult, or give the adults a handicap of one minute.</li>
+<li>Use the answer key at the end to settle any arguments.</li></ol>
+<h2>Printing tips</h2>
+<p>Print on plain US Letter or A4 paper at "Actual size". Use a pencil so pages can be checked against the answer key, or slip a page into a sheet protector and use a dry-erase marker to reuse it all season.</p>
+<p>The puzzle books are bilingual, English and Spanish, so they also work for dual-language classrooms and bilingual families. ¿Lo buscas en español? Hay sopas de letras navideñas en el mismo libro.</p>'''
+faq=[("Do the Christmas word searches come with answers?","Yes. The Large Print Christmas Puzzles book includes an answer key for all 20 word searches and 15 crosswords."),
+ ("Are they large print?","Yes. The Christmas puzzle book and the 100 Large Print Puzzles book both use big letters and roomy grids, so they work well for seniors and young readers."),
+ ("What paper size are they?","US Letter and A4. Print at home, at school or at a copy shop."),
+ ("Is anything shipped?","No. These are digital PDF files you download right after checkout and print yourself."),
+ ("Can I print copies for my class or family?","Yes. Personal and classroom use is fine, so print as many as you need. Please don't resell the files.")]
+h=page("christmas-word-search","Christmas Word Search Printable: 20 Puzzles + Answers",
+ "Printable Christmas word search puzzles in large print: 20 word searches and 15 crosswords with answers, for kids, families and seniors. US Letter and A4 PDF.",
+ "Printable Christmas word search puzzles",
+ "<b>20 Christmas word searches and 15 crosswords</b> in large print, with every answer included. Print them for family gatherings, the classroom or a quiet afternoon. Instant PDF download, English and Spanish, US Letter and A4.",
+ ["pasatiempos-navidad","rompecabezas-letra-grande"],body,
+ ["kit-navideno-gratis","kids-mega","combo-gratitud","mega"],faq,"Christmas word search")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More Christmas games and activities</h2>")
+os.makedirs("christmas-word-search",exist_ok=True)
+open("christmas-word-search/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/christmas-word-search/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-word-search/</loc><lastmod>2026-10-27</lastmod></url></urlset>"))
+print("ok christmas word search")
