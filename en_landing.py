@@ -132,8 +132,8 @@ faq=[("What is a good Secret Santa budget?","Most groups choose $10 to $25. What
  ("How do you draw names for Secret Santa?","Write every name on a card, fold them into a bowl and have each person draw one in private. If someone draws their own name, they put it back and draw again. The Secret Santa Kit includes printable draw cards."),
  ("What should I give a coworker I don't know well?","Something useful and neutral: a mug with cocoa, a candle, a tumbler, a plant or a nice notebook."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
-h=page("secret-santa","Secret Santa Printables: Draw Cards, Wish Lists, Gift Tags + Ideas | Bucky",
- "Plan a Secret Santa in minutes: printable draw cards, wish lists and gift tags, plus gift ideas under $10, $15 and $25 for office, family and classroom exchanges. English and Spanish PDF.",
+h=page("secret-santa","Secret Santa Printables: Name Slips, Wish Lists & Gift Tags",
+ "Printable Secret Santa name slips, wish lists and gift tags, plus gift ideas under $10, $15 and $25 for office, family and class exchanges. Instant PDF.",
  "Secret Santa printables and gift ideas for office, family and class",
  "Run your gift exchange without the stress: the <b>Secret Santa Kit</b> has <b>draw cards, wish lists and gift tags</b> ready to print, and below you'll find <b>gift ideas by budget</b>. Instant PDF download, English and Spanish, US Letter and A4.",
  ["secret-santa","kit-navideno-gratis"],body,
