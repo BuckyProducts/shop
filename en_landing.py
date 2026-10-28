@@ -94,8 +94,8 @@ faq=[("Are there free printable Christmas party games?","Yes. The free Christmas
  ("What Christmas games work for adults at an office party?","Would You Rather, Christmas Scattergories and charades are quick, need no setup and work for large groups. Print a sheet per person and set a timer."),
  ("What games work for kids and families?","Charades, word searches and coloring pages work for all ages. The Kids Activity Mega Pack adds 60 screen-free pages for winter break."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
-h=page("christmas-party-games","Printable Christmas Party Games (Free PDF for Family, Kids, Office) | Bucky",
- "Printable Christmas party games to download today: free Christmas charades, Would You Rather and Scattergories, plus 13 more Christmas games and large-print puzzles. English and Spanish, US Letter and A4.",
+h=page("christmas-party-games","Printable Christmas Party Games: Free PDF for Family & Kids",
+ "Free printable Christmas party games: charades, Would You Rather and Scattergories, plus 13 more games for family, kids and office. Letter and A4 PDF.",
  "Printable Christmas party games for family, kids and office parties",
  "Start with the <b>free Christmas Mini Kit</b> (charades, Would You Rather and Christmas Scattergories), then add <b>13 more Christmas games</b> or large-print puzzles. Instant PDF download, English and Spanish.",
  ["kit-navideno-gratis","combo-gratitud"],body,
@@ -311,3 +311,39 @@ open("christmas-word-search/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/christmas-word-search/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-word-search/</loc><lastmod>2026-10-27</lastmod></url></urlset>"))
 print("ok christmas word search")
+
+# --- Christmas bingo (2026-10-28, FB Page 10 AM slot) ---
+for k,g,pr,en,den in [('christmas-bingo','lbizh','5.99','Christmas Picture Bingo','50 watercolor picture bingo cards, 45 calling cards and 20 word bingo cards. English and Spanish, Letter and A4.')]:
+  P.setdefault(k,{'k':k,'g':g,'pr':pr,'en':en,'den':den})
+body='''<h2>Why picture bingo is the easiest Christmas party game</h2>
+<p>Bingo needs no rules explanation, no teams and no prep beyond printing. Picture bingo goes one step further: every square has a painted picture with its label, so kids who can't read yet can play right next to grandparents. When the adults want something a little faster, switch to the word bingo cards.</p>
+<ul><li><b>Family Christmas parties:</b> one game fits everyone from age 3 to 93, and it fills the half hour between dinner and dessert.</li>
+<li><b>Classroom holiday parties:</b> a teacher or room parent can call the pictures while kids mark their cards.</li>
+<li><b>Office and church gatherings:</b> the word bingo cards are quick to play with adults and need nothing but a pen.</li>
+<li><b>Bilingual families:</b> the same game comes in English and in Spanish, so everyone can play in the language they like.</li></ul>
+<h2>How to play Christmas bingo</h2>
+<ol><li>Print the cards (two picture cards per page) and cut the picture calling cards apart.</li>
+<li>Give each player a card and some markers: candy, mini marshmallows, buttons or a crayon.</li>
+<li>Shuffle the calling cards in a bowl or hat. Draw one at a time and say it out loud.</li>
+<li>Players mark the matching square. The first to complete a row, column or diagonal shouts "Bingo!" and wins.</li>
+<li>For a longer game, play blackout: the winner is the first to cover the whole card.</li></ol>
+<h2>Printing tips</h2>
+<p>Print on plain US Letter or A4 paper at "Actual size", or on light cardstock if you want the cards to last all season. Slip a card into a sheet protector and use a dry-erase marker to reuse it round after round. Prize ideas: candy canes, hot cocoa packets, a small ornament, or first pick at the cookie tray.</p>
+<p>¿Lo buscas en español? El juego trae una versión completa en español: lotería de imágenes navideña y bingo de palabras.</p>'''
+faq=[("How many Christmas bingo cards are included?","50 unique picture bingo cards (2 per page) with 45 picture calling cards, plus 20 word bingo cards with a 40-word calling list."),
+ ("Can kids who can't read play?","Yes. Every square on the picture cards has a painted picture with its label, so young kids and non-readers can play."),
+ ("Will two players have the same card?","No. All 50 picture cards are different, and no two share more than 17 of their 24 pictures."),
+ ("What paper size and language?","You get 4 PDF files: English US Letter, English A4, Spanish US Letter and Spanish A4."),
+ ("Is anything shipped?","No. It's a digital download you print at home or at a copy shop.")]
+h=page("christmas-bingo","Printable Christmas Bingo: 50 Picture Cards + Word Bingo",
+ "Printable Christmas bingo for families and parties: 50 unique picture cards kids can play, 45 calling cards and 20 word bingo cards. English, Spanish, PDF.",
+ "Printable Christmas bingo cards for the whole family",
+ "<b>50 unique Christmas picture bingo cards</b> that kids and non-readers can play, <b>45 calling cards</b>, and <b>20 word bingo cards</b> for adults. Instant PDF download in English and Spanish, US Letter and A4, for <b>$5.99</b>.",
+ ["christmas-bingo","kit-navideno-gratis"],body,
+ ["games","bundle","combo-gratitud","kids-mega","mega"],faq,"Christmas bingo")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More Christmas party games and printables</h2>")
+os.makedirs("christmas-bingo",exist_ok=True)
+open("christmas-bingo/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/christmas-bingo/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-bingo/</loc><lastmod>2026-10-28</lastmod></url></urlset>"))
+print("ok christmas bingo")
