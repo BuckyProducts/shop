@@ -347,4 +347,35 @@ open("christmas-bingo/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/christmas-bingo/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-bingo/</loc><lastmod>2026-10-28</lastmod></url></urlset>"))
 print("ok christmas bingo")
+
+# --- Printable Christmas cards (2026-10-29, FB Page 10 AM slot) ---
+body='''<h2>Why print your own Christmas cards</h2>
+<p>A box of store cards costs more than a whole printable set, and it never has the right card for the teacher, the neighbor and the grandparents all at once. With a PDF you print exactly the cards you need tonight, and print more next week when you remember one more person.</p>
+<ul><li><b>Messages already written:</b> every card in the Bucky Christmas Cards set has a warm message inside plus space to sign, so you only add a name.</li>
+<li><b>Cards for everyone on the list:</b> Merry Christmas, Happy Holidays, Peace on Earth, Blessed Christmas, Thank You Teacher, Grandma &amp; Grandpa, Happy New Year and more.</li>
+<li><b>Fits a standard envelope:</b> the finished card is 4.25 &times; 5.5 in, the size of an A2 envelope.</li>
+<li><b>Bilingual:</b> every card comes in English and in Spanish, for bilingual families and dual-language classrooms.</li></ul>
+<h2>How to print and fold a quarter-fold card</h2>
+<ol><li>Download the PDF and print on white cardstock (65 to 110 lb) at "Actual size". The cards print on one side only, so there is no double-sided setting to fight with.</li>
+<li>Fold the sheet in half the long way, then in half again, so the picture ends up on the front.</li>
+<li>Run a thumbnail or a ruler along each fold for a crisp edge.</li>
+<li>Sign inside, slip it into an A2 envelope and add a matching gift tag to the present.</li></ol>
+<p>Not sure yet? The <b>free Christmas Mini Kit</b> includes one folding Christmas card and 8 gift tags, so you can try a print before you buy. ¿Buscas tarjetas en español? Cada tarjeta viene también en español, y hay <a href="../tarjetas-navidenas-gratis/">tarjetas navideñas gratis</a>.</p>'''
+faq=[("Are there free printable Christmas cards?","Yes. The free Christmas Mini Kit includes one folding Christmas card and 8 To/From gift tags. The full Bucky Christmas Cards set has 12 cards and 16 gift tags for $3.99."),
+ ("What size are the cards?","Each card folds down to 4.25 x 5.5 inches and fits a standard A2 envelope. The A4 version folds to about 10.5 x 14.8 cm."),
+ ("Do I need to print double-sided?","No. The cards print on one side of the sheet; you fold the page in four and the message lands inside."),
+ ("What paper should I use?","White cardstock, 65 to 110 lb, gives the best result. Plain printer paper works for a quick card."),
+ ("Is anything shipped?","No. You get 4 PDF files (English US Letter, English A4, Spanish US Letter and Spanish A4) to print yourself.")]
+h=page("printable-christmas-cards","Printable Christmas Cards: 12 Foldable Cards + a Free Card",
+ "Printable Christmas cards with the message already inside: 12 quarter-fold cards and 16 gift tags for $3.99, or a free card to start. English and Spanish PDF.",
+ "Printable Christmas cards you can make tonight",
+ "<b>12 folding Christmas cards</b> with a warm message already inside, plus <b>16 To/From gift tags</b>, for <b>$3.99</b>. Print on one side, fold in four and give. Instant PDF download in English and Spanish, US Letter and A4. Want to try first? Grab the <b>free mini kit</b> with one card and 8 tags.",
+ ["tarjetas-navidad","kit-navideno-gratis"],body,
+ ["tarjetas-felicitacion","tarjetas-biblicas","combo-gratitud","mega"],faq,"Printable Christmas cards")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More cards and Christmas printables</h2>")
+os.makedirs("printable-christmas-cards",exist_ok=True)
+open("printable-christmas-cards/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/printable-christmas-cards/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}printable-christmas-cards/</loc><lastmod>2026-10-29</lastmod></url></urlset>"))
+print("ok printable christmas cards")
 import subprocess; subprocess.run(["python3", "utm.py"])
