@@ -165,8 +165,8 @@ faq=[("Is this 2027 calendar really free?","Yes. Download the PDF in US Letter o
  ("Does the 2027 calendar include US holidays?","Yes. All 11 federal holidays are circled, and Valentine's Day, St. Patrick's Day, Easter, Mother's Day, Father's Day, Halloween and New Year's Eve are marked."),
  ("When is Easter in 2027?","Easter Sunday is March 28, 2027."),
  ("When is Thanksgiving 2027?","Thanksgiving is Thursday, November 25, 2027.")]
-h=page("printable-calendar-2027","Free Printable 2027 Calendar with US Holidays (One Page PDF) | Bucky",
- "Free printable 2027 calendar on one page with all US federal holidays, plus Easter, Mother's Day and Halloween dates. Instant PDF, US Letter and A4, no sign-up.",
+h=page("printable-calendar-2027","Free Printable 2027 Calendar with US Holidays (PDF) | Bucky",
+ "Free one-page 2027 calendar with all US federal holidays plus Easter, Mother's Day and Halloween. Instant PDF in US Letter and A4, no sign-up.",
  "Free printable 2027 calendar with US holidays",
  "Download a <b>free one-page 2027 calendar</b> with every <b>US federal holiday</b> circled. US Letter and A4 PDF, no sign-up. Need more space? The <b>2027 Planner</b> has monthly and weekly pages.",
  ["planner","combo-posada"],body,
