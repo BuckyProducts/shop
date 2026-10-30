@@ -378,4 +378,39 @@ open("printable-christmas-cards/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/printable-christmas-cards/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}printable-christmas-cards/</loc><lastmod>2026-10-29</lastmod></url></urlset>"))
 print("ok printable christmas cards")
+
+# --- Printable Thanksgiving games (2026-10-30, FB Page 10 AM slot) ---
+P["thanksgiving"]={"k":"thanksgiving","g":"ckmaso","pr":"7.79","en":"Thanksgiving Games Bundle","den":"Picture bingo, trivia, charades, Scattergories, a pie contest, gratitude cards, place cards and a kids' table mat. 38 pages, EN + ES."}
+body='''<h2>Thanksgiving games the whole table can play</h2>
+<p>The turkey takes hours, and the gap between "everyone's here" and "dinner's ready" is where printable games earn their keep. These work for a big family dinner, a Friendsgiving with roommates, or a classroom party the day before break.</p>
+<ul><li><b>Thanksgiving picture bingo:</b> 20 different cards with a picture and a word on every square, plus 30 calling cards, so kids who can't read yet play alongside grandparents.</li>
+<li><b>Thanksgiving trivia:</b> 20 family-friendly questions with an answer key. Split the room into two teams and keep score on a napkin.</li>
+<li><b>Who Am I? and charades:</b> 24 cards for a game that needs nothing but the cards and a little courage.</li>
+<li><b>Thanksgiving Scattergories:</b> a game sheet with 12 categories and 3 rounds. Print one per player.</li>
+<li><b>The Great Pie-Off:</b> a sign, 8 star-rating ballots, 6 entry cards and 6 awards (Best in Show, Flakiest Crust, People's Choice and more) turn dessert into a contest.</li></ul>
+<h2>Gratitude activities and a kids' table that runs itself</h2>
+<p>Put a stack of "I'm thankful for" cards (16 with prompts) by each plate and read them out before the pie. The gratitude tree poster comes with 18 leaves to color and stick on. For the kids' table there's an activity mat with tic-tac-toe, count-and-write, draw your plate and a turkey to color, plus a coloring page, a word search and a maze.</p>
+<h2>How to print them</h2>
+<ol><li>Download the 4 PDFs right after checkout: English US Letter, English A4, Spanish US Letter and Spanish A4.</li>
+<li>Print at "Actual size". Use cardstock for bingo cards, place cards and thankful cards, and plain paper for trivia and Scattergories sheets.</li>
+<li>Cut, fold and play. No printer at home? Any copy shop can print it the same day.</li></ol>
+<p>Thanksgiving 2026 is Thursday, November 26. ¿Lo buscas en español? Todo el kit viene también en español, ideal para familias bilingües: bingo, trivia, mímica y tarjetas de gratitud.</p>'''
+faq=[("When is Thanksgiving 2026?","Thursday, November 26, 2026."),
+ ("What games are in the Thanksgiving Games Bundle?","Picture bingo (20 cards and 30 calling cards), Thanksgiving trivia (20 questions with answers), Who Am I? and charades (24 cards), Thanksgiving Scattergories, and the Great Pie-Off dessert contest, plus gratitude cards, place cards, menus and a kids' activity mat."),
+ ("How many pages is it?","38 pages per language, in 4 PDF files: English US Letter, English A4, Spanish US Letter and Spanish A4."),
+ ("Can small kids play?","Yes. Every bingo square has a picture next to the word, and the kids' table mat and coloring page are made for little ones."),
+ ("Is anything shipped?","No. It's a digital download you print at home or at a copy shop. The files are not editable; you fill them in by hand.")]
+h=page("thanksgiving-games","Printable Thanksgiving Games: Bingo, Trivia & Family Fun",
+ "Printable Thanksgiving games for family and kids: picture bingo, trivia, charades, Scattergories and a pie contest. 38 pages, English and Spanish PDF, $7.79.",
+ "Printable Thanksgiving games for family and kids",
+ "<b>Thanksgiving picture bingo, trivia, charades, Scattergories and a pie contest</b>, plus gratitude cards, place cards and a kids' table mat, in one <b>38-page</b> download for <b>$7.79</b>. Instant PDF in English and Spanish, US Letter and A4.",
+ ["thanksgiving","combo-gratitud"],body,
+ ["kids-mega","rompecabezas-letra-grande","kit-navideno-gratis","mega"],faq,"Thanksgiving games")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More printables for Thanksgiving week and beyond</h2>")
+h=h.replace('<a href="../ideas-intercambio-regalos/">ideas para intercambio de regalos</a>.</p>','<a href="../ideas-intercambio-regalos/">ideas para intercambio de regalos</a>. In English: <a href="../thanksgiving-printables/">more Thanksgiving printables</a>.</p>')
+os.makedirs("thanksgiving-games",exist_ok=True)
+open("thanksgiving-games/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/thanksgiving-games/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}thanksgiving-games/</loc><lastmod>2026-10-30</lastmod></url></urlset>"))
+print("ok thanksgiving games")
 import subprocess; subprocess.run(["python3", "utm.py"])
