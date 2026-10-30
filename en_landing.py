@@ -199,8 +199,8 @@ faq=[("When does Advent start in 2026?","Many churches begin Advent on the fourt
  ("Is this Advent devotional good for kids?","Yes. Each day is short: one verse, a few sentences of reflection, a prayer and a small action. Families read it together in about ten minutes, and older kids can read it on their own."),
  ("Which Bible translation does it use?","The English pages use the King James Version (KJV). The Spanish pages use the Reina-Valera 1909."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
-h=page("advent-devotional","Printable Advent Devotional for Families: 24 Days of Bible Readings (PDF) | Bucky",
- "Printable Advent devotional for families and kids: 24 days of KJV Bible readings, a short reflection, prayer and action for each day, Dec 1 to 24. Plus tips for a family Advent routine. US Letter and A4 PDF.",
+h=page("advent-devotional","Printable Advent Devotional for Families: 24 Days (PDF)",
+ "Printable Advent devotional for families and kids: 24 days of KJV Bible readings, Dec 1 to 24, each with a reflection, prayer and action. Letter and A4 PDF.",
  "Printable Advent devotional for families and kids",
  "Count down to Christmas with God's Word: the <b>Advent Devotional</b> gives you <b>24 daily Bible readings</b> (KJV), each with a short reflection, a prayer and a simple action for the whole family. Instant PDF download, US Letter and A4.",
  ["devocional-adviento","kit-navideno-gratis"],body,
