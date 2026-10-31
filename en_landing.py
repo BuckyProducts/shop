@@ -230,8 +230,8 @@ faq=[("What size is the print?","The puzzles are laid out in large type with roo
  ("Are the answers included?","Yes. Both books include an answer key for every puzzle."),
  ("Are these puzzles good for seniors with memory loss?","Many caregivers and activity coordinators use word searches and simple mazes as calm, low-pressure activities. Start with the easier pages and let the person go at their own pace."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home, at a senior center or at a copy shop.")]
-h=page("large-print-puzzles","Large Print Puzzles for Seniors: Printable Word Search, Crossword and Sudoku (PDF) | Bucky",
- "Printable large-print puzzles for seniors: word searches, crosswords, sudoku and mazes with answers, plus large-print Christmas puzzles. English and Spanish. US Letter and A4 PDF, print as many as you need.",
+h=page("large-print-puzzles","Large Print Puzzles for Seniors: Word Search & Sudoku PDF",
+ "Printable large-print puzzles for seniors: word search, crossword, sudoku and mazes with answers, plus Christmas puzzles. English and Spanish PDF.",
  "Printable large-print puzzles for seniors",
  "Big letters, roomy grids and every answer included: <b>100 large-print puzzles</b> (word search, crossword, sudoku and mazes) plus a <b>large-print Christmas puzzle book</b>. Instant PDF download in English and Spanish, US Letter and A4.",
  ["rompecabezas-letra-grande","pasatiempos-navidad"],body,
