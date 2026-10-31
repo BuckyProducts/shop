@@ -413,4 +413,43 @@ open("thanksgiving-games/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/thanksgiving-games/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}thanksgiving-games/</loc><lastmod>2026-10-30</lastmod></url></urlset>"))
 print("ok thanksgiving games")
+# --- Printable Christmas trivia (2026-10-31, FB Page 10 AM slot) ---
+body='''<h2>Christmas trivia that works for a mixed crowd</h2>
+<p>Trivia is the party game that needs the least setup: one person reads, everyone else argues. It fits the lull after dinner, a classroom party on the last day before break, an office lunch or a video call with family in another state. The trick is questions that grandparents and teens can both answer, and an answer key so nobody has to look things up mid-game.</p>
+<ul><li><b>Christmas trivia:</b> 20 family-friendly questions with an answer key, in the Christmas Party Games set.</li>
+<li><b>Emoji Carol Quiz:</b> 20 traditional carols written as emoji strings. Guess the carol, then sing a line to score. Answer key included.</li>
+<li><b>Word Scramble:</b> 20 scrambled Christmas words with answers, good for quiet tables and early readers.</li>
+<li><b>Ten more games in the same set:</b> Lotería Navideña, picture bingo (50 cards), word bingo, Who Am I?, charades, Would You Rather, This or That, a Left–Right gift exchange story, Scattergories and Find the Guest bingo.</li></ul>
+<h2>Five warm-up questions to try tonight</h2>
+<p>Written for this page so you can test the crowd before you print:</p>
+<ol><li>In "The Twelve Days of Christmas," what is given on the fifth day? <i>Five gold rings.</i></li>
+<li>The poinsettia is native to which country? <i>Mexico.</i></li>
+<li>Which plant do people traditionally kiss under? <i>Mistletoe.</i></li>
+<li>How many sides does a snowflake usually have? <i>Six.</i></li>
+<li>Which country is credited with starting the decorated indoor Christmas tree? <i>Germany.</i></li></ol>
+<h2>How to run a Christmas trivia game</h2>
+<ol><li>Print the question sheet and answer key on plain US Letter or A4 paper at "Actual size".</li>
+<li>Split into teams of 3 to 5 and give each team a pen and scrap paper. Mix ages so kids and adults help each other.</li>
+<li>Read each question twice, give 30 seconds, then reveal answers every 5 questions so scores stay exciting.</li>
+<li>Finish with the Emoji Carol Quiz as a bonus round: double points if the team sings the first line.</li>
+<li>Prizes: candy canes, hot cocoa packets, or first pick at the cookie tray.</li></ol>
+<p>¿Lo buscas en español? Todo viene también en español: trivia navideña, villancicos con emojis y palabras revueltas, ideal para familias bilingües y posadas.</p>'''
+faq=[("How many Christmas trivia questions are included?","The Christmas Party Games set has 20 Christmas trivia questions with an answer key, plus a 20-carol Emoji Carol Quiz and a 20-word Word Scramble, each with answers."),
+ ("Is the trivia family-friendly?","Yes. The questions are written for families, classrooms and office parties, and the carols in the emoji quiz are traditional ones."),
+ ("Does it come in Spanish?","Yes. You get 4 PDF files: English US Letter, English A4, Spanish US Letter and Spanish A4."),
+ ("What else is in the set?","13 games in total, 70 pages per language: Lotería Navideña, picture bingo, word bingo, Who Am I?, charades, Would You Rather, This or That, a Left–Right gift exchange story, Scattergories and Find the Guest bingo, plus the three quiz games."),
+ ("Is there a free version?","The free Christmas Mini Kit has 12 charades cards, 12 Would You Rather cards and a Christmas Scattergories sheet, but no trivia. It's a good way to test the style first."),
+ ("Is anything shipped?","No. It's a digital download you print at home or at a copy shop. The files are not editable.")]
+h=page("christmas-trivia","Printable Christmas Trivia: Questions, Answers & Carol Quiz",
+ "Printable Christmas trivia with answers: 20 family questions, a 20-carol emoji quiz and a word scramble, plus 10 more party games. English and Spanish PDF.",
+ "Printable Christmas trivia with answers",
+ "<b>20 Christmas trivia questions with an answer key</b>, a <b>20-carol Emoji Carol Quiz</b> and a <b>Word Scramble</b>, inside a set of 13 printable Christmas party games for <b>$9.99</b>. Instant PDF in English and Spanish, US Letter and A4.",
+ ["games","bundle"],body,
+ ["combo-gratitud","pasatiempos-navidad","kit-navideno-gratis","mega"],faq,"Christmas trivia")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More Christmas games and printables</h2>")
+os.makedirs("christmas-trivia",exist_ok=True)
+open("christmas-trivia/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/christmas-trivia/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-trivia/</loc><lastmod>2026-10-31</lastmod></url></urlset>"))
+print("ok christmas trivia")
 import subprocess; subprocess.run(["python3", "utm.py"])
