@@ -266,8 +266,8 @@ faq=[("Are there free Christmas activities for kids here?","Yes. The free Christ
  ("What ages are these activities for?","Most pages work for ages 3 to 10. Coloring pages and stickers suit preschoolers, and games and word searches suit older kids and the whole family."),
  ("Can teachers use them in class?","Yes. Personal and classroom use is fine, so print as many copies as your class needs. Please don't resell the files."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
-h=page("christmas-activities-for-kids","Printable Christmas Activities for Kids: Coloring, Games and Mazes (PDF) | Bucky",
- "Printable Christmas activities for kids: a free Christmas mini kit with games and a coloring page, plus 60 screen-free activity pages, coloring pages and stories for winter break. English and Spanish, US Letter and A4.",
+h=page("christmas-activities-for-kids","Printable Christmas Activities for Kids: Games and Coloring",
+ "Printable Christmas activities for kids: a free mini kit plus 60 screen-free games, coloring pages and stories. English and Spanish, Letter and A4.",
  "Printable Christmas activities for kids",
  "Keep kids happy and off screens all winter break: start with the <b>free Christmas Mini Kit</b> (games and a coloring page), then add <b>60 screen-free activity pages</b>, coloring pages and stories. Instant PDF download, English and Spanish, US Letter and A4.",
  ["kit-navideno-gratis","kids-mega"],body,
