@@ -452,4 +452,41 @@ open("christmas-trivia/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/christmas-trivia/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-trivia/</loc><lastmod>2026-10-31</lastmod></url></urlset>"))
 print("ok christmas trivia")
+# --- Printable 2027 planner (2026-11-01, FB Page 10 AM slot) ---
+body='''<h2>One 2027 planner for your tablet and your printer</h2>
+<p>Most people start shopping for next year's planner in November and December, when the new year suddenly feels close. This one comes two ways in the same download: a hyperlinked digital planner for GoodNotes, Notability, Noteshelf, Xodo, Samsung Notes or any PDF annotation app, and a printable version in US Letter and A4 for a binder or a disc-bound notebook.</p>
+<h2>What's inside (89 pages per version)</h2>
+<ul><li><b>Year at a glance and key dates:</b> US federal holidays and Mexican holidays for 2027 already marked.</li>
+<li><b>Yearly goals:</b> six life areas, a word of the year and a goal action plan.</li>
+<li><b>Money pages:</b> an annual budget, a $50,500 savings challenge and a bill tracker.</li>
+<li><b>Year in Pixels:</b> a mood tracker, one square per day.</li>
+<li><b>Monthly:</b> 12 calendars with holidays marked, plus 12 monthly pages with goals, priorities, a 7-habit tracker, a monthly budget and notes.</li>
+<li><b>Weekly:</b> 53 dated weekly pages with all 7 days, a weekly focus, a to-do list and a gratitude line.</li>
+<li><b>Notes:</b> lined pages and dot grid.</li></ul>
+<h2>Digital or printed: how to choose</h2>
+<ul><li><b>Digital:</b> more than 1,900 links. Side tabs jump to every month and section, tapping a date opens its week, and tapping the month name takes you back. Import the PDF into your note app once and write with a stylus.</li>
+<li><b>Printed:</b> printer-safe margins and a calm warm-neutral design. Print only the months you need, or the whole year at a copy shop.</li>
+<li><b>Monday or Sunday start:</b> both are included, so the week starts the way you like.</li></ul>
+<p>You get 12 PDF files in total: 4 digital (Monday and Sunday start, English and Spanish) and 8 printable (Monday and Sunday start, Letter and A4, English and Spanish). Nothing is shipped.</p>
+<h2>Just need a calendar?</h2>
+<p>If you only want the dates on one sheet, the <a href="../printable-calendar-2027/">free printable 2027 calendar with US holidays</a> is a single page in Letter and A4.</p>
+<p>¿Prefieres en español? La agenda 2027 viene también completa en español, con días festivos de México y de EE. UU.</p>'''
+faq=[("Is this a digital planner or a printable planner?","Both. The same download includes a hyperlinked digital planner for tablet note apps and a printable version in US Letter and A4."),
+ ("Which apps does the digital planner work in?","GoodNotes, Notability, Noteshelf, Xodo, Samsung Notes and any PDF annotation app."),
+ ("How many pages does the 2027 planner have?","89 pages per version: year at a glance, goals, budget pages, a Year in Pixels tracker, 12 monthly calendars, 12 monthly pages, 53 weekly pages and notes."),
+ ("Does the week start on Monday or Sunday?","Both versions are included, so you can pick Monday start or Sunday start."),
+ ("Is it in Spanish too?","Yes. Every version comes in English and in Spanish, 12 PDF files in total."),
+ ("Is anything shipped?","No. It's a one-time digital download for personal use.")]
+h=page("printable-2027-planner","Printable 2027 Planner: Digital + Print PDF, Letter & A4",
+ "2027 planner, digital and printable: 89 pages with yearly goals, budget, habit tracker, 12 monthly and 53 weekly pages. English and Spanish PDF.",
+ "Printable and digital 2027 planner",
+ "An <b>89-page 2027 planner</b> with yearly goals, budget pages, a habit tracker, <b>12 monthly and 53 weekly pages</b>, as a hyperlinked digital planner and a printable PDF, for <b>$7.99</b>. English and Spanish, US Letter and A4, Monday or Sunday start.",
+ ["planner","combo-posada"],body,
+ ["organizador-hogar","sheets","organiza-tu-casa-30-dias","kit-navideno-gratis","mega"],faq,"2027 planner")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More printables for a fresh start in 2027</h2>")
+os.makedirs("printable-2027-planner",exist_ok=True)
+open("printable-2027-planner/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/printable-2027-planner/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}printable-2027-planner/</loc><lastmod>2026-11-01</lastmod></url></urlset>"))
+print("ok 2027 planner")
 import subprocess; subprocess.run(["python3", "utm.py"])
