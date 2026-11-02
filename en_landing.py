@@ -298,9 +298,9 @@ faq=[("Do the Christmas word searches come with answers?","Yes. The Large Print 
  ("Are they large print?","Yes. The Christmas puzzle book and the 100 Large Print Puzzles book both use big letters and roomy grids, so they work well for seniors and young readers."),
  ("What paper size are they?","US Letter and A4. Print at home, at school or at a copy shop."),
  ("Is anything shipped?","No. These are digital PDF files you download right after checkout and print yourself."),
- ("Can I print copies for my class or family?","Yes. Personal and classroom use is fine, so print as many as you need. Please don't resell the files.")]
+ ("Can I print copies for my family?","Yes. Print as many copies as your own family needs. The puzzle books are for personal use only, so please don't share or resell the files.")]
 h=page("christmas-word-search","Christmas Word Search Printable: 20 Puzzles + Answers",
- "Printable Christmas word search puzzles in large print: 20 word searches and 15 crosswords with answers, for kids, families and seniors. US Letter and A4 PDF.",
+ "Printable Christmas word search puzzles in large print: 20 word searches and 15 crosswords with answers, for kids, families and seniors. Letter and A4 PDF.",
  "Printable Christmas word search puzzles",
  "<b>20 Christmas word searches and 15 crosswords</b> in large print, with every answer included. Print them for family gatherings, the classroom or a quiet afternoon. Instant PDF download, English and Spanish, US Letter and A4.",
  ["pasatiempos-navidad","rompecabezas-letra-grande"],body,
