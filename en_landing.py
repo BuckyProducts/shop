@@ -490,3 +490,34 @@ s=open("sitemap.xml").read()
 if "/printable-2027-planner/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}printable-2027-planner/</loc><lastmod>2026-11-01</lastmod></url></urlset>"))
 print("ok 2027 planner")
 import subprocess; subprocess.run(["python3", "utm.py"])
+# --- Christian Christmas printables (2026-11-02, FB Page 10 AM slot) ---
+body='''<h2>Keep Christ at the center of a busy Christmas</h2>
+<p>Advent begins on Sunday, November 29, 2026, and December fills up fast. These printables give your family, your Bible study or your prayer group a few quiet minutes each day: a devotional page to read, a verse to carry, a page to color while you pray. Every one is ready to print at home tonight.</p>
+<h2>What each printable is for</h2>
+<ul><li><b>Advent devotional (24 days):</b> one page for each day from December 1 to 24, with a King James Bible verse, a short reflection you can read in 2 minutes, a prayer, one simple action for the day and lines for notes. It walks from the promises of Isaiah and Micah to the shepherds and angels, and ends on Christmas Eve with John 3:16. 26 pages per file.</li>
+<li><b>40 Bible verse cards:</b> large, easy-to-read scripture cards, 4 per page, on 16 themes like hope, peace, comfort, joy and courage, with a page of card backs for two-sided printing. Tuck one into a Christmas card, a gift or a hospital visit.</li>
+<li><b>Bible verse coloring pages for adults:</b> 20 pages of mandalas, flower wreaths, hearts, doves and sunrises, each with a verse in big outlined letters. Big, clear spaces make them comfortable for seniors and lovely for women's groups or Sunday school.</li>
+<li><b>Holy Rosary and novenas guide:</b> a large-print, 16-page guide to praying the Rosary step by step, with the mysteries for each day and three novenas, including Our Lady of Guadalupe (December 12). A thoughtful gift for a grandmother or godmother.</li></ul>
+<h2>How to print them</h2>
+<ol><li>Download the PDFs right after checkout. Each product comes as 4 files: English and Spanish, in US Letter and A4.</li><li>Print at 100% ("Actual size"). Use cardstock for the verse cards and plain paper for the devotional and coloring pages.</li><li>No printer? Any print shop or office store can print them for you.</li></ol>
+<p>English verses use the King James Version and Spanish verses use the Reina-Valera 1909, both public domain. Want the devotional on its own? See the <a href="../advent-devotional/">printable Advent devotional</a> page.</p>
+<p>¿Prefieres en español? Todos vienen también en español, con versículos de la Reina-Valera 1909.</p>'''
+faq=[("Are these printables Christian and Bible-based?","Yes. Every page uses Bible verses: the King James Version in English and the Reina-Valera 1909 in Spanish, both public domain."),
+ ("When should I start the Advent devotional?","It has one page for each day from December 1 to December 24, ending on Christmas Eve with John 3:16."),
+ ("Are they good for seniors?","Yes. The verse cards, coloring pages and Rosary guide are all in large, easy-to-read print with big, clear spaces."),
+ ("What paper size are they?","Each product includes US Letter and A4 PDFs, in English and in Spanish."),
+ ("Is there a free Christmas printable?","The Christmas Mini Kit is free. It has party games and cards rather than devotional pages, so it's a good way to see the print quality first."),
+ ("Is anything shipped?","No. These are digital downloads for personal use that you print at home or at a print shop.")]
+h=page("christian-christmas-printables","Christian Christmas Printables: Advent, Bible Verses, Prayer",
+ "Christian Christmas printables: a 24-day Advent devotional, 40 Bible verse cards, verse coloring pages and a Rosary guide. Large print, English & Spanish.",
+ "Christian Christmas printables for Advent and the holidays",
+ "A <b>24-day Advent devotional</b> for <b>$4.99</b> and <b>40 large-print Bible verse cards</b> for <b>$3.99</b>, plus verse coloring pages and a Rosary and novenas guide. Instant PDFs in English and Spanish, US Letter and A4.",
+ ["devocional-adviento","tarjetas-biblicas"],body,
+ ["colorear-biblico","rosario-novenas","kit-navideno-gratis","mega"],faq,"Christian Christmas printables")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More faith printables for the season</h2>")
+os.makedirs("christian-christmas-printables",exist_ok=True)
+open("christian-christmas-printables/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/christian-christmas-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christian-christmas-printables/</loc><lastmod>2026-11-02</lastmod></url></urlset>"))
+print("ok christian christmas printables")
+import subprocess; subprocess.run(["python3", "utm.py"])
