@@ -521,3 +521,40 @@ s=open("sitemap.xml").read()
 if "/christian-christmas-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christian-christmas-printables/</loc><lastmod>2026-11-02</lastmod></url></urlset>"))
 print("ok christian christmas printables")
 import subprocess; subprocess.run(["python3", "utm.py"])
+# --- Las Posadas printables (2026-11-03, FB Page 10 AM slot) ---
+P["games"]=dict(P["games"],den="13 printable Christmas games, including Lotería Navideña with 54 watercolor cards and 32 unique tablas, plus picture bingo and trivia. EN + ES.")
+P["combo-posada"]=dict(P["combo-posada"],den="The 13 Christmas games with Lotería, a Secret Santa kit, a 2027 planner and the posada lyrics sheet, about 40% less than buying them separately.")
+body='''<h2>What Las Posadas are, and how a home posada usually goes</h2>
+<p>Las Posadas are nine nights of celebration, from December 16 to December 24, that remember Mary and Joseph looking for a place to stay in Bethlehem. Families in Mexico, and many Mexican American families and parishes in the US, take turns hosting. Many hosts also throw a single posada party on a weekend in December for friends, coworkers or the extended family.</p>
+<ol><li><b>Pedir posada (asking for shelter):</b> guests split into two groups. One group stands outside with candles and sings the verses of the pilgrims; the group inside answers as the innkeepers, until the door opens and everyone comes in singing together.</li>
+<li><b>Food and ponche:</b> tamales, pozole, buñuelos and hot ponche or champurrado are the classics.</li>
+<li><b>Piñata:</b> the traditional star piñata, with fruit and candy inside.</li>
+<li><b>Games:</b> Lotería is the favorite, because kids, parents and grandparents can all play at the same table. Bingo, trivia and charades keep the party going after the piñata.</li></ol>
+<h2>What each printable covers</h2>
+<ul><li><b>Christmas Lotería (Lotería Navideña):</b> 54 original watercolor cards and 32 unique tablas, with the rules, in English and Spanish. It comes in the 13-game Christmas Party Games set for $9.99 and in the Posada combo.</li>
+<li><b>Posada lyrics:</b> the Posada combo ($14.49) adds "Letanía para pedir posada", the traditional lyrics on an easy 2-page sheet in Spanish, color-coded for the outside and inside groups, plus a Secret Santa kit and a 2027 planner.</li>
+<li><b>Family recipes:</b> the Mexican family recipes cookbook has 30 classic recipes in large print, including tamales, pozole, champurrado and arroz con leche, with US cups and metric amounts.</li>
+<li><b>Prayer:</b> the Holy Rosary and novenas guide is large print and includes a novena to Our Lady of Guadalupe (December 12).</li></ul>
+<h2>How to print them</h2>
+<ol><li>Download right after checkout. The games come as PDFs in English and Spanish, US Letter and A4.</li><li>Print at 100% ("Actual size"). Use cardstock for the Lotería cards, tablas and bingo cards so they last all nine nights.</li><li>Use beans, corn kernels or bottle caps as markers, the way Lotería is played at home.</li></ol>
+<p>Want the lyrics explained first? See <a href="../letania-posadas/">la letra para pedir posada</a> (in Spanish), or more <a href="../christmas-party-games/">printable Christmas party games</a> and <a href="../christmas-bingo/">Christmas bingo</a>.</p>
+<p>¿Prefieres en español? Mira los <a href="../juegos-posada-adultos/">juegos para posada para adultos</a>.</p>'''
+faq=[("When are Las Posadas in 2026?","Las Posadas run for nine nights, from Wednesday, December 16 to Thursday, December 24, 2026 (Christmas Eve)."),
+ ("Is there a printable Christmas Lotería in English?","Yes. The Lotería Navideña in the Christmas Party Games set comes in English and in Spanish, with 54 watercolor cards and 32 unique tablas."),
+ ("Are the posada lyrics included?","The 2-page \"Letanía para pedir posada\" lyrics sheet is a bonus in the Posada combo. It is in Spanish, color-coded for the outside and inside groups."),
+ ("Can I use these at a church or office posada?","These files are for personal use: print them for your own family party at home. They are not licensed for resale or sharing."),
+ ("Is there a free version?","The Christmas Mini Kit is free. It has charades, Would You Rather, Christmas Scattergories, a card and gift tags, but no Lotería."),
+ ("Is anything shipped?","No. These are digital downloads you print at home or at a print shop. The files are not editable.")]
+h=page("las-posadas-printables","Las Posadas Printables: Christmas Lotería, Games and Lyrics",
+ "Las Posadas printables: a Christmas Lotería with 54 cards and 32 tablas, 12 more party games and the posada lyrics. English and Spanish PDF, Letter and A4.",
+ "Las Posadas printables: Lotería, games and lyrics",
+ "A printable <b>Christmas Lotería with 54 watercolor cards and 32 unique tablas</b> plus 12 more party games for <b>$9.99</b>, or the <b>Posada combo with the posada lyrics</b> for <b>$14.49</b>. Instant PDFs in English and Spanish, US Letter and A4.",
+ ["games","combo-posada"],body,
+ ["recetas-familia","rosario-novenas","kit-navideno-gratis","mega"],faq,"Las Posadas printables")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More for your posada</h2>")
+os.makedirs("las-posadas-printables",exist_ok=True)
+open("las-posadas-printables/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/las-posadas-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}las-posadas-printables/</loc><lastmod>2026-11-03</lastmod></url></urlset>"))
+print("ok las posadas printables")
+import subprocess; subprocess.run(["python3", "utm.py"])
