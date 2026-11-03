@@ -62,7 +62,7 @@ body='''<h2>Printable Christmas gift tags: why they beat store-bought</h2>
 <li><b>Matching cards:</b> the Christmas Cards set includes 12 folding cards with the same look as its tags.</li></ul>'''
 faq=[("Are there free printable Christmas gift tags here?","Yes. The free Christmas Mini Kit includes 8 printable gift tags, plus party games, a card and a coloring page."),
  ("What paper should I use for gift tags?","White cardstock between 65 and 110 lb holds up best on ribbon. Regular printer paper is fine if you tape or glue the tag flat."),
- ("Can I print the tags more than once?","Yes. Print as many as you need for your own gifts, home or classroom. Please don't resell the files."),
+ ("Can I print the tags more than once?","Yes. Print as many as you need for your own gifts at home. The files are for personal use, so please don't resell or share them."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
 h=page("christmas-gift-tags","Printable Christmas Gift Tags: Free Bilingual PDF | Bucky",
  "Free printable Christmas gift tags: 8 free tags in the Christmas Mini Kit, plus 16 matching tags and 12 cards in English and Spanish. Letter and A4.",
@@ -109,7 +109,7 @@ print("ok party games")
 # --- Secret Santa (2026-10-25, FB Page 8 PM slot) ---
 for k,g,pp,pr,es,en,des,den,c in [('secret-santa','mfqlci','PGsBK','6.99','Kit de intercambio de regalos','Secret Santa Kit','','Draw cards, wish lists and gift tags for your gift exchange. EN + ES.','xmas'),
  ('bundle','bkgnnd','0NkMo','15.99','Paquete fiesta navideña','Christmas Party Bundle','','The complete pack: party games, gift exchange kit and decor. Best value.','xmas'),
- ('games','cnexgy','yR2hw','9.99','Juegos para fiesta navideña','Christmas Party Games','','Printable games for office, family and classroom parties.','xmas')]:
+ ('games','cnexgy','yR2hw','9.99','Juegos para fiesta navideña','Christmas Party Games','','Printable games for Christmas parties at home with family and friends.','xmas')]:
   P.setdefault(k,{'k':k,'g':g,'pr':pr,'en':en,'den':den})
 body='''<h2>How to run a Secret Santa that actually works</h2>
 <ol><li><b>Set the budget and the date.</b> Agree on one price limit for everyone ($10, $15, $20 or $25 are the most common) and the day you'll swap gifts.</li>
