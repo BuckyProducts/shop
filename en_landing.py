@@ -78,9 +78,9 @@ print("ok gift tags")
 
 # --- Christmas party games (2026-10-25, FB group posts 12:30 slot) ---
 body='''<h2>Printable Christmas party games that work for any crowd</h2>
-<p>The best Christmas party games need no setup, no app and no extra shopping: print one sheet per player, hand out pens and start. That's why printable games work so well for family nights, classroom parties, office get-togethers and church events.</p>
+<p>The best Christmas party games need no setup, no app and no extra shopping: print one sheet per player, hand out pens and start. That's why printable games work so well for family nights, parties at home with friends and church events.</p>
 <ul><li><b>Christmas charades:</b> great for mixed ages. Cut the cards, fold them into a bowl and let teams act out a reindeer, a snowman or wrapping a present.</li>
-<li><b>Christmas Would You Rather:</b> an easy icebreaker for office parties and teens. No winners or losers, just good conversation.</li>
+<li><b>Christmas Would You Rather:</b> an easy icebreaker for adults and teens. No winners or losers, just good conversation.</li>
 <li><b>Christmas Scattergories:</b> pick a letter and fill in a Christmas food, song or gift in under a minute. Works for 3 to 30 players.</li>
 <li><b>Word searches and crosswords:</b> a quiet option for grandparents and kids who'd rather sit out the loud games. The large-print versions are easy on the eyes.</li>
 <li><b>Gift exchange games:</b> pair a White Elephant or Secret Santa round with printable rules so nobody argues about stealing.</li></ul>
@@ -89,17 +89,20 @@ body='''<h2>Printable Christmas party games that work for any crowd</h2>
 <li>Print one game sheet per player or per team, plus a few spares.</li>
 <li>Set a timer on your phone (60 to 90 seconds per round keeps the energy up).</li>
 <li>Have a small prize ready: a candy cane, a mug or first pick at the gift exchange.</li></ol>
-<p>Every game comes in English and Spanish, so bilingual families and dual-language classrooms can play together.</p>'''
+<p>Every game comes in English and Spanish, so bilingual families and friends can play together.</p>'''
 faq=[("Are there free printable Christmas party games?","Yes. The free Christmas Mini Kit includes Christmas charades, Would You Rather and Christmas Scattergories, plus a card, gift tags and a coloring page."),
- ("What Christmas games work for adults at an office party?","Would You Rather, Christmas Scattergories and charades are quick, need no setup and work for large groups. Print a sheet per person and set a timer."),
+ ("What Christmas games work for adults?","Would You Rather, Christmas Scattergories and charades are quick, need no setup and work for large groups. Print a sheet per person and set a timer."),
  ("What games work for kids and families?","Charades, word searches and coloring pages work for all ages. The Kids Activity Mega Pack adds 60 screen-free pages for winter break."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
+for k,g,pr,en,den in [('bundle','bkgnnd','15.99','Christmas Party Bundle','The complete pack: party games, gift exchange kit and decor. Best value.'),
+ ('games','cnexgy','9.99','Christmas Party Games','Printable games for Christmas parties at home with family and friends.')]:
+  P.setdefault(k,{'k':k,'g':g,'pr':pr,'en':en,'den':den})
 h=page("christmas-party-games","Printable Christmas Party Games: Free PDF for Family & Kids",
- "Free printable Christmas party games: charades, Would You Rather and Scattergories, plus 13 more games for family, kids and office. Letter and A4 PDF.",
- "Printable Christmas party games for family, kids and office parties",
+ "Free printable Christmas party games: charades, Would You Rather and Scattergories, plus 13 more games for family, kids and adults. Letter and A4 PDF.",
+ "Printable Christmas party games for family, kids and adults",
  "Start with the <b>free Christmas Mini Kit</b> (charades, Would You Rather and Christmas Scattergories), then add <b>13 more Christmas games</b> or large-print puzzles. Instant PDF download, English and Spanish.",
- ["kit-navideno-gratis","combo-gratitud"],body,
- ["pasatiempos-navidad","combo-posada","kids-mega","rompecabezas-letra-grande","mega"],faq,"Christmas party games")
+ ["games","kit-navideno-gratis"],body,
+ ["bundle","combo-gratitud","pasatiempos-navidad","kids-mega","rompecabezas-letra-grande","mega"],faq,"Christmas party games")
 os.makedirs("christmas-party-games",exist_ok=True)
 open("christmas-party-games/index.html","w").write(h)
 s=open("sitemap.xml").read()
