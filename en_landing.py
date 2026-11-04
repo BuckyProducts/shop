@@ -558,3 +558,48 @@ s=open("sitemap.xml").read()
 if "/las-posadas-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}las-posadas-printables/</loc><lastmod>2026-11-03</lastmod></url></urlset>"))
 print("ok las posadas printables")
 import subprocess; subprocess.run(["python3", "utm.py"])
+# --- Spanish Christmas printables (2026-11-04, FB Page 10 AM slot) ---
+_keep={k:dict(P[k]) for k in ("spanish","pasatiempos-navidad","tarjetas-navidad")}
+P["spanish"]=dict(P["spanish"],den="Not Christmas-themed: 200 picture flashcards in 10 themes, 20 worksheets with answer keys and a verb cheat sheet. Latin American Spanish.")
+P["pasatiempos-navidad"]=dict(P["pasatiempos-navidad"],den="20 Christmas word searches + 15 crosswords in large print, with answer keys. A complete English book and a complete Spanish book.")
+P["tarjetas-navidad"]=dict(P["tarjetas-navidad"],den="12 folding Christmas cards with a message inside + 16 To/From gift tags, in an English file and a Spanish file.")
+body='''<h2>Why bilingual Christmas printables work</h2>
+<p>Every printable on this page comes as a complete English PDF and a complete Spanish PDF, in US Letter and A4. The pages match, so you can print the Spanish set for a game night with grandparents, the English set for cousins who don't speak Spanish, or one of each to practice new words side by side. It's an easy way to keep Spanish part of the holidays for bilingual families, heritage speakers and anyone learning the language at home.</p>
+<h2>What you can print in Spanish</h2>
+<ul><li><b>Lotería Navideña:</b> 54 original watercolor cards and 32 unique tablas with the rules. It comes in the Christmas Party Games set ($9.99), 13 games and 70 pages per language, which also has picture bingo, charades, trivia, an Emoji Carol Quiz with 20 traditional carols and Scattergories (called Basta in Spanish).</li>
+<li><b>Christmas Picture Bingo ($5.99):</b> 50 unique picture cards with a hand-painted picture and a label on every square, 45 picture calling cards, and 20 word bingo cards with a 40-word calling list. The labeled pictures make it a natural vocabulary game.</li>
+<li><b>Large Print Christmas Puzzles ($4.99):</b> 20 word searches (13 × 13, 10 words each, no backward words) and 15 crosswords with simple clues, on Christmas, family dinner, winter, posadas and New Year, with all the answers.</li>
+<li><b>Christmas cards ($3.99):</b> 12 folding cards with a warm message already written inside, plus 16 To/From gift tags. They print on one side: print, fold in four, give.</li>
+<li><b>Three Kings Day kit ($4.99):</b> for January 6, a letter to the Three Kings with a wish list, a paper crown, 3 coloring pages, a word search, a maze and a 24-card memory game, for ages about 3 to 9.</li></ul>
+<h2>Easy ways to use them</h2>
+<ol><li><b>Bilingual game night:</b> the caller reads each Lotería or bingo card in Spanish, then in English, so everyone at the table can play.</li>
+<li><b>Vocabulary practice:</b> before you play, go through the picture calling cards and say each word in both languages.</li>
+<li><b>Quiet time:</b> hand the Spanish puzzle book to a grandparent and the English one to a teen, then compare answers.</li>
+<li><b>Cards for family abroad:</b> print the Spanish cards for relatives who read Spanish and the English cards for everyone else.</li></ol>
+<h2>Spanish Christmas words to know</h2>
+<ul><li><b>Navidad</b>: Christmas · <b>Nochebuena</b>: Christmas Eve (Thursday, December 24, 2026)</li>
+<li><b>Las Posadas</b>: the nine nights from December 16 to 24 · <b>villancico</b>: Christmas carol</li>
+<li><b>regalo</b>: gift · <b>estrella</b>: star · <b>piñata</b>: piñata</li>
+<li><b>Día de Reyes</b>: Three Kings Day (Wednesday, January 6, 2027) · <b>rosca de Reyes</b>: the Kings' cake</li></ul>
+<p>Planning a posada? See <a href="../las-posadas-printables/">Las Posadas printables</a>, or more <a href="../christmas-bingo/">Christmas bingo</a> and <a href="../christmas-word-search/">Christmas word search</a> pages.</p>
+<p>¿Prefieres en español? Todos estos imprimibles traen la versión completa en español. Mira también la <a href="../rosca-de-reyes/">rosca de Reyes</a> y la <a href="../letania-posadas/">letra para pedir posada</a>.</p>'''
+faq=[("Are these printables fully in Spanish?","Yes. Each product includes complete Spanish PDFs next to the English ones, in US Letter and A4, not just translated titles."),
+ ("Is there a free Spanish Christmas printable?","Yes. The Christmas Mini Kit is free: 12 charades cards, 12 Would You Rather cards, a Scattergories sheet, a folding card with 8 To/From gift tags, a coloring page and a 2027 mini calendar, in English and Spanish."),
+ ("Can I use them in my Spanish class?","Licenses differ. The Christmas Party Games, Christmas Picture Bingo, Large Print Christmas Puzzles, Christmas cards and the free Mini Kit are for personal use only, at home with your own family. The Three Kings Day kit allows personal use or one classroom, and the Spanish for Beginners pack and the Mega Pack allow personal and single-classroom use. None may be resold or shared."),
+ ("When is Three Kings Day 2027?","Día de Reyes is on Wednesday, January 6, 2027. The Three Kings Day kit even includes a tracker for who found the figurine in the rosca, for Candelaria on February 2."),
+ ("Which Spanish does the beginners pack teach?","Latin American Spanish. Every noun shows its article (el or la), and a bonus edition helps Spanish speakers learn English."),
+ ("Is anything shipped?","No. These are digital downloads you print at home or at a print shop.")]
+h=page("spanish-christmas-printables","Spanish Christmas Printables: Bilingual Games and Activities",
+ "Spanish Christmas printables with full English and Spanish PDFs: Lotería, picture bingo, puzzles, cards, a Three Kings Day kit and a free mini kit.",
+ "Spanish Christmas printables for bilingual families",
+ "Christmas games, puzzles and cards with a <b>complete Spanish PDF and a complete English PDF</b>: a <b>Christmas Lotería with 54 cards and 32 tablas</b>, <b>50 picture bingo cards</b> and a <b>free Christmas Mini Kit</b> to start. Instant download, US Letter and A4.",
+ ["games","christmas-bingo","kit-navideno-gratis"],body,
+ ["pasatiempos-navidad","tarjetas-navidad","reyes-kit","spanish","mega"],faq,"Spanish Christmas printables")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More bilingual printables, ready to download</h2>")
+P.update(_keep)
+os.makedirs("spanish-christmas-printables",exist_ok=True)
+open("spanish-christmas-printables/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/spanish-christmas-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}spanish-christmas-printables/</loc><lastmod>2026-11-04</lastmod></url></urlset>"))
+print("ok spanish christmas printables")
+import subprocess; subprocess.run(["python3", "utm.py"])
