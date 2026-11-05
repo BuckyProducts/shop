@@ -136,7 +136,7 @@ faq=[("What is a good Secret Santa budget?","Most groups choose $10 to $25. What
  ("What questions go on a Secret Santa questionnaire?","Keep it short: favorite color, favorite snack or drink, hobbies, sizes, and one thing they don't want. The Secret Santa Kit includes printable wish list cards with these questions in English and Spanish."),
  ("What should I give a coworker I don't know well?","Something useful and neutral: a mug with cocoa, a candle, a tumbler, a plant or a nice notebook."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
-h=page("secret-santa","Secret Santa Printables: Name Slips, Wish Lists & Gift Tags",
+h=page("secret-santa","Secret Santa Printables: Slips, Wish Lists & Gift Tags",
  "Printable Secret Santa name slips, wish list questionnaires and gift tags, plus gift ideas under $10, $15 and $25 for office, family and class. Instant PDF.",
  "Secret Santa printables and gift ideas for office, family and class",
  "Run your gift exchange without the stress: the <b>Secret Santa Kit</b> has <b>draw cards, wish lists and gift tags</b> ready to print, and below you'll find <b>gift ideas by budget</b>. Instant PDF download, English and Spanish, US Letter and A4.",
@@ -322,8 +322,8 @@ for k,g,pr,en,den in [('christmas-bingo','lbizh','5.99','Christmas Picture Bingo
 body='''<h2>Why picture bingo is the easiest Christmas party game</h2>
 <p>Bingo needs no rules explanation, no teams and no prep beyond printing. Picture bingo goes one step further: every square has a painted picture with its label, so kids who can't read yet can play right next to grandparents. When the adults want something a little faster, switch to the word bingo cards.</p>
 <ul><li><b>Family Christmas parties:</b> one game fits everyone from age 3 to 93, and it fills the half hour between dinner and dessert.</li>
-<li><b>Classroom holiday parties:</b> a teacher or room parent can call the pictures while kids mark their cards.</li>
-<li><b>Office and church gatherings:</b> the word bingo cards are quick to play with adults and need nothing but a pen.</li>
+<li><b>Kids' holiday parties at home:</b> a parent can call the pictures while kids mark their cards.</li>
+<li><b>Adult get-togethers:</b> the word bingo cards are quick to play with friends or church groups and need nothing but a pen.</li>
 <li><b>Bilingual families:</b> the same game comes in English and in Spanish, so everyone can play in the language they like.</li></ul>
 <h2>How to play Christmas bingo</h2>
 <ol><li>Print the cards (two picture cards per page) and cut the picture calling cards apart.</li>
@@ -337,6 +337,7 @@ body='''<h2>Why picture bingo is the easiest Christmas party game</h2>
 faq=[("How many Christmas bingo cards are included?","50 unique picture bingo cards (2 per page) with 45 picture calling cards, plus 20 word bingo cards with a 40-word calling list."),
  ("Can kids who can't read play?","Yes. Every square on the picture cards has a painted picture with its label, so young kids and non-readers can play."),
  ("Will two players have the same card?","No. All 50 picture cards are different, and no two share more than 17 of their 24 pictures."),
+ ("Can I use this in a classroom?","Christmas Picture Bingo is for personal use at home with family and friends. For classroom-licensed printables, see our Christmas classroom printables page."),
  ("What paper size and language?","You get 4 PDF files: English US Letter, English A4, Spanish US Letter and Spanish A4."),
  ("Is anything shipped?","No. It's a digital download you print at home or at a copy shop.")]
 h=page("christmas-bingo","Printable Christmas Bingo: 50 Picture Cards + Word Bingo",
