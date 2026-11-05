@@ -1,5 +1,5 @@
 # English-first SEO landing pages (US buyers are ~85% of Gumroad views). Run: python3 en_landing.py
-import json,html,re
+import json,html,re,os
 E=html.escape
 U='https://buckyproducts.github.io/shop/';G='https://buckylittleshop.gumroad.com/l/'
 CSS=re.search(r"CSS='''(.*?)'''",open('landing.py').read(),re.S).group(1)
@@ -605,4 +605,46 @@ open("spanish-christmas-printables/index.html","w").write(h)
 s=open("sitemap.xml").read()
 if "/spanish-christmas-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}spanish-christmas-printables/</loc><lastmod>2026-11-04</lastmod></url></urlset>"))
 print("ok spanish christmas printables")
+import subprocess; subprocess.run(["python3", "utm.py"])
+
+# --- Christmas classroom printables (2026-11-05, FB Page 10 AM slot) ---
+_keep_cc={k:dict(P[k]) for k in ("teachers","spanish","reyes-kit","kids-mega")}
+P["teachers"]=dict(P["teachers"],den="Not Christmas-themed: 30 pages of Spanish classroom games for elementary bilingual, dual-language, heritage and immersion classes. One teacher, one classroom.")
+P["spanish"]=dict(P["spanish"],den="Not Christmas-themed: 200 picture flashcards in 10 themes, 20 worksheets with answer keys and a verb cheat sheet. Latin American Spanish. Single-classroom use.")
+P["reyes-kit"]=dict(P["reyes-kit"],den="For January 6: letter to the Three Kings with a wish list, paper crown, 3 coloring pages, word search, maze and 24-card memory game. Ages about 3 to 9. Personal use or one classroom.")
+P["kids-mega"]=dict(P["kids-mega"],den="60 screen-free pages: mazes, coloring, dot-to-dot, picture sudoku and word search for quiet time, early finishers and learning centers. Ages about 4 to 9. Personal use or one classroom.")
+body='''<h2>What teachers need for the last weeks before break</h2>
+<p>December fills up fast: holiday parties, early finishers, rainy indoor recess and the quiet days after gifts are opened. Printable activities that are already licensed for one classroom save a planning period. Every kit on this page allows personal use or use in one classroom (each product page states its license). Nothing is shipped: you download the PDF and print on US Letter or A4.</p>
+<h2>What to print for your classroom</h2>
+<ul><li><b>Kids Activity Mega Pack ($7.99):</b> 60 screen-free pages with mazes, coloring, dot-to-dot, picture sudoku and word search. Built for quiet time, road-trip bags, rainy days, learning centers and early finishers, ages about 4 to 9, in English and Spanish.</li>
+<li><b>Spanish Classroom Games ($6.99):</b> 30 ready-to-print pages of Spanish classroom games for elementary bilingual, dual-language, heritage and Spanish-immersion classes. Not Christmas-themed, so you can keep using them after winter break. License: one teacher, one classroom.</li>
+<li><b>Three Kings Day kit ($4.99):</b> for January 6 (Wednesday in 2027), a letter to the Three Kings with a wish list, a paper crown, 3 coloring pages, a word search, a maze and a 24-card memory game, for ages about 3 to 9. Personal use or one classroom.</li>
+<li><b>Classroom wall art ($9.99):</b> 12 cheerful pastel posters with the Bucky mascot, each in English and Spanish (24 designs), in common classroom sizes. Personal and single-classroom use.</li>
+<li><b>Bucky coloring pages ($2.99):</b> 10 thick-line coloring pages for fast centers and calm-down corners. Print for home or your classroom.</li></ul>
+<h2>A simple week-of-break plan</h2>
+<ol><li><b>Monday to Wednesday:</b> put a stack of Mega Pack pages in the early-finisher bin and a coloring sheet at each calm-down corner.</li>
+<li><b>Party day:</b> use the Spanish Classroom Games pack for a short rotation, or hang a few wall-art posters for a festive backdrop that stays up into January.</li>
+<li><b>After Christmas, before Three Kings Day:</b> send the letter-to-the-Kings page home, or make paper crowns in class on January 5 or 6.</li>
+<li>Print at 100% ("Actual size"). Cardstock helps for crowns and memory cards; plain paper is fine for mazes and coloring.</li></ol>
+<p>Looking for home-only Christmas games (personal use)? See <a href="../christmas-activities-for-kids/">Christmas activities for kids</a> and <a href="../spanish-christmas-printables/">Spanish Christmas printables</a>. For January 6 traditions, see <a href="../rosca-de-reyes/">Rosca de Reyes</a>.</p>
+<p>¿Lo buscas en español? Mira las <a href="../manualidades-navidenas-ninos/">manualidades navideñas para niños</a> y la <a href="../rosca-de-reyes/">rosca de Reyes</a>.</p>'''
+faq=[("Can I use these in my classroom?","Yes for the kits on this page. The Kids Activity Mega Pack, Three Kings Day kit, Bucky coloring pages, wall art, Spanish for Beginners pack and Mega Pack allow personal use or one classroom. The Spanish Classroom Games pack is licensed for one teacher and one classroom. Please don't resell or share the files."),
+ ("Are any of these free?","The free Christmas Mini Kit is a personal-use download for home, not licensed for classroom use. The classroom kits on this page are paid instant downloads."),
+ ("Is the Spanish Classroom Games pack Christmas-themed?","No. It is year-round Spanish practice for elementary classes, so it still works after winter break."),
+ ("When is Three Kings Day in 2027?","Día de Reyes is Wednesday, January 6, 2027. The Three Kings Day kit includes a letter, crown, coloring pages, puzzles and a memory game for ages about 3 to 9."),
+ ("What ages are these for?","Most pages fit about ages 4 to 9. The Three Kings Day kit works from about 3 to 9. The Spanish Classroom Games pack is written for elementary Spanish classes."),
+ ("Is anything shipped?","No. These are digital PDFs you download and print at school or at home.")]
+h=page("christmas-classroom-printables","Christmas Classroom Printables: Activities for Teachers",
+ "Christmas classroom printables for teachers: 60 activity pages, Spanish class games, Three Kings Day kit, wall art and coloring. One-classroom PDFs.",
+ "Printable Christmas classroom activities for teachers",
+ "Fill the last weeks before break with <b>60 screen-free activity pages</b> for <b>$7.99</b> and <b>30 Spanish classroom games</b> for <b>$6.99</b>, both licensed for one classroom. Instant PDFs in English and Spanish, US Letter and A4.",
+ ["kids-mega","teachers"],body,
+ ["reyes-kit","wall-art","bucky-coloring","spanish","mega"],faq,"Christmas classroom printables")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More for your classroom this season</h2>")
+P.update(_keep_cc)
+os.makedirs("christmas-classroom-printables",exist_ok=True)
+open("christmas-classroom-printables/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/christmas-classroom-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-classroom-printables/</loc><lastmod>2026-11-05</lastmod></url></urlset>"))
+print("ok christmas classroom printables")
 import subprocess; subprocess.run(["python3", "utm.py"])
