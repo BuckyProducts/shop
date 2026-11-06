@@ -650,3 +650,46 @@ s=open("sitemap.xml").read()
 if "/christmas-classroom-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-classroom-printables/</loc><lastmod>2026-11-05</lastmod></url></urlset>"))
 print("ok christmas classroom printables")
 import subprocess; subprocess.run(["python3", "utm.py"])
+
+# --- Three Kings Day printables (2026-11-06, FB group posts 12:30 slot) ---
+_keep_tk={k:dict(P[k]) for k in ("reyes-kit","kids-mega","kit-navideno-gratis","bucky-coloring","bucky-storybooks")}
+P["reyes-kit"]=dict(P["reyes-kit"],den="For January 6: letter to the Three Kings with a wish list, paper crown, 3 coloring pages, word search, maze, 24-card memory game and a figurine tracker for Candelaria (Feb 2). Ages about 3 to 9. Personal use or one classroom.")
+P["kids-mega"]=dict(P["kids-mega"],den="60 screen-free pages: mazes, coloring, dot-to-dot, picture sudoku and word search for quiet time after gifts. Ages about 4 to 9. Personal use or one classroom.")
+P["kit-navideno-gratis"]=dict(P["kit-navideno-gratis"],den="Free mini kit for home (personal use only): charades, Would You Rather, Christmas Scattergories, a folding card with 8 gift tags, a coloring page and a 2027 mini calendar. English and Spanish.")
+P["bucky-coloring"]=dict(P["bucky-coloring"],den="10 thick-line Bucky coloring pages plus a color cover. Print for home or your classroom. English and Spanish, Letter and A4.")
+P["bucky-storybooks"]=dict(P["bucky-storybooks"],den="3 gentle Bucky stories (8 pages each with read-aloud text and discussion questions) plus 24 matching coloring pages. Ages about 3 to 7. Print at home. English and Spanish.")
+body='''<h2>What is Three Kings Day (Epiphany)?</h2>
+<p>Three Kings Day, also called Epiphany or Día de Reyes, falls on <b>Wednesday, January 6, 2027</b>. In many Spanish-speaking and Christian homes, kids leave a letter for Melchior, Gaspar and Balthazar the night before, and families share a <b>rosca de Reyes</b> (Kings cake). Whoever finds the little figurine inside hosts tamales on Candelaria, February 2. Printable activities make the morning easy: a letter and wish list, a paper crown, coloring pages, a memory game and a tracker for who found the figurine.</p>
+<h2>What to print for January 6</h2>
+<ul><li><b>Three Kings Day kit ($4.99):</b> 14 pages per file with a letter to the Three Kings and wish list, a paper crown (one in color, one to color), 3 coloring pages (rosca, crown, camels and the star), a word search, a maze, a 24-card memory game, a "Who found the figurine?" tracker for Candelaria and a Rosca Champion certificate, plus answer keys. Ages about 3 to 9. Four PDFs: English and Spanish, US Letter and A4. Personal use or one classroom.</li>
+<li><b>Free Christmas Mini Kit:</b> a personal-use starter with party games, a card, 8 gift tags, a coloring page and a 2027 mini calendar, in English and Spanish. Handy for the days between Christmas and Epiphany at home.</li>
+<li><b>Kids Activity Mega Pack ($7.99):</b> 60 screen-free pages (mazes, coloring, dot-to-dot, picture sudoku, word search) for quiet time while the rosca bakes or after gifts are opened. Ages about 4 to 9. Personal use or one classroom.</li>
+<li><b>Bucky coloring pages ($2.99):</b> 10 thick-line pages plus a cover. Fast calm-down activity for younger kids at the table.</li>
+<li><b>Bucky Storybooks ($4.99):</b> 3 gentle illustrated stories with discussion questions and 24 matching coloring pages, ages about 3 to 7 — a quiet Epiphany-evening read-aloud.</li></ul>
+<h2>A simple Three Kings Day morning</h2>
+<ol><li><b>Night of January 5:</b> print the letter and wish list; kids leave it out with a glass of water or a snack for the camels.</li>
+<li><b>Morning of January 6:</b> cut out the paper crown, color a page, then play the memory game while the rosca is served.</li>
+<li><b>After the cake:</b> write who found the figurine on the Candelaria tracker so you remember who brings tamales on February 2.</li>
+<li>Print at 100% ("Actual size"). Cardstock helps for the crown and memory cards; plain paper is fine for the letter, maze and coloring.</li></ol>
+<p>Looking for the Spanish-first page about the cake itself? See <a href="../rosca-de-reyes/">Rosca de Reyes</a>. More kids activities: <a href="../christmas-activities-for-kids/">Christmas activities for kids</a>. Classroom licenses: <a href="../christmas-classroom-printables/">Christmas classroom printables</a>.</p>
+<p>¿Lo buscas en español? Mira la <a href="../rosca-de-reyes/">rosca de Reyes</a> y las <a href="../manualidades-navidenas-ninos/">manualidades navideñas para niños</a>.</p>'''
+faq=[("When is Three Kings Day in 2027?","Día de Reyes (Epiphany / Three Kings Day) is Wednesday, January 6, 2027. Candelaria, when the person who found the figurine traditionally brings tamales, is Tuesday, February 2, 2027."),
+ ("What is in the Three Kings Day printable kit?","14 pages per file: a letter to the Three Kings with a wish list, a paper crown, 3 coloring pages, a word search, a maze, a 24-card memory game, a figurine tracker for Candelaria, a Rosca Champion certificate and answer keys. English and Spanish, US Letter and A4."),
+ ("Is there a free printable to start with?","Yes. The Christmas Mini Kit is free for personal use at home: charades, Would You Rather, Christmas Scattergories, a card, 8 gift tags, a coloring page and a 2027 mini calendar."),
+ ("Can I use these in a classroom?","The Three Kings Day kit and the Kids Activity Mega Pack allow personal use or one classroom. Bucky coloring pages may be printed for home or your classroom. The free Mini Kit is personal use only. The Bucky Storybooks listing is for printing at home. The Mega Pack allows personal and single-classroom use. Please don't resell or share the files."),
+ ("What ages are these for?","The Three Kings Day kit fits about ages 3 to 9. The Mega Pack and coloring pages fit about 4 to 9. The storybooks fit about 3 to 7."),
+ ("Is anything shipped?","No. These are digital PDFs you download and print at home or at a copy shop.")]
+h=page("three-kings-day-printables","Three Kings Day Printables for Kids | Epiphany PDF",
+ "Three Kings Day printables for Día de Reyes (Jan 6, 2027): letter, crown, coloring, puzzles, a free mini kit and quiet-time pages. Letter and A4 PDF.",
+ "Three Kings Day printables for Epiphany and Día de Reyes",
+ "Celebrate <b>Three Kings Day on Wednesday, January 6, 2027</b> with a <b>letter to the Kings, paper crown, coloring pages, memory game</b> and a free mini kit to start. Instant PDFs in English and Spanish, US Letter and A4.",
+ ["reyes-kit","kit-navideno-gratis"],body,
+ ["kids-mega","bucky-coloring","bucky-storybooks","mega"],faq,"Three Kings Day printables")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More printables for quiet time around January 6</h2>")
+P.update(_keep_tk)
+os.makedirs("three-kings-day-printables",exist_ok=True)
+open("three-kings-day-printables/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/three-kings-day-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}three-kings-day-printables/</loc><lastmod>2026-11-06</lastmod></url></urlset>"))
+print("ok three kings day printables")
+import subprocess; subprocess.run(["python3", "utm.py"])
