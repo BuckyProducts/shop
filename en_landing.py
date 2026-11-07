@@ -693,3 +693,50 @@ s=open("sitemap.xml").read()
 if "/three-kings-day-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}three-kings-day-printables/</loc><lastmod>2026-11-06</lastmod></url></urlset>"))
 print("ok three kings day printables")
 import subprocess; subprocess.run(["python3", "utm.py"])
+
+# --- Christmas Eve printables (2026-11-07, FB Page 10 AM slot) ---
+# Distinct from christmas-activities-for-kids (winter-break stacks) and christmas-party-games (party nights):
+# this page targets Christmas Eve family night — dinner, last-minute cards/tags, quiet games while waiting, movie night.
+P.setdefault("games",{"k":"games","g":"cnexgy","pr":"9.99","en":"Christmas Party Games","den":"Printable games for Christmas parties at home with family and friends."})
+_keep_ce={k:dict(P[k]) for k in ("kit-navideno-gratis","tarjetas-navidad","games","kids-mega","bucky-storybooks","bucky-coloring")}
+P["kit-navideno-gratis"]=dict(P["kit-navideno-gratis"],den="Free mini kit for Christmas Eve at home (personal use only): charades, Would You Rather, Christmas Scattergories, a folding card with 8 gift tags, a coloring page and a 2027 mini calendar. English and Spanish.")
+P["tarjetas-navidad"]=dict(P["tarjetas-navidad"],den="12 folding Christmas cards with a message inside + 16 To/From gift tags for last-minute Christmas Eve wrapping. English and Spanish files.")
+P["games"]=dict(P["games"],den="13 printable Christmas games for a quiet round after dinner or while gifts are opened: trivia, bingo, charades and more. Personal use at home with family and friends. English and Spanish.")
+P["kids-mega"]=dict(P["kids-mega"],den="60 screen-free pages: mazes, coloring, dot-to-dot, picture sudoku and word search for kids who need something calm while adults finish cooking or wrap. Ages about 4 to 9. Personal use or one classroom.")
+P["bucky-storybooks"]=dict(P["bucky-storybooks"],den="3 gentle Bucky stories (8 pages each with read-aloud text and discussion questions) plus 24 matching coloring pages. Ages about 3 to 7. A quiet Christmas Eve read before the movie. Print at home. English and Spanish.")
+P["bucky-coloring"]=dict(P["bucky-coloring"],den="10 thick-line Bucky coloring pages plus a color cover. Easy calm-down activity while everyone waits for dinner or the tree lights. English and Spanish, Letter and A4.")
+body='''<h2>What to print for Christmas Eve (Thursday, December 24, 2026)</h2>
+<p>Christmas Eve is the night dinner runs late, a few gifts still need tags, and kids ask "is it time yet?" every ten minutes. Printable activities fill those gaps without a store run: last-minute cards and tags, a quiet game after dinner, coloring and stories while you wait for the movie to start.</p>
+<ul><li><b>Free Christmas Mini Kit:</b> personal-use starter with charades, Would You Rather, Christmas Scattergories, a folding card, 8 gift tags, a coloring page and a 2027 mini calendar — enough for one evening at home.</li>
+<li><b>Christmas cards + gift tags ($3.99):</b> 12 folding cards with a message inside and 16 To/From tags. Print on cardstock the afternoon of the 24th for the gifts you forgot to wrap.</li>
+<li><b>Christmas Party Games ($9.99):</b> 13 games / about 70 pages per language for a calm round after dinner or while presents are opened. Personal use for family and friends at home.</li>
+<li><b>Kids Activity Mega Pack ($7.99):</b> 60 screen-free pages so younger kids have mazes and coloring while adults finish cooking.</li>
+<li><b>Bucky Storybooks ($4.99) and coloring pages ($2.99):</b> a short read-aloud plus thick-line coloring before the Christmas movie starts.</li></ul>
+<h2>A simple Christmas Eve family plan</h2>
+<ol><li><b>Afternoon:</b> print cards and tags on cardstock; cut tags and finish wrapping.</li>
+<li><b>While dinner cooks:</b> hand kids a coloring page or a short story so the kitchen stays calm.</li>
+<li><b>After dinner:</b> one short game (charades or Would You Rather from the free kit, or a round from the 13-game set) before gifts or the movie.</li>
+<li><b>Movie night:</b> keep a spare coloring page and crayons on the coffee table for anyone who fidgets.</li>
+<li>Print at 100% ("Actual size"). Cardstock helps for cards and tags; plain paper is fine for games and coloring.</li></ol>
+<p>Looking for more kids winter-break stacks? See <a href="../christmas-activities-for-kids/">Christmas activities for kids</a>. Full party-night game lists: <a href="../christmas-party-games/">Christmas party games</a>. Matching card designs: <a href="../printable-christmas-cards/">printable Christmas cards</a>.</p>
+<p>¿Lo buscas en español? Mira las <a href="../tarjetas-navidenas-gratis/">tarjetas navideñas gratis</a> y las <a href="../manualidades-navidenas-ninos/">manualidades navideñas para niños</a>.</p>'''
+faq=[("When is Christmas Eve in 2026?","Christmas Eve is Thursday, December 24, 2026. Christmas Day is Friday, December 25, 2026."),
+ ("What should I print for Christmas Eve at home?","Start with the free Mini Kit (games, a card, tags and a coloring page). Add the cards+tags set if you still need to wrap, and a short game or story for after dinner."),
+ ("Is there a free printable for Christmas Eve?","Yes. The Christmas Mini Kit is free for personal use at home: charades, Would You Rather, Christmas Scattergories, a card, 8 gift tags, a coloring page and a 2027 mini calendar."),
+ ("Can I use these in a classroom?","Most kits on this page are for personal use at home. The Kids Activity Mega Pack allows personal use or one classroom. Bucky coloring pages may be printed for home or your classroom. The free Mini Kit, Christmas cards, Christmas Party Games and Bucky Storybooks are for personal / home use (storybooks: print at home). The Mega Pack allows personal and single-classroom use. Please don't resell or share the files."),
+ ("What ages are these for?","Coloring and storybooks fit about ages 3 to 7. The Mega Pack fits about 4 to 9. Party games and cards work for mixed ages at a family table."),
+ ("Is anything shipped?","No. These are digital PDFs you download and print at home or at a copy shop.")]
+h=page("christmas-eve-printables","Christmas Eve Printables for Family Night (PDF)",
+ "Christmas Eve printables for Dec 24, 2026: last-minute cards, quiet games while you wait, coloring and stories for family movie night. Letter and A4 PDF.",
+ "Printable Christmas Eve activities for family night",
+ "Make <b>Christmas Eve (Thursday, December 24, 2026)</b> easier: <b>last-minute cards and gift tags</b>, quiet games while you wait, coloring and a short story before the movie. Instant PDFs in English and Spanish, US Letter and A4.",
+ ["kit-navideno-gratis","tarjetas-navidad"],body,
+ ["games","kids-mega","bucky-storybooks","bucky-coloring","mega"],faq,"Christmas Eve printables")
+h=h.replace("<h2>More Christmas printables, ready to download</h2>","<h2>More printables for a calm Christmas Eve</h2>")
+P.update(_keep_ce)
+os.makedirs("christmas-eve-printables",exist_ok=True)
+open("christmas-eve-printables/index.html","w").write(h)
+s=open("sitemap.xml").read()
+if "/christmas-eve-printables/" not in s: open("sitemap.xml","w").write(s.replace("</urlset>",f"<url><loc>{U}christmas-eve-printables/</loc><lastmod>2026-11-07</lastmod></url></urlset>"))
+print("ok christmas eve printables")
+import subprocess; subprocess.run(["python3", "utm.py"])
