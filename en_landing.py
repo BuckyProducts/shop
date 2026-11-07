@@ -359,17 +359,18 @@ body='''<h2>Why print your own Christmas cards</h2>
 <ul><li><b>Messages already written:</b> every card in the Bucky Christmas Cards set has a warm message inside plus space to sign, so you only add a name.</li>
 <li><b>Cards for everyone on the list:</b> Merry Christmas, Happy Holidays, Peace on Earth, Blessed Christmas, Thank You Teacher, Grandma &amp; Grandpa, Happy New Year and more.</li>
 <li><b>Fits a standard envelope:</b> the finished card is 4.25 &times; 5.5 in, the size of an A2 envelope.</li>
-<li><b>Bilingual:</b> every card comes in English and in Spanish, for bilingual families and dual-language classrooms.</li></ul>
+<li><b>Bilingual:</b> every card comes in English and in Spanish, for bilingual families and friends who write in both languages.</li></ul>
 <h2>How to print and fold a quarter-fold card</h2>
 <ol><li>Download the PDF and print on white cardstock (65 to 110 lb) at "Actual size". The cards print on one side only, so there is no double-sided setting to fight with.</li>
 <li>Fold the sheet in half the long way, then in half again, so the picture ends up on the front.</li>
 <li>Run a thumbnail or a ruler along each fold for a crisp edge.</li>
 <li>Sign inside, slip it into an A2 envelope and add a matching gift tag to the present.</li></ol>
-<p>Not sure yet? The <b>free Christmas Mini Kit</b> includes one folding Christmas card and 8 gift tags, so you can try a print before you buy. ¿Buscas tarjetas en español? Cada tarjeta viene también en español, y hay <a href="../tarjetas-navidenas-gratis/">tarjetas navideñas gratis</a>.</p>'''
+<p>Not sure yet? The <b>free Christmas Mini Kit</b> includes one folding Christmas card and 8 gift tags, so you can try a print before you buy. ¿Buscas tarjetas en español? Cada tarjeta viene también en español, y hay <a href="../tarjetas-navidenas-gratis/">tarjetas navideñas gratis</a>. Teachers looking for one-classroom licenses: see <a href="../christmas-classroom-printables/">Christmas classroom printables</a>.</p>'''
 faq=[("Are there free printable Christmas cards?","Yes. The free Christmas Mini Kit includes one folding Christmas card and 8 To/From gift tags. The full Bucky Christmas Cards set has 12 cards and 16 gift tags for $3.99."),
  ("What size are the cards?","Each card folds down to 4.25 x 5.5 inches and fits a standard A2 envelope. The A4 version folds to about 10.5 x 14.8 cm."),
  ("Do I need to print double-sided?","No. The cards print on one side of the sheet; you fold the page in four and the message lands inside."),
  ("What paper should I use?","White cardstock, 65 to 110 lb, gives the best result. Plain printer paper works for a quick card."),
+ ("Can I use these in a classroom?","The Bucky Christmas Cards, free Mini Kit, greeting cards, Bible verse cards and Gratitude + Christmas Combo are for personal use at home. The Mega Pack allows personal and single-classroom use. For classroom-licensed Christmas printables, see our Christmas classroom printables page. Please don't resell or share the files."),
  ("Is anything shipped?","No. You get 4 PDF files (English US Letter, English A4, Spanish US Letter and Spanish A4) to print yourself.")]
 h=page("printable-christmas-cards","Printable Christmas Cards: 12 Foldable Cards + a Free Card",
  "Printable Christmas cards with the message already inside: 12 quarter-fold cards and 16 gift tags for $3.99, or a free card to start. English and Spanish PDF.",
