@@ -265,10 +265,10 @@ body='''<h2>Screen-free Christmas activities kids actually enjoy</h2>
 <li>Save the party games for an evening when the whole family is home.</li>
 <li>Hang finished pages on the fridge or turn them into cards for teachers and neighbors.</li>
 <li>After Christmas, the Three Kings Day kit keeps the fun going until January 6.</li></ol>
-<p>Every file is bilingual, English and Spanish, so it works for dual-language classrooms and families who speak both. ¿Lo buscas en español? Mira nuestras <a href="../manualidades-navidenas-ninos/">manualidades navideñas para niños</a>.</p>'''
+<p>Every file is bilingual, English and Spanish, so it works for bilingual families and friends who speak both. Teachers looking for one-classroom licenses: see <a href="../christmas-classroom-printables/">Christmas classroom printables</a>. ¿Lo buscas en español? Mira nuestras <a href="../manualidades-navidenas-ninos/">manualidades navideñas para niños</a>.</p>'''
 faq=[("Are there free Christmas activities for kids here?","Yes. The free Christmas Mini Kit has Christmas charades, Would You Rather, Christmas Scattergories, a card, 8 gift tags and a coloring page."),
  ("What ages are these activities for?","Most pages work for ages 3 to 10. Coloring pages and stickers suit preschoolers, and games and word searches suit older kids and the whole family."),
- ("Can teachers use them in class?","Some kits, yes. The Kids Activity Mega Pack, the Three Kings Day kit and the Mega Pack allow use in one classroom. The free mini kit is for personal use only, and the other kits are for personal use unless their product page says otherwise. Please don't resell or share the files."),
+ ("Can teachers use them in class?","The Kids Activity Mega Pack and Three Kings Day kit allow personal use or one classroom. Bucky coloring pages may be printed for home or your classroom. The free Mini Kit, Gratitude + Christmas Combo and Bucky Stickers are personal use only. Bucky Storybooks are for printing at home. The Mega Pack allows personal and single-classroom use. For more classroom-licensed kits, see our Christmas classroom printables page. Please don't resell or share the files."),
  ("Is anything shipped?","No. These are digital PDF files you download and print at home or at a copy shop.")]
 h=page("christmas-activities-for-kids","Printable Christmas Activities for Kids: Games and Coloring",
  "Printable Christmas activities for kids: a free mini kit plus 60 screen-free games, coloring pages and stories. English and Spanish, Letter and A4.",
