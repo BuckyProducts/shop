@@ -31,14 +31,14 @@ body='''<h2>Christmas printables for every part of the season</h2>
 <li><b>Planning ahead:</b> a 2027 planner and calendar help you start January organized.</li></ul>
 <h2>How to print them at home</h2>
 <ol><li>Download the PDF right after checkout (or right away for the free kit).</li><li>Print on US Letter or A4. Use plain paper for games and puzzles, and cardstock (65 to 110 lb) for cards and tags.</li><li>Choose "Actual size" or "Fit to page" in your printer settings.</li><li>Cut along the lines, and you're done. Print as many copies as you need for your own home.</li></ol>
-<p>Every file is bilingual (English and Spanish), so it works for dual-language classrooms and bilingual families too.</p>'''
+<p>Every file is bilingual (English and Spanish), so it works for bilingual families and friends who speak both. Teachers looking for one-classroom licenses: see <a href="../christmas-classroom-printables/">Christmas classroom printables</a>.</p>'''
 faq=[("Are these Christmas printables free?","The Christmas Mini Kit is free. The other kits are paid instant downloads between $3.99 and $29."),
  ("What paper size are they?","US Letter, and most also come in A4. Print at home or at any copy shop."),
  ("Will anything be shipped to me?","No. These are digital PDF files you download and print yourself."),
- ("Can I use them in my classroom?","It depends on the kit. The Kids Activity Mega Pack and the Mega Pack allow use in one classroom. The free mini kit and the other Christmas kits are for personal use only. Each product page states its license; please don't resell or share the files.")]
+ ("Can I use them in my classroom?","The free Mini Kit, Christmas cards, Large Print Puzzles, Posada + Planner Combo, Gratitude + Christmas Combo, Advent Devotional and 2027 planner are for personal use at home. The Kids Activity Mega Pack allows personal use or one classroom, and the Mega Pack allows personal and single-classroom use. For more classroom-licensed kits, see our Christmas classroom printables page. Please don't resell or share the files.")]
 h=page("christmas-printables","Christmas Printables: Free Games, Cards and Gift Tags (PDF)",
  "Christmas printables to download today: a free kit of party games, cards and gift tags, plus large-print puzzles and kids activities. US Letter and A4.",
- "Christmas printables for home, class and parties",
+ "Christmas printables for home, family and parties",
  "Start with the <b>free Christmas mini kit</b> (games, a card, 8 gift tags and a coloring page), then add cards, puzzles and party games. Instant PDF download, US Letter and A4.",
  ["kit-navideno-gratis","tarjetas-navidad"],body,
  ["pasatiempos-navidad","combo-posada","kids-mega","combo-gratitud","devocional-adviento","planner","mega"],faq,"Christmas printables")
